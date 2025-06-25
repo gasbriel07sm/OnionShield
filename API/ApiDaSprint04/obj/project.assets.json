@@ -453,11 +453,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gs_mi\\OneDrive\\Área de Trabalho\\Faculdade\\Projeto_Integrador\\API\\ApiDaSprint04\\ApiDaSprint04.csproj",
+      "projectUniqueName": "C:\\Users\\gs_mi\\OneDrive\\Área de Trabalho\\OnionShield\\API\\ApiDaSprint04\\ApiDaSprint04.csproj",
       "projectName": "ApiDaSprint04",
-      "projectPath": "C:\\Users\\gs_mi\\OneDrive\\Área de Trabalho\\Faculdade\\Projeto_Integrador\\API\\ApiDaSprint04\\ApiDaSprint04.csproj",
+      "projectPath": "C:\\Users\\gs_mi\\OneDrive\\Área de Trabalho\\OnionShield\\API\\ApiDaSprint04\\ApiDaSprint04.csproj",
       "packagesPath": "C:\\Users\\gs_mi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gs_mi\\OneDrive\\Área de Trabalho\\Faculdade\\Projeto_Integrador\\API\\ApiDaSprint04\\obj\\",
+      "outputPath": "C:\\Users\\gs_mi\\OneDrive\\Área de Trabalho\\OnionShield\\API\\ApiDaSprint04\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
