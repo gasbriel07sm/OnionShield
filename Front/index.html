@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OnionShield</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="assets/logo branca.png" type="image/x-icon">
+</head>
+<body>
+<!-- HEADER -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="index.html" class="nav__logo">
+                    <img src="assets/logo branca.png" alt=""> OnionShield
+                </a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__burger"></i>
+                    <i class="ri-close-line nav__close"></i>
+                </div>
+            </div>
+            <!--============ NAV MENU ============-->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <!--============ DROPDOWN 1 ============-->
+                    <li class="dropdown__item">
+                        <a href="info/info.html" class="nav__link">
+                            Informações <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </a>
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="info/content/conteudo.html" class="dropdown__link">
+                                    <i class="ri-bookmark-line"></i> Conteúdo
+                                </a>
+                            </li>
+                            <!--=============== DROPDOWN SUBMENU ===============-->
+                            <li class="dropdown__subitem">
+                                <div class="dropdown__link">
+                                    <i class="ri-survey-line"></i> Questionários <i class="ri-add-line dropdown__add"></i>
+                                </div>
+                                <ul class="dropdown__submenu">
+                                    <li>
+                                        <a href="info/quiz/quiz1/quiz1.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Quiz 1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="info/quiz/quiz2/quiz2.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Quiz 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="info/quiz/quiz3/quiz3.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Quiz 3
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="info/quiz/quiz4/quiz4.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Quiz 4
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="info/quiz/quiz5/quiz5.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Quiz 5
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="info/source/pesquisa.html" class="dropdown__link">
+                                    <i class="ri-search-line"></i> Pesquisa
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--============ DROPDOWN 2 ============-->
+                    <li class="dropdown__item">
+                        <a href="criptografia/criptografia.html" class="nav__link">
+                            Criptografia <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </a>
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="criptografia/medidor_senha/medidor_senha.html" class="dropdown__link">
+                                    <i class="ri-alarm-warning-line"></i> Medidor de Força
+                                </a>
+                            </li>
+                            <li>
+                                <a href="criptografia/gerador_senha/gerador_senha.html" class="dropdown__link">
+                                    <i class="ri-key-2-line"></i> Gerador de Senhas
+                                </a>
+                            </li>
+                            <li>
+                                <a href="criptografia/criptografia_simetrica/criptografia_simetrica.html" class="dropdown__link">
+                                    <i class="ri-lock-password-line"></i> Simétrica
+                                </a>
+                            </li>
+                            <li>
+                                <a href="criptografia/hashing/hashing.html" class="dropdown__link">
+                                    <i class="ri-terminal-line"></i> Hashing
+                                </a>
+                            </li>
+                            <li>
+                                <a href="criptografia/analise_url/analise_url.html" class="dropdown__link">
+                                    <i class="ri-qr-scan-2-line"></i> Análise de URL
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="sobre.html" class="nav__link">Sobre</a></li>
+                    <li><a href="contato/contato.html" class="nav__link">Contato</a></li>
+                    <li class="dropdown__item" id="login-area" style="display: flex">
+                        <a href="login/login.html" class="nav__link">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+<!-- FIM HEADER -->
+
+<!-- MAIN -->
+    <main class="main">
+
+        <!-- HERO -->
+        <section class="hero section">
+            <div class="hero__container container grid">
+                <div class="hero__data">
+                    <h1 class="hero__title">PROMOVENDO <br> A SEGURANÇA <br> EM CAMADAS</h1>
+                    <hr>
+                    <p class="hero__description">
+                    A OnionShield preza pela segurança dos clientes em camadas, trazendo mais confiabilidade e segurança ao cliente.</p>
+                    <div class="hero__buttons">
+                        <a href="info/info.html" class="button">Fique por Dentro</a>
+                        <a href="sobre.html" class="button button--ghost">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <img src=" assets/site.png" alt="Ilustração de cibersegurança">
+                </div>
+            </div>
+        </section>
+        <!-- FIM HERO -->
+
+        <!-- SERVIÇOS -->
+        <section class="solutions section">
+            
+            <h2 class="section__title">SEGURANÇA CIBERNÉTICA</h2>
+            <hr>
+            <p class="section__description">A Onion oferece os melhores serviços de segurança digital para os usuários e clientes, trazendo melhores experiências, mais segurança e integridade.</p>
+            <div class="solutions__container container grid">
+                <article class="solutions__card">
+                    <div class="solutions__card-content">
+                        <div class="solutions__icon-wrapper"><i class="ri-cloud-line solutions__icon"></i></div>
+                        <h3 class="solutions__title">Segurança em Nuvem</h3>
+                        <p class="solutions__description-card">Proteção para seus dados e aplicações armazenados em ambientes de nuvem.</p>
+                        <a href="info/info.html" class="button button--ghost button--small">Saber Mais</a>
+                    </div>
+                </article>
+                <article class="solutions__card">
+                    <div class="solutions__card-content">
+                        <div class="solutions__icon-wrapper"><i class="ri-key-2-line solutions__icon"></i></div>
+                        <h3 class="solutions__title">Segurança de Senhas</h3>
+                        <p class="solutions__description-card">Gerenciamento e fortalecimento das suas credenciais para evitar acessos não autorizados.</p>
+                        <a href="info/info.html" class="button button--ghost button--small">Saber Mais</a>
+                    </div>
+                </article>
+                <article class="solutions__card">
+                     <div class="solutions__card-content">
+                        <div class="solutions__icon-wrapper"><i class="ri-shield-user-line solutions__icon"></i></div>
+                        <h3 class="solutions__title">Dados Pessoais</h3>
+                        <p class="solutions__description-card">Salvaguarda de informações sensíveis e pessoais contra violações e uso indevido.</p>
+                        <a href="info/info.html" class="button button--ghost button--small">Saber Mais</a>
+                    </div>
+                </article>
+                <article class="solutions__card">
+                    <div class="solutions__card-content">
+                        <div class="solutions__icon-wrapper"><i class="ri-database-2-line solutions__icon"></i></div>
+                        <h3 class="solutions__title">Segurança de Servidores</h3>
+                        <p class="solutions__description-card">Defesa da infraestrutura central do seu sistema contra ataques e vulnerabilidades.</p>
+                        <a href="info/info.html" class="button button--ghost button--small">Saber Mais</a>
+                    </div>
+                </article>
+                <article class="solutions__card">
+                    <div class="solutions__card-content">
+                        <div class="solutions__icon-wrapper"><i class="ri-file-shield-2-line solutions__icon"></i></div>
+                        <h3 class="solutions__title">Segurança de Arquivos</h3>
+                        <p class="solutions__description-card">Garantia de que seus documentos e arquivos importantes estejam seguros e íntegros.</p>
+                        <a href="info/info.html" class="button button--ghost button--small">Saber Mais</a>
+                    </div>
+                </article>
+                <article class="solutions__card">
+                    <div class="solutions__card-content">
+                        <div class="solutions__icon-wrapper"><i class="ri-global-line solutions__icon"></i></div>
+                        <h3 class="solutions__title">Segurança de Websites</h3>
+                        <p class="solutions__description-card"> Proteção para sua página na internet contra ameaças online, garantindo a confiança de seus usuários</p>
+                        <a href="info/info.html" class="button button--ghost button--small">Saber Mais</a>
+                    </div>
+                </article>
+            </div>
+             <!-- FIM SERVIÇOS -->
+
+             <!-- QUIZ E QUESTIONÁRIO -->
+            <div class="solutions__cta-group">
+                <div class="solutions__cta container">
+                    <h3> <i class="ri-question-answer-line" style="padding-right: 15px;"></i>  Quizzes e Questionários</h3>
+                    <p>Treine seus conhecimentos a respeito de segurança digital.</p>
+                    <a href="info/info.html" class="button" style="margin: 0;">Treine Agora</a>
+                </div>
+                <!-- FIM QUIZ E QUESTIONÁRIO -->
+                
+                <!-- CRIPTOGRAFIA -->
+                <div class="solutions__cta container">
+                    <h3><i class="ri-code-line" style="padding-right: 15px;"></i> Criptografia</h3>
+                    <p>Conheça e aprenda algumas técnicas de criptografia.</p>
+                    <a href="criptografia/criptografia.html" class="button" style="margin: 0;">Conheça!</a>
+                </div>
+            </div>
+            <!-- FIM CRIPTOGRAFIA -->
+
+        </section>
+
+        <section class="testimonials section">
+            <h2 class="section__title">DEPOIMENTOS DE USUÁRIOS</h2>
+            <hr class="section__divider">
+
+            <div class="testimonials__container container grid">
+                <div class="testimonials__card">
+                    <i class="ri-double-quotes-l testimonials__quote"></i>
+                    <div class="testimonials__stars">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                    </div>
+                    <h3 class="testimonials__title">Referência em cibersegurança com excelência técnica e humana</h3>
+                    <p class="testimonials__description">A empresa demonstra maestria na resolução de desafios complexos em segurança da informação. Possui um ambiente acolhedor, com uma equipe multidisciplinar altamente capacitada e uma cultura voltada à inovação e proteção de dados.</p>
+                    <div class="testimonials__author" style="margin-top: 2.75rem;">
+                        <img src="./assets/pessoa2.jpg" alt="Avatar Hanna Sajira">
+                        <div class="testimonials__author-info">
+                            <h4>Hanna Sajira</h4>
+                            <span>CEO KeepFund.it</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials__card">
+                    <i class="ri-double-quotes-l testimonials__quote"></i>
+                    <div class="testimonials__stars">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                    </div>
+                    <h3 class="testimonials__title">Equipe altamente qualificada, entrega ágil e parceria sólida</h3>
+                    <p class="testimonials__description">A colaboração com esta empresa tem sido sinônimo de excelência operacional. A equipe demonstra domínio técnico, proatividade e uma postura colaborativa rara no mercado. Estão sempre atualizados com as melhores práticas e tecnologias, entregando soluções eficazes com agilidade e empatia. </p>
+                    <div class="testimonials__author">
+                        <img src="./assets/pessoa1.jpg" alt="Avatar Albert Carls">
+                        <div class="testimonials__author-info">
+                            <h4>Albert Carls</h4>
+                            <span>CEO HappyPlay.co</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="cta section">
+        <div class="cta__container container">
+            <div class="cta__left">
+                <h2 class="section__title">Blindamos Seu Negócio com Cibersegurança</h2>
+                <p class="cta__description">Protegemos sua empresa com tecnologia de ponta, Inteligência Artificial e estratégias personalizadas para garantir confiança, segurança e continuidade operacional.</p>
+                <a href="contato/contato.html" class="button">Contate-nos</a>
+            </div>
+            <div class="cta__right">
+                <div class="cta__item">
+                    <h4>Prevenção Proativa de Ameaças</h4>
+                    <p>Identificamos e bloqueamos ameaças em tempo real com sistemas integrados e automação inteligente, garantindo continuidade e tranquilidade operacional.</p>
+                </div>
+                <div class="cta__item">
+                    <h4>Blindagem Completa de Sites e Sistemas</h4>
+                    <p>Protegemos seus sites contra ataques de hackers com antivírus avançado, firewall, criptografia e segurança de rede.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="index.html" class="footer__logo">OnionShield</a>
+                <p class="footer__description" style="margin-top: 0.5rem;">Soluções de segurança integradas para sua vida, sua empresa e sua tranquilidade. <br><br>
+                Nos acompanhe em nossas redes:</p>
+                <div class="footer__social">
+                    <abbr title="Chatbot">
+                        <a href="#" class="footer__social-link"><i class="ri-whatsapp-line"></i></a>
+                    </abbr>
+                    <abbr title="Instagram">
+                        <a href="#" class="footer__social-link"><i class="ri-instagram-line"></i></a>
+                    </abbr>
+                    <abbr title="Github">
+                        <a href="https://github.com/gasbriel07sm/Projeto_Integrador" class="footer__social-link"><i class="ri-github-fill"></i></a>
+                    </abbr>
+                    <abbr title="Contato">
+                        <a href="contato/contato.html" class="footer__social-link"><i class="ri-mail-line"></i></a>
+                    </abbr>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Links Rápidos</h3>
+                <ul class="footer__links">
+                    <li><a href="sobre.html" class="footer__link">Sobre</a></li>
+                    <li><a href="info/info.html" class="footer__link">Informações</a></li>
+                    <li><a href="criptografia/criptografia.html" class="footer__link">Criptografia</a></li>
+                    <li><a href="contato/contato.html" class="footer__link">Contato</a></li>
+                    <li><a href="login/login.html" class="footer__link">Login</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Nosso Grupo</h3>
+                <ul class="footer__links">
+                    <li>Gabriel de Souza Miranda</li>
+                    <li>Luiz Gustavo</li>
+                    <li>Willian Kenner</li>
+                    <li>Gabriel de Sousa Gomes</li>
+                    <li>Maicon</li>
+                    <li>Sávio Honorato</li>
+                    <li>Gabriel Carvalho</li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Inscreva-se</h3>
+                <p class="footer__description">Receba notícias e atualizações constantes de nossos serviços.</p>
+                <form action="" class="footer__form">
+                    <input type="email" placeholder="Seu email..." class="footer__input">
+                    <button class="button">Inscrever</button>
+                </form>
+            </div>
+        </div>
+        <p class="footer__copy">&#169; OnionShield. Todos os direitos reservados.</p>
+    </footer>
+<!-- FIM FOOTER -->
+  
+  <script src="main.js"></script>
+</body>
+</html>

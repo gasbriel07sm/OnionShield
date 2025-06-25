@@ -1,0 +1,6 @@
+@ApiDaSprint04_HostAddress = http://localhost:5020
+
+GET {{ApiDaSprint04_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

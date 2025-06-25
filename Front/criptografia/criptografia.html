@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OnionShield - Ferramentas de Criptografia</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="cripto.css">
+</head>
+<body>
+<!-- HEADER -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="../index.html" class="nav__logo">
+                    <img src="../assets/logo branca.png" alt=""> OnionShield
+                </a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__burger"></i>
+                    <i class="ri-close-line nav__close"></i>
+                </div>
+            </div>
+            <!--============ NAV MENU ============-->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="../index.html" class="nav__link">Home</a></li>
+                    <!--============ DROPDOWN 1 ============-->
+                    <li class="dropdown__item">
+                        <a href="info.html" class="nav__link">
+                            Informações <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </a>
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="../info/content/conteudo.html" class="dropdown__link">
+                                    <i class="ri-bookmark-line"></i> Conteúdo
+                                </a>
+                            </li>
+                            <!--=============== DROPDOWN SUBMENU ===============-->
+                            <li class="dropdown__subitem">
+                                <div class="dropdown__link">
+                                    <i class="ri-survey-line"></i> Questionários <i class="ri-add-line dropdown__add"></i>
+                                </div>
+                                <ul class="dropdown__submenu">
+                                    <li>
+                                        <a href="../info/quiz/quiz1/quiz1.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Quiz 1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../info/quiz/quiz2/quiz2.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Quiz 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../info/quiz/quiz3/quiz3.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Quiz 3
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../info/quiz/quiz4/quiz4.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Quiz 4
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../info/quiz/quiz5/quiz5.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Quiz 5
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../info/source/pesquisa.html" class="dropdown__link">
+                                    <i class="ri-search-line"></i> Pesquisa
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--============ DROPDOWN 2 ============-->
+                    <li class="dropdown__item">
+                        <a href="criptografia.html" class="nav__link">
+                            Criptografia <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </a>
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="medidor_senha/medidor_senha.html" class="dropdown__link">
+                                    <i class="ri-alarm-warning-line"></i> Medidor de Força
+                                </a>
+                            </li>
+                            <li>
+                                <a href="gerador_senha/gerador_senha.html" class="dropdown__link">
+                                    <i class="ri-key-2-line"></i> Gerador de Senhas
+                                </a>
+                            </li>
+                            <li>
+                                <a href="criptografia_simetrica/criptografia_simetrica.html" class="dropdown__link">
+                                    <i class="ri-lock-password-line"></i> Simétrica
+                                </a>
+                            </li>
+                            <li>
+                                <a href="hashing/hashing.html" class="dropdown__link">
+                                    <i class="ri-terminal-line"></i> Hashing
+                                </a>
+                            </li>
+                            <li>
+                                <a href="analise_url/analise_url.html" class="dropdown__link">
+                                    <i class="ri-qr-scan-2-line"></i> Análise de URL
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="../sobre.html" class="nav__link">Sobre</a></li>
+                    <li><a href="../contato/contato.html" class="nav__link">Contato</a></li>
+                    <li class="dropdown__item" id="login-area" style="display: flex">
+                        <a href="../login/login.html" class="nav__link">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+<!-- FIM HEADER -->
+    <main class="main">
+        <section class="section">
+            <div class="main-content container" style="margin-top: 2rem;">
+
+                <article class="tool-card" >
+                    <div class="tool-image"><img src="./assets/imagem1.jpg" alt="Ilustração de um cadeado com biometria"></div>
+                    <div class="tool-content">
+                        <h2>Medidor de Força de Senha</h2>
+                        <p class="description">Pense nisto como um "termômetro" para sua senha. Ele mostra em tempo real o quão difícil seria para um invasor descobri-la.</p>
+                        <div class="password-container">
+                            <input type="password" id="password-input" placeholder="Digite sua senha aqui..."" >
+                            <i class="ri-eye-line" id="toggle-password"></i>
+                        </div>
+                        <div class="strength-meter" ><div class="strength-bar" id="strength-bar"></div></div>
+                        <p class="strength-text" id="strength-text"></p>
+                        <div class="strength-criteria" id="strength-criteria">
+                            <div class="criteria-item invalid" id="length-criteria"><i class="ri-close-circle-line"></i> Pelo menos 12 caracteres</div>
+                            <div class="criteria-item invalid" id="uppercase-criteria"><i class="ri-close-circle-line"></i> Contém letras maiúsculas (A-Z)</div>
+                            <div class="criteria-item invalid" id="number-criteria"><i class="ri-close-circle-line"></i> Contém números (0-9)</div>
+                            <div class="criteria-item invalid" id="symbol-criteria"><i class="ri-close-circle-line"></i> Contém símbolos (!@#$%)</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tool-card reverse">
+                    <div class="tool-image" style="height: 24rem;"><img src="./assets/img2.jpg" alt="Ilustração de um robô gerando senhas"></div>
+                    <div class="tool-content">
+                        <h2>Gerador de Senhas Seguras</h2>
+                        <p class="description">Cansado de inventar senhas? Deixe que nosso robô crie uma para você! Ele gera senhas fortes e aleatórias, difíceis de adivinhar.</p>
+                        <div class="form-group">
+                            <label for="password-length">Tamanho da Senha: <span id="length-value">16</span></label>
+                            <input type="range" id="password-length" min="8" max="32" value="16">
+                        </div>
+                        <div class="checkbox-group" style="margin-bottom: 1rem;">
+                            <label><input type="checkbox" id="include-uppercase" checked> Maiúsculas</label>
+                            <label><input type="checkbox" id="include-numbers" checked> Números</label>
+                            <label><input type="checkbox" id="include-symbols" checked> Símbolos</label>
+                        </div>
+                        <div class="generated-password-container">
+                            <input type="text" id="generated-password" readonly placeholder="Sua senha segura aparecerá aqui...">
+                            <button id="copy-btn" title="Copiar"><i class="ri-file-copy-line"></i></button>
+                        </div>
+                        <button id="generate-btn" class="button">Gerar Nova Senha <i class="ri-refresh-line"></i></button>
+                    </div>
+                </article>
+
+                <article class="tool-card">
+                    <div class="tool-image"><img src="./assets/img3.jpg" alt="Ilustração de código criptografado"></div>
+                    <div class="tool-content">
+                        <h2>Criptografia Simétrica (AES)</h2>
+                        <p class="description">Imagine escrever uma carta com "tinta invisível". Apenas quem tem a "caneta especial" (a chave secreta) consegue revelar o texto.</p>
+                        <div class="form-group">
+                            <label for="plain-text">Texto Original:</label>
+                            <textarea id="plain-text" rows="3" placeholder="Digite o texto para criptografar..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="secret-key">Chave Secreta:</label>
+                            <input type="password" id="secret-key" placeholder="Insira uma chave secreta">
+                        </div>
+                        <div class="button-group">
+                            <button id="encrypt-btn" class="button">Criptografar <i class="ri-lock-line"></i></button>
+                            <button id="decrypt-btn" class="button button--ghost">Descriptografar <i class="ri-lock-unlock-line"></i></button>
+                        </div>
+                        <div class="form-group">
+                            <label for="cipher-text" style="margin-bottom: 1rem; margin-top: 1rem;">Texto Criptografado:</label>
+                            <textarea id="cipher-text" rows="3" placeholder="O resultado aparecerá aqui..." readonly></textarea>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tool-card reverse">
+                    <div class="tool-image"><img src="./assets/img4.jpg" alt="Ilustração de um liquidificador com código saindo"></div>
+                    <div class="tool-content">
+                        <h2>Demonstrador de Hashing</h2>
+                        <p class="description">Pense no hashing como um "liquidificador de dados". Você coloca uma maçã (sua senha) e obtém suco (o hash). É impossível transformar o suco de volta na maçã.</p>
+                        <div class="form-group">
+                            <label for="hash-input">Texto de Entrada:</label>
+                            <input type="text" id="hash-input" placeholder="Digite qualquer coisa...">
+                        </div>
+                        <div class="form-group">
+                            <label for="hash-algorithm">Algoritmo:</label>
+                            <select id="hash-algorithm">
+                                <option value="SHA256" selected>SHA-256</option>
+                                <option value="SHA512">SHA-512</option>
+                                <option value="MD5">MD5 (Inseguro)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="hash-output">Hash Gerado:</label>
+                            <textarea id="hash-output" class="hash-output-box" readonly></textarea>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tool-card">
+                    <div class="tool-image"><img src="./assets/img5.jpg" alt="Lupa analisando uma URL"></div>
+                    <div class="tool-content">
+                        <h2>Analisador de Segurança de URL</h2>
+                        <p class="description">Recebeu um link suspeito? Cole-o aqui. Nossa ferramenta age como um detetive, verificando se o link usa uma conexão segura (HTTPS).</p>
+                        <div class="form-group">
+                            <label for="url-input">Cole a URL para análise:</label>
+                            <input type="text" id="url-input" placeholder="https://www.exemplo.com.br">
+                        </div>
+                        <button id="analyze-url-btn" class="button">Analisar URL <i class="ri-search-eye-line"></i></button>
+                        <div id="url-results" class="results-box"></div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="../index.html" class="footer__logo">OnionShield</a>
+                <p class="footer__description" style="margin-top: 1rem;">Protegendo seu mundo digital com soluções de cibersegurança de ponta.</p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" class="footer__social-link"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="footer__social-link"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#" class="footer__social-link"><i class="ri-linkedin-box-line"></i></a>
+                </div>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">Links Rápidos</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Sobre</a></li>
+                    <li><a href="#" class="footer__link">Nossos Serviços</a></li>
+                    <li><a href="#" class="footer__link">Carreira</a></li>
+                    <li><a href="../contato/contato.html" class="footer__link">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">Nosso Escritório</h3>
+                <ul class="footer__links">
+                    <li>Sistemas da Informação</li>
+                    <li>Uniaraxá, Sala 3C01</li><br>
+                    <li>Contato 1: (XX) XXXXX-XXXX</li>
+                    <li>Contato 2: (XX) XXXXX-XXXX</li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">Inscreva-se</h3>
+                <p class="footer__description">Receba notícias e dicas de segurança diretamente no seu email.</p>
+                <form action="" class="footer__form">
+                    <input type="email" placeholder="Seu email" class="footer__input">
+                    <button class="button">Inscrever</button>
+                </form>
+            </div>
+        </div>
+        <p class="footer__copy">&#169; OnionShield. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+    <script src="cripto.js"></script>
+    <script src="../main.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questionário 1 - OnionShield</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+  <link rel="stylesheet" href="../quiz.css">
+  <link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<!-- HEADER -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="../../../index.html" class="nav__logo">
+                    <img src="../../../assets/logo branca.png" alt=""> OnionShield
+                </a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__burger"></i>
+                    <i class="ri-close-line nav__close"></i>
+                </div>
+            </div>
+            <!--============ NAV MENU ============-->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="../../../index.html" class="nav__link">Home</a></li>
+                    <!--============ DROPDOWN 1 ============-->
+                    <li class="dropdown__item">
+                        <a href="../../info.html" class="nav__link">
+                        Informações <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </a>
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="../../content/conteudo.html" class="dropdown__link">
+                                    <i class="ri-bookmark-line"></i> Conteúdo
+                                </a>
+                            </li>
+                            <!--=============== DROPDOWN SUBMENU ===============-->
+                            <li class="dropdown__subitem">
+                                <div class="dropdown__link">
+                                    <i class="ri-survey-line"></i> Questionários <i class="ri-add-line dropdown__add"></i>
+                                </div>
+                                <ul class="dropdown__submenu">
+                                    <li>
+                                        <a href="quiz1.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../quiz2/quiz2.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../quiz3/quiz3.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 3
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../quiz4/quiz4.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 4
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../quiz5/quiz5.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 5
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../../source/pesquisa.html" class="dropdown__link">
+                                    <i class="ri-search-line"></i> Pesquisa
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--============ DROPDOWN 2 ============-->
+                    <li class="dropdown__item">
+                        <a href="../../../criptografia/criptografia.html" class="nav__link">
+                            Criptografia <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </a>
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="../../../criptografia/medidor_senha/medidor_senha.html" class="dropdown__link">
+                                    <i class="ri-alarm-warning-line"></i> Medidor de Força
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../../criptografia/gerador_senha/gerador_senha.html" class="dropdown__link">
+                                    <i class="ri-key-2-line"></i> Gerador de Senhas
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../../criptografia/criptografia_simetrica/criptografia_simetrica.html" class="dropdown__link">
+                                    <i class="ri-lock-password-line"></i> Simétrica
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../../criptografia/hashing/hashing.html" class="dropdown__link">
+                                    <i class="ri-terminal-line"></i> Hashing
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../../criptografia/analise_url/analise_url.html" class="dropdown__link">
+                                    <i class="ri-qr-scan-2-line"></i> Análise de URL
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../sobre.html" class="nav__link">Sobre</a></li>
+                    <li><a href="../../../contato/contato.html" class="nav__link">Contato</a></li>
+                    <li class="dropdown__item" id="login-area" style="display: flex">
+                        <a href="../../../login.html" class="nav__link">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+<!-- FIM HEADER -->
+  <div class="quiz-container">
+    <div class="quiz-header">
+      <h1>Questionário 1 - GERAL</h1>
+      <div id="timer-display">Tempo: <span>60</span>s</div>
+    </div>
+    
+    <form id="quiz-form">
+      <div class="questions-wrapper">
+
+        <div class="question active">
+          <p>1. Qual é uma boa prática para criar senhas seguras?</p>
+          <label><input type="radio" name="q1" value="a"> Usar datas de aniversário ou nomes de familiares</label>
+          <label><input type="radio" name="q1" value="b"> Usar combinações longas de letras maiúsculas, minúsculas, números e símbolos</label>
+          <label><input type="radio" name="q1" value="c"> Usar a mesma senha para várias contas</label>
+          <label><input type="radio" name="q1" value="d"> Anotar a senha em um post-it colado no monitor</label>
+        </div>
+
+        <div class="question">
+          <p>2. O que significa "fazer backup" dos seus dados?</p>
+          <label><input type="radio" name="q2" value="a"> Excluir arquivos antigos para liberar espaço</label>
+          <label><input type="radio" name="q2" value="b"> Criptografar todos os arquivos do computador</label>
+          <label><input type="radio" name="q2" value="c"> Criar uma cópia dos dados em outro local (disco externo, nuvem) para recuperação</label>
+          <label><input type="radio" name="q2" value="d"> Instalar um antivírus atualizado</label>
+        </div>
+
+        <div class="question">
+            <p>3. Por que é importante manter o software (sistema operacional, navegador, aplicativos) atualizado?</p>
+            <label><input type="radio" name="q3" value="a"> Para obter novos recursos visuais</label>
+            <label><input type="radio" name="q3" value="b"> As atualizações frequentemente corrigem vulnerabilidades de segurança</label>
+            <label><input type="radio" name="q3" value="c"> Para reduzir o consumo de bateria do dispositivo</label>
+            <label><input type="radio" name="q3" value="d"> Para aumentar a velocidade de download</label>
+        </div>
+
+        <div class="question">
+          <p>4. O que é autenticação de dois fatores (2FA)?</p>
+          <label><input type="radio" name="q4" value="a"> Usar duas senhas diferentes para a mesma conta</label>
+          <label><input type="radio" name="q4" value="b"> Um método de segurança que exige duas formas de verificação (ex: senha + código no celular) para acessar uma conta</label>
+          <label><input type="radio" name="q4" value="c"> Fazer login em um site duas vezes seguidas</label>
+          <label><input type="radio" name="q4" value="d"> Um tipo de firewall avançado</label>
+        </div>
+
+        <div class="question">
+          <p>5. É seguro clicar em links ou baixar anexos de e-mails de remetentes desconhecidos?</p>
+          <label><input type="radio" name="q5" value="a"> Sim, se o antivírus estiver ativado</label>
+          <label><input type="radio" name="q5" value="b"> Sim, se o e-mail parecer importante</label>
+          <label><input type="radio" name="q5" value="c"> Não, pois podem conter malware ou levar a sites de phishing.</label>
+          <label><input type="radio" name="q5" value="d"> Apenas se o link for curto</label>
+        </div>
+
+        <div class="question">
+          <p>6. O que é o "Princípio do Menor Privilégio"?</p>
+          <label><input type="radio" name="q6" value="a"> Dar aos usuários os privilégios mais altos possíveis para facilitar o trabalho</label>
+          <label><input type="radio" name="q6" value="b"> Conceder aos usuários apenas as permissões estritamente necessárias para realizar suas tarefas.</label>
+          <label><input type="radio" name="q6" value="c"> Revogar todos os privilégios em caso de incidente</label>
+          <label><input type="radio" name="q6" value="d"> Um princípio de design de software para minimizar o uso de recursos</label>
+        </div>
+
+        <div class="question">
+          <p>7. Qual o objetivo de uma Política de Segurança da Informação (PSI) em uma organização?</p>
+          <label><input type="radio" name="q7" value="a"> Listar todos os softwares permitidos na empresa</label>
+          <label><input type="radio" name="q7" value="b"> Definir as regras, diretrizes e responsabilidades para proteger os ativos de informação da organização</label>
+          <label><input type="radio" name="q7" value="c"> Detalhar o plano de marketing da empresa</label>
+          <label><input type="radio" name="q7" value="d"> Servir como manual de usuário para o sistema operacional</label>
+        </div>
+
+        <div class="question">
+          <p>8. O que é Classificação da Informação?</p>
+          <label><input type="radio" name="q8" value="a"> Organizar arquivos em pastas por ordem alfabética</label>
+          <label><input type="radio" name="q8" value="b"> Categorizar a informação com base em seu nível de sensibilidade e criticidade para aplicar controles de segurança apropriados</label>
+          <label><input type="radio" name="q8" value="c"> Fazer backup da informação em diferentes formatos</label>
+          <label><input type="radio" name="q8" value="d"> Indexar informações para facilitar a busca</label>
+        </div>
+
+        <div class="question">
+          <p>9. Qual a primeira fase típica de um Plano de Resposta a Incidentes?</p>
+          <label><input type="radio" name="q9" value="a"> Erradicação (eliminar a causa do incidente)</label>
+          <label><input type="radio" name="q9" value="b"> Recuperação (restaurar sistemas)</label>
+          <label><input type="radio" name="q9" value="c"> Preparação (definir planos, treinar equipe, ter ferramentas prontas)</label>
+          <label><input type="radio" name="q9" value="d"> Análise (investigar o que aconteceu)</label>
+        </div>
+
+        <div class="question">
+          <p>10. O que é Criptografia Simétrica?</p>
+          <label><input type="radio" name="q10" value="a"> Usa um par de chaves: uma pública para criptografar e uma privada para descriptografar</label>
+          <label><input type="radio" name="q10" value="b"> Usa a mesma chave tanto para criptografar quanto para descriptografar a informação</label>
+          <label><input type="radio" name="q10" value="c"> Um método para comprimir dados sem perda de informação</label>
+          <label><input type="radio" name="q10" value="d"> Um algoritmo usado exclusivamente para gerar hashes.</label>
+        </div>
+
+        <div class="question">
+          <p>11. Qual a diferença entre Avaliação de Vulnerabilidades e Teste de Intrusão (Pen Test)?</p>
+          <label><input type="radio" name="q11" value="a"> São termos sinônimos para a mesma atividade</label>
+          <label><input type="radio" name="q11" value="b"> Avaliação de Vulnerabilidades identifica falhas conhecidas (geralmente automatizada), enquanto o Pen Test simula ativamente um ataque para explorar essas falhas e avaliar o impacto real</label>
+          <label><input type="radio" name="q11" value="c"> Pen Test foca apenas em redes internas, Avaliação de Vulnerabilidades em redes externas</label>
+          <label><input type="radio" name="q11" value="d"> Avaliação de Vulnerabilidades é feita por hackers maliciosos, Pen Test por equipes internas.</label>
+        </div>
+
+        <div class="question">
+          <p>12. O que significa o conceito de "Defesa em Profundidade" (Defense in Depth)?</p>
+          <label><input type="radio" name="q12" value="a"> Usar apenas um único controle de segurança muito forte</label>
+          <label><input type="radio" name="q12" value="b"> Implementar múltiplas camadas de controles de segurança (físicos, técnicos, administrativos) para que a falha de um controle não comprometa todo o sistema</label>
+          <label><input type="radio" name="q12" value="c"> Focar a segurança apenas nos dados mais críticos</label>
+          <label><input type="radio" name="q12" value="d"> Uma técnica específica de criptografia de banco de dados</label>
+        </div>
+
+        <div class="question">
+          <p>13. Qual o propósito de um framework de segurança como o NIST Cybersecurity Framework ou a ISO 27001?</p>
+          <label><input type="radio" name="q13" value="a"> São softwares antivírus específicos para grandes empresas</label>
+          <label><input type="radio" name="q13" value="b"> São regulamentações legais obrigatórias em todos os países</label>
+          <label><input type="radio" name="q13" value="c"> Fornecem um conjunto de padrões, diretrizes e melhores práticas para ajudar as organizações a gerenciar e reduzir o risco de cibersegurança</label>
+          <label><input type="radio" name="q13" value="d"> São protocolos de comunicação segura para a IoT</label>
+        </div>
+
+        <div class="question">
+          <p>14. O que é Criptografia Assimétrica (ou de Chave Pública)?</p>
+          <label><input type="radio" name="q14" value="a"> Usa a mesma chave secreta para criptografar e descriptografar</label>
+          <label><input type="radio" name="q14" value="b"> Usa um par de chaves matematicamente relacionadas: uma chave pública (para criptografar ou verificar assinatura) e uma chave privada (para descriptografar ou assinar)</label>
+          <label><input type="radio" name="q14" value="c"> É um método de hashing usado para verificar a integridade dos dados</label>
+          <label><input type="radio" name="q14" value="d"> É usada apenas para comprimir arquivos grandes</label>
+        </div>
+
+        <div class="question">
+          <p>15. No contexto de Gerenciamento de Riscos de Segurança da Informação, o que significa "Aceitação do Risco"?</p>
+          <label><input type="radio" name="q15" value="a"> Ignorar completamente um risco identificado</label>
+          <label><input type="radio" name="q15" value="b"> Implementar controles para eliminar totalmente o risco</label>
+          <label><input type="radio" name="q15" value="c"> Transferir o risco para terceiros (ex: seguro)</label>
+          <label><input type="radio" name="q15" value="d"> Uma decisão informada de não tomar ações para mitigar um risco específico, geralmente porque o custo da mitigação supera o impacto potencial do risco</label>
+        </div>
+
+      </div>
+
+      <div class="quiz-footer">
+        <button type="button" id="next-btn">Próxima Pergunta</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="../../../main.js"></script>
+  <script src="quiz1.js"></script>
+</body>
+</html>

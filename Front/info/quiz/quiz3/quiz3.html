@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário 3</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="../quiz.css">
+</head>
+<body>
+<!-- HEADER -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="../../../index.html" class="nav__logo">
+                    <img src="../../../assets/logo branca.png" alt=""> OnionShield
+                </a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__burger"></i>
+                    <i class="ri-close-line nav__close"></i>
+                </div>
+            </div>
+            <!--============ NAV MENU ============-->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="../../../index.html" class="nav__link">Home</a></li>
+                    <!--============ DROPDOWN 1 ============-->
+                    <li class="dropdown__item">
+                        <a href="../../info.html" class="nav__link">
+                        Informações <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </a>
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="../../content/conteudo.html" class="dropdown__link">
+                                    <i class="ri-bookmark-line"></i> Conteúdo
+                                </a>
+                            </li>
+                            <!--=============== DROPDOWN SUBMENU ===============-->
+                            <li class="dropdown__subitem">
+                                <div class="dropdown__link">
+                                    <i class="ri-survey-line"></i> Questionários <i class="ri-add-line dropdown__add"></i>
+                                </div>
+                                <ul class="dropdown__submenu">
+                                    <li>
+                                        <a href="../quiz1.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../quiz2/quiz2.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="quiz3.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 3
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../quiz4/quiz4.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 4
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../quiz5/quiz5.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 5
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../../source/pesquisa.html" class="dropdown__link">
+                                    <i class="ri-search-line"></i> Pesquisa
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--============ DROPDOWN 2 ============-->
+                    <li class="dropdown__item">
+                        <a href="../../../criptografia/criptografia.html" class="nav__link">
+                            Criptografia <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </a>
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="../../../criptografia/medidor_senha/medidor_senha.html" class="dropdown__link">
+                                    <i class="ri-alarm-warning-line"></i> Medidor de Força
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../../criptografia/gerador_senha/gerador_senha.html" class="dropdown__link">
+                                    <i class="ri-key-2-line"></i> Gerador de Senhas
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../../criptografia/criptografia_simetrica/criptografia_simetrica.html" class="dropdown__link">
+                                    <i class="ri-lock-password-line"></i> Simétrica
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../../criptografia/hashing/hashing.html" class="dropdown__link">
+                                    <i class="ri-terminal-line"></i> Hashing
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../../criptografia/analise_url/analise_url.html" class="dropdown__link">
+                                    <i class="ri-qr-scan-2-line"></i> Análise de URL
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../sobre.html" class="nav__link">Sobre</a></li>
+                    <li><a href="../../../contato/contato.html" class="nav__link">Contato</a></li>
+                    <li class="dropdown__item" id="login-area" style="display: flex">
+                        <a href="../../../login.html" class="nav__link">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+<!-- FIM HEADER -->
+ <div class="quiz-container">
+    <div class="quiz-header">
+      <h1>Questionário 3 - Ataques Cibernéticos</h1>
+      <div id="timer-display">Tempo: <span>60</span>s</div>
+    </div>
+    
+    <form id="quiz-form">
+      <div class="questions-wrapper">
+
+        <div class="question active">
+          <p>1. O que é Phishing?</p>
+          <label><input type="radio" name="q1" value="a"> Um tipo de hardware de rede.</label>
+          <label><input type="radio" name="q1" value="b"> Um software que protege contra vírus.</label>
+          <label><input type="radio" name="q1" value="c"> Uma tentativa de enganar usuários para obter informações sensíveis (senhas, dados bancários).</label>
+          <label><input type="radio" name="q1" value="d"> Uma técnica de criptografia de dados.</label>
+        </div>
+
+        <div class="question">
+          <p>2. Qual o objetivo principal de um vírus de computador?</p>
+          <label><input type="radio" name="q2" value="a"> Melhorar o desempenho do sistema.</label>
+          <label><input type="radio" name="q2" value="b"> Replicar-se e causar algum tipo de dano ou alteração não autorizada no sistema.</label>
+          <label><input type="radio" name="q2" value="c"> Fazer backup automático de arquivos importantes.</label>
+          <label><input type="radio" name="q2" value="d"> Monitorar o tráfego de rede para otimização.</label>
+        </div>
+
+        <div class="question">
+          <p>3. Malware é um termo geral para:</p>
+          <label><input type="radio" name="q3" value="a"> Qualquer tipo de equipamento de segurança física.</label>
+          <label><input type="radio" name="q3" value="b"> Softwares projetados para proteger computadores.</label>
+          <label><input type="radio" name="q3" value="c"> Softwares maliciosos projetados para infiltrar ou danificar um sistema.</label>
+          <label><input type="radio" name="q3" value="d"> Protocolos de comunicação segura na internet.</label>
+        </div>
+
+        <div class="question">
+          <p>4. O que significa a sigla DDoS?</p>
+          <label><input type="radio" name="q4" value="a"> Digital Data Operation System</label>
+          <label><input type="radio" name="q4" value="b"> Distributed Denial of Service (Negação de Serviço Distribuída)</label>
+          <label><input type="radio" name="q4" value="c"> Direct Digital Output Signal</label>
+          <label><input type="radio" name="q4" value="d"> Data Decryption Online Standard</label>
+        </div>
+
+        <div class="question">
+          <p>5. Qual destas ações é um exemplo de engenharia social?</p>
+          <label><input type="radio" name="q5" value="a"> Instalar um firewall na rede.</label>
+          <label><input type="radio" name="q5" value="b"> Usar força bruta para descobrir uma senha.</label>
+          <label><input type="radio" name="q5" value="c"> Ligar para um funcionário fingindo ser do suporte técnico para obter uma senha.</label>
+          <label><input type="radio" name="q5" value="d"> Explorar uma vulnerabilidade em um software desatualizado.</label>
+        </div>
+
+        <div class="question">
+          <p>6. Qual a principal diferença entre um vírus e um worm?</p>
+          <label><input type="radio" name="q6" value="a"> Vírus precisam de um programa hospedeiro para se espalhar, worms se propagam autonomamente pela rede.</label>
+          <label><input type="radio" name="q6" value="b"> Worms só afetam e-mails, vírus afetam arquivos executáveis.</label>
+          <label><input type="radio" name="q6" value="c"> Vírus roubam dados, worms apenas consomem banda de rede.</label>
+          <label><input type="radio" name="q6" value="d"> Worms são criados por hackers iniciantes, vírus por profissionais.</label>
+        </div>
+
+        <div class="question">
+          <p>7. O que um ataque de Ransomware tipicamente faz?</p>
+          <label><input type="radio" name="q7" value="a"> Rouba senhas de e-mail e redes sociais.</label>
+          <label><input type="radio" name="q7" value="b"> Intercepta comunicações de rede para espionagem.</label>
+          <label><input type="radio" name="q7" value="c"> Criptografa os arquivos da vítima e exige um resgate para liberá-los.</label>
+          <label><input type="radio" name="q7" value="d"> Instala barras de ferramentas indesejadas no navegador.</label>
+        </div>
+
+        <div class="question">
+          <p>8. Um ataque "Man-in-the-Middle" (MitM) consiste em:</p>
+          <label><input type="radio" name="q8" value="a"> Sobrecarregar um servidor com solicitações falsas.</label>
+          <label><input type="radio" name="q8" value="b"> Tentar adivinhar senhas usando um dicionário de palavras.</label>
+          <label><input type="radio" name="q8" value="c"> Interceptar secretamente a comunicação entre duas partes.</label>
+          <label><input type="radio" name="q8" value="d"> Injetar código malicioso em um site legítimo.</label>
+        </div>
+
+        <div class="question">
+          <p>9. O que é Spyware?</p>
+          <label><input type="radio" name="q9" value="a"> Um software que exibe anúncios indesejados.</label>
+          <label><input type="radio" name="q9" value="b"> Um programa que se disfarça de software legítimo (Cavalo de Troia).</label>
+          <label><input type="radio" name="q9" value="c"> Um tipo de malware que coleta informações sobre o usuário sem seu consentimento.</label>
+          <label><input type="radio" name="q9" value="d"> Um firewall que espiona conexões suspeitas.</label>
+        </div>
+
+        <div class="question">
+          <p>10. Qual técnica um invasor usaria para explorar falhas em aplicações web que manipulam entradas do usuário diretamente em comandos SQL?</p>
+          <label><input type="radio" name="q10" value="a"> Cross-Site Scripting (XSS)</label>
+          <label><input type="radio" name="q10" value="b"> SQL Injection</label>
+          <label><input type="radio" name="q10" value="c"> Session Hijacking</label>
+          <label><input type="radio" name="q10" value="d"> Buffer Overflow</label>
+        </div>
+
+        <div class="question">
+          <p>11. O que caracteriza uma vulnerabilidade "Zero-day"?</p>
+          <label><input type="radio" name="q11" value="a"> Uma falha de segurança que só pode ser explorada durante a noite.</label>
+          <label><input type="radio" name="q11" value="b"> Uma vulnerabilidade que afeta exclusivamente sistemas operacionais Windows.</label>
+          <label><input type="radio" name="q11" value="c"> Um ataque que leva menos de 24 horas para ser concluído com sucesso.</label>
+          <label><input type="radio" name="q11" value="d"> É uma falha de segurança desconhecida pelo fornecedor do software/hardware, para a qual ainda não existe correção oficial.</label>
+        </div>
+
+        <div class="question">
+          <p>12. Um Ataque Persistente Avançado (APT - Advanced Persistent Threat) diferencia-se de ataques comuns principalmente por:</p>
+          <label><input type="radio" name="q12" value="a"> Usar apenas ferramentas de código aberto.</label>
+          <label><input type="radio" name="q12" value="b"> Ser rápido e causar danos imediatos e visíveis.</label>
+          <label><input type="radio" name="q12" value="c"> Ser direcionado, furtivo, de longo prazo e geralmente patrocinado por nações ou grandes grupos.</label>
+          <label><input type="radio" name="q12" value="d"> Focar exclusivamente em roubo de identidade de pessoas físicas.</label>
+        </div>
+
+        <div class="question">
+          <p>13. Qual o propósito de um ataque de "Watering Hole"?</p>
+          <label><input type="radio" name="q13" value="a"> Inundar a rede da vítima com tráfego para negar serviço.</label>
+          <label><input type="radio" name="q13" value="b"> Envenenar o cache DNS para redirecionar usuários a sites falsos.</label>
+          <label><input type="radio" name="q13" value="c"> Comprometer sites legítimos frequentemente visitados por um grupo alvo específico, esperando infectá-los quando acessarem o site.</label>
+          <label><input type="radio" name="q13" value="d"> Criar pontos de acesso Wi-Fi falsos em locais públicos.</label>
+        </div>
+
+        <div class="question">
+          <p>14. Em um ataque de Cross-Site Scripting (XSS) refletido, onde o script malicioso é tipicamente executado?</p>
+          <label><input type="radio" name="q14" value="a"> No servidor web que hospeda a aplicação vulnerável.</label>
+          <label><input type="radio" name="q14" value="b"> No banco de dados da aplicação.</label>
+          <label><input type="radio" name="q14" value="c"> No navegador da vítima que clicou em um link malicioso.</label>
+          <label><input type="radio" name="q14" value="d"> No firewall da rede corporativa.</label>
+        </div>
+
+        <div class="question">
+          <p>15. Qual técnica de evasão pode ser usada por malware para evitar a detecção por sandboxes de análise?</p>
+          <label><input type="radio" name="q15" value="a"> Criptografar seu próprio código usando AES-256.</label>
+          <label><input type="radio" name="q15" value="b"> Verificar a presença de ferramentas de virtualização ou análise e se recusar a executar ou alterar seu comportamento.</label>
+          <label><input type="radio" name="q15" value="c"> Utilizar exclusivamente protocolos de comunicação não padrão.</label>
+          <label><input type="radio" name="q15" value="d"> Dividir seu código em múltiplos arquivos pequenos.</label>
+        </div>
+
+      </div>
+
+      <div class="quiz-footer">
+        <button type="button" id="next-btn">Próxima Pergunta</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="quiz3.js"></script>
+  <script src="../../../main.js"></script>
+</body>
+</html>

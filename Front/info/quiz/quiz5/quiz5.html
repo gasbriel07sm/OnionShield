@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../style.css">
+      <link rel="stylesheet" href="../quiz.css">
+</head>
+<body>
+<!-- HEADER -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="../../../index.html" class="nav__logo">
+                    <img src="../../../assets/logo branca.png" alt=""> OnionShield
+                </a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__burger"></i>
+                    <i class="ri-close-line nav__close"></i>
+                </div>
+            </div>
+            <!--============ NAV MENU ============-->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="../../../index.html" class="nav__link">Home</a></li>
+                    <!--============ DROPDOWN 1 ============-->
+                    <li class="dropdown__item">
+                        <a href="../../info.html" class="nav__link">
+                        Informações <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </a>
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="../../content/conteudo.html" class="dropdown__link">
+                                    <i class="ri-bookmark-line"></i> Conteúdo
+                                </a>
+                            </li>
+                            <!--=============== DROPDOWN SUBMENU ===============-->
+                            <li class="dropdown__subitem">
+                                <div class="dropdown__link">
+                                    <i class="ri-survey-line"></i> Questionários <i class="ri-add-line dropdown__add"></i>
+                                </div>
+                                <ul class="dropdown__submenu">
+                                    <li>
+                                        <a href="../quiz1.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../quiz2/quiz2.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../quiz3/quiz3.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 3
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../quiz4/quiz4.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 4
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="quiz5.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 5
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../../source/pesquisa.html" class="dropdown__link">
+                                    <i class="ri-search-line"></i> Pesquisa
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--============ DROPDOWN 2 ============-->
+                    <li class="dropdown__item">
+                        <a href="../../../criptografia/criptografia.html" class="nav__link">
+                            Criptografia <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </a>
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="../../../criptografia/medidor_senha/medidor_senha.html" class="dropdown__link">
+                                    <i class="ri-alarm-warning-line"></i> Medidor de Força
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../../criptografia/gerador_senha/gerador_senha.html" class="dropdown__link">
+                                    <i class="ri-key-2-line"></i> Gerador de Senhas
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../../criptografia/criptografia_simetrica/criptografia_simetrica.html" class="dropdown__link">
+                                    <i class="ri-lock-password-line"></i> Simétrica
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../../criptografia/hashing/hashing.html" class="dropdown__link">
+                                    <i class="ri-terminal-line"></i> Hashing
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../../criptografia/analise_url/analise_url.html" class="dropdown__link">
+                                    <i class="ri-qr-scan-2-line"></i> Análise de URL
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../sobre.html" class="nav__link">Sobre</a></li>
+                    <li><a href="../../../contato/contato.html" class="nav__link">Contato</a></li>
+                    <li class="dropdown__item" id="login-area" style="display: flex">
+                        <a href="../../../login.html" class="nav__link">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+<!-- FIM HEADER -->
+  <div class="quiz-container">
+    <div class="quiz-header">
+      <h1>Questionário 5 - Ferramentas de Segurança</h1>
+      <div id="timer-display">Tempo: <span>60</span>s</div>
+    </div>
+    
+    <form id="quiz-form">
+      <div class="questions-wrapper">
+
+        <div class="question active">
+          <p>1. Qual ferramenta é projetada para inspecionar o tráfego de rede e bloquear ou permitir pacotes com base em regras predefinidas?</p>
+          <label><input type="radio" name="q1" value="a"> Antivírus</label>
+          <label><input type="radio" name="q1" value="b"> Firewall</label>
+          <label><input type="radio" name="q1" value="c"> Backup</label>
+          <label><input type="radio" name="q1" value="d"> Criptografia</label>
+        </div>
+
+        <div class="question">
+          <p>2. Qual o principal propósito de um software Antivírus?</p>
+          <label><input type="radio" name="q2" value="a"> Criptografar arquivos importantes.</label>
+          <label><input type="radio" name="q2" value="b"> Detectar e remover malware de um computador.</label>
+          <label><input type="radio" name="q2" value="c"> Filtrar spam de e-mails.</label>
+          <label><input type="radio" name="q2" value="d"> Monitorar o uso da rede por aplicativos.</label>
+        </div>
+
+        <div class="question">
+          <p>3. Uma VPN (Virtual Private Network) é usada principalmente para:</p>
+          <label><input type="radio" name="q3" value="a"> Aumentar a velocidade da conexão com a internet.</label>
+          <label><input type="radio" name="q3" value="b"> Criar um túnel seguro e criptografado para comunicação através de redes públicas (como a internet).</label>
+          <label><input type="radio" name="q3" value="c"> Bloquear anúncios em sites.</label>
+          <label><input type="radio" name="q3" value="d"> Organizar arquivos no disco rígido.</label>
+        </div>
+
+        <div class="question">
+          <p>4. Qual ferramenta ajuda a prevenir que e-mails indesejados e potencialmente maliciosos (spam) cheguem à caixa de entrada do usuário?</p>
+          <label><input type="radio" name="q4" value="a"> Firewall</label>
+          <label><input type="radio" name="q4" value="b"> Filtro de Spam</label>
+          <label><input type="radio" name="q4" value="c"> IDS (Intrusion Detection System)</label>
+          <label><input type="radio" name="q4" value="d"> Scanner de Vulnerabilidades</label>
+        </div>
+
+        <div class="question">
+          <p>5. O que faz uma ferramenta de backup?</p>
+          <label><input type="radio" name="q5" value="a"> Detecta intrusões na rede em tempo real.</label>
+          <label><input type="radio" name="q5" value="b"> Cria cópias de segurança de dados para recuperação em caso de perda.</label>
+          <label><input type="radio" name="q5" value="c"> Analisa o código de aplicações em busca de falhas.</label>
+          <label><input type="radio" name="q5" value="d"> Controla o acesso físico a áreas restritas.</label>
+        </div>
+
+        <div class="question">
+          <p>6. Qual a diferença fundamental entre um IDS (Intrusion Detection System) e um IPS (Intrusion Prevention System)?</p>
+          <label><input type="radio" name="q6" value="a"> IDS apenas detecta e alerta sobre atividades suspeitas, IPS tenta bloqueá-las ativamente.</label>
+          <label><input type="radio" name="q6" value="b"> IPS apenas detecta, IDS tenta bloquear.</label>
+          <label><input type="radio" name="q6" value="c"> IDS é baseado em hardware, IPS é baseado em software.</label>
+          <label><input type="radio" name="q6" value="d"> IDS monitora a rede interna, IPS monitora a rede externa.</label>
+        </div>
+
+        <div class="question">
+          <p>7. Para que serve uma ferramenta SIEM (Security Information and Event Management)?</p>
+          <label><input type="radio" name="q7" value="a"> Apenas para fazer backup de logs de segurança.</label>
+          <label><input type="radio" name="q7" value="b"> Para agregar e correlacionar logs de diversas fontes (firewalls, servidores, IDS/IPS) para detectar incidentes e facilitar análises.</label>
+          <label><input type="radio" name="q7" value="c"> Para criptografar o tráfego de rede wireless.</label>
+          <label><input type="radio" name="q7" value="d"> Para escanear aplicativos web em busca de vulnerabilidades.</label>
+        </div>
+
+        <div class="question">
+          <p>8. O que um WAF (Web Application Firewall) protege especificamente?</p>
+          <label><input type="radio" name="q8" value="a"> A rede interna contra ataques externos.</label>
+          <label><input type="radio" name="q8" value="b"> Os computadores dos usuários contra vírus.</label>
+          <label><input type="radio" name="q8" value="c"> Aplicações web contra ataques como SQL Injection, XSS e outros ataques comuns à camada de aplicação.</label>
+          <label><input type="radio" name="q8" value="d"> O banco de dados contra acesso não autorizado.</label>
+        </div>
+
+        <div class="question">
+          <p>9. Qual o objetivo de um Scanner de Vulnerabilidades (ex: Nessus, OpenVAS)?</p>
+          <label><input type="radio" name="q9" value="a"> Remover malware já instalado em um sistema.</label>
+          <label><input type="radio" name="q9" value="b"> Identificar proativamente falhas de segurança conhecidas em sistemas, redes e aplicações.</label>
+          <label><input type="radio" name="q9" value="c"> Criptografar comunicações entre servidores.</label>
+          <label><input type="radio" name="q9" value="d"> Monitorar o comportamento dos usuários na rede.</label>
+        </div>
+
+        <div class="question">
+          <p>10. Ferramentas de DLP (Data Loss Prevention) são projetadas para:</p>
+          <label><input type="radio" name="q10" value="a"> Prevenir a perda de dados devido a falhas de hardware.</label>
+          <label><input type="radio" name="q10" value="b"> Detectar e prevenir a exfiltração (vazamento) de dados sensíveis da organização.</label>
+          <label><input type="radio" name="q10" value="c"> Otimizar o desempenho de bancos de dados.</label>
+          <label><input type="radio" name="q10" value="d"> Gerenciar as atualizações de software nos endpoints.</label>
+        </div>
+
+        <div class="question">
+          <p>11. O que diferencia uma solução EDR (Endpoint Detection and Response) de um antivírus tradicional?</p>
+          <label><input type="radio" name="q11" value="a"> EDR funciona apenas na rede, não no endpoint.</label>
+          <label><input type="radio" name="q11" value="b"> EDR foca apenas na prevenção, não na detecção ou resposta.</label>
+          <label><input type="radio" name="q11" value="c"> EDR oferece maior visibilidade sobre as atividades do endpoint, detecção avançada (comportamental, IA) e capacidades de resposta a incidentes (isolar host, investigar).</label>
+          <label><input type="radio" name="q11" value="d"> Antivírus tradicional é mais eficaz contra ameaças zero-day.</label>
+        </div>
+
+        <div class="question">
+          <p>12. Qual o papel de uma plataforma SOAR (Security Orchestration, Automation, and Response)?</p>
+          <label><input type="radio" name="q12" value="a"> Substituir completamente a necessidade de analistas de segurança.</label>
+          <label><input type="radio" name="q12" value="b"> Automatizar tarefas repetitivas de segurança e orquestrar a resposta a incidentes integrando diferentes ferramentas de segurança.</label>
+          <label><input type="radio" name="q12" value="c"> Funcionar como um honeypot para atrair atacantes.</label>
+          <label><input type="radio" name="q12" value="d"> Gerenciar certificados digitais e chaves de criptografia.</label>
+        </div>
+
+        <div class="question">
+          <p>13. Uma "Sandbox" no contexto de segurança é usada para:</p>
+          <label><input type="radio" name="q13" value="a"> Armazenar backups de forma segura.</label>
+          <label><input type="radio" name="q13" value="b"> Executar arquivos ou códigos suspeitos em um ambiente isolado e controlado para observar seu comportamento sem arriscar o sistema principal.</label>
+          <label><input type="radio" name="q13" value="c"> Criar redes virtuais privadas para desenvolvedores.</label>
+          <label><input type="radio" name="q13" value="d"> Analisar o tráfego de rede criptografado.</label>
+        </div>
+
+        <div class="question">
+          <p>14. Qual a função de um CASB (Cloud Access Security Broker)?</p>
+          <label><input type="radio" name="q14" value="a"> Proteger exclusivamente a infraestrutura de nuvem do provedor (AWS, Azure).</label>
+          <label><input type="radio" name="q14" value="b"> Atuar como um intermediário entre os usuários da organização e os serviços em nuvem, aplicando políticas de segurança, visibilidade e conformidade.</label>
+          <label><input type="radio" name="q14" value="c"> Gerenciar senhas de acesso a serviços em nuvem.</label>
+          <label><input type="radio" name="q14" value="d"> Acelerar o acesso a aplicações hospedadas na nuvem.</label>
+        </div>
+
+        <div class="question">
+          <p>15. Ferramentas de Análise Estática de Segurança de Aplicações (SAST - Static Application Security Testing) examinam o quê?</p>
+          <label><input type="radio" name="q15" value="a"> O comportamento da aplicação durante a execução.</label>
+          <label><input type="radio" name="q15" value="b"> O código-fonte ou binário da aplicação em busca de vulnerabilidades sem executá-la.</label>
+          <label><input type="radio" name="q15" value="c"> A configuração dos servidores web onde a aplicação está hospedada.</label>
+          <label><input type="radio" name="q15" value="d"> Os logs gerados pela aplicação em produção.</label>
+        </div>
+
+      </div>
+
+      <div class="quiz-footer">
+        <button type="button" id="next-btn">Próxima Pergunta</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="quiz5.js"></script>
+  <script src="../../../main.js"></script>
+</body>
+</html>

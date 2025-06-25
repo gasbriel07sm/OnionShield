@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="../quiz.css">
+</head>
+<body>
+<!-- HEADER -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="../../../index.html" class="nav__logo">
+                    <img src="../../../assets/logo branca.png" alt=""> OnionShield
+                </a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__burger"></i>
+                    <i class="ri-close-line nav__close"></i>
+                </div>
+            </div>
+            <!--============ NAV MENU ============-->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="../../../index.html" class="nav__link">Home</a></li>
+                    <!--============ DROPDOWN 1 ============-->
+                    <li class="dropdown__item">
+                        <a href="../../info.html" class="nav__link">
+                        Informações <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </a>
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="../../content/conteudo.html" class="dropdown__link">
+                                    <i class="ri-bookmark-line"></i> Conteúdo
+                                </a>
+                            </li>
+                            <!--=============== DROPDOWN SUBMENU ===============-->
+                            <li class="dropdown__subitem">
+                                <div class="dropdown__link">
+                                    <i class="ri-survey-line"></i> Questionários <i class="ri-add-line dropdown__add"></i>
+                                </div>
+                                <ul class="dropdown__submenu">
+                                    <li>
+                                        <a href="../quiz1.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="quiz2.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../quiz3/quiz3.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 3
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../quiz4/quiz4.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 4
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../quiz5/quiz5.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 5
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../../source/pesquisa.html" class="dropdown__link">
+                                    <i class="ri-search-line"></i> Pesquisa
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--============ DROPDOWN 2 ============-->
+                    <li class="dropdown__item">
+                        <a href="../../../criptografia/criptografia.html" class="nav__link">
+                            Criptografia <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </a>
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="../../../criptografia/medidor_senha/medidor_senha.html" class="dropdown__link">
+                                    <i class="ri-alarm-warning-line"></i> Medidor de Força
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../../criptografia/gerador_senha/gerador_senha.html" class="dropdown__link">
+                                    <i class="ri-key-2-line"></i> Gerador de Senhas
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../../criptografia/criptografia_simetrica/criptografia_simetrica.html" class="dropdown__link">
+                                    <i class="ri-lock-password-line"></i> Simétrica
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../../criptografia/hashing/hashing.html" class="dropdown__link">
+                                    <i class="ri-terminal-line"></i> Hashing
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../../criptografia/analise_url/analise_url.html" class="dropdown__link">
+                                    <i class="ri-qr-scan-2-line"></i> Análise de URL
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../sobre.html" class="nav__link">Sobre</a></li>
+                    <li><a href="../../../contato/contato.html" class="nav__link">Contato</a></li>
+                    <li class="dropdown__item" id="login-area" style="display: flex">
+                        <a href="../../../login.html" class="nav__link">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+<!-- FIM HEADER -->
+  <div class="quiz-container">
+    <div class="quiz-header">
+      <h1>Questionário 2 - Pilares da Segurança</h1>
+      <div id="timer-display">Tempo: <span>60</span>s</div>
+    </div>
+    
+    <form id="quiz-form">
+      <div class="questions-wrapper">
+
+        <div class="question active">
+          <p>1. Qual pilar da segurança da informação garante que a informação só seja acessível por pessoas autorizadas?</p>
+          <label><input type="radio" name="q1" value="a"> Integridade</label>
+          <label><input type="radio" name="q1" value="b"> Disponibilidade</label>
+          <label><input type="radio" name="q1" value="c"> Confidencialidade</label>
+          <label><input type="radio" name="q1" value="d"> Autenticidade</label>
+        </div>
+
+        <div class="question">
+          <p>2. A Integridade da informação refere-se a:</p>
+          <label><input type="radio" name="q2" value="a"> Garantir que a informação esteja sempre disponível quando necessária.</label>
+          <label><input type="radio" name="q2" value="b"> Proteger a informação contra alterações não autorizadas ou acidentais.</label>
+          <label><input type="radio" name="q2" value="c"> Manter a informação secreta de todos, exceto do proprietário.</label>
+          <label><input type="radio" name="q2" value="d"> Assegurar que a informação possa ser facilmente compartilhada.</label>
+        </div>
+
+        <div class="question">
+          <p>3. Qual pilar garante que os sistemas e dados estejam operacionais e acessíveis aos usuários autorizados quando necessário?</p>
+          <label><input type="radio" name="q3" value="a"> Confidencialidade</label>
+          <label><input type="radio" name="q3" value="b"> Integridade</label>
+          <label><input type="radio" name="q3" value="c"> Disponibilidade</label>
+          <label><input type="radio" name="q3" value="d"> Não-repúdio</label>
+        </div>
+
+        <div class="question">
+          <p>4. Usar criptografia para proteger dados armazenados em um disco rígido é um controle que visa principalmente qual pilar?</p>
+          <label><input type="radio" name="q4" value="a"> Disponibilidade</label>
+          <label><input type="radio" name="q4" value="b"> Confidencialidade</label>
+          <label><input type="radio" name="q4" value="c"> Integridade</label>
+          <label><input type="radio" name="q4" value="d"> Usabilidade</label>
+        </div>
+
+        <div class="question">
+          <p>5. Um backup regular dos dados de uma empresa ajuda a garantir principalmente qual pilar em caso de falha do sistema principal?</p>
+          <label><input type="radio" name="q5" value="a"> Confidencialidade</label>
+          <label><input type="radio" name="q5" value="b"> Integridade</label>
+          <label><input type="radio" name="q5" value="c"> Disponibilidade</label>
+          <label><input type="radio" name="q5" value="d"> Autenticidade</label>
+        </div>
+
+        <div class="question">
+          <p>6. A utilização de Hashes (como SHA-256) para verificar a versão de um arquivo baixado da internet está relacionada principalmente a qual pilar?</p>
+          <label><input type="radio" name="q6" value="a"> Confidencialidade</label>
+          <label><input type="radio" name="q6" value="b"> Disponibilidade</label>
+          <label><input type="radio" name="q6" value="c"> Integridade</label>
+          <label><input type="radio" name="q6" value="d"> Autenticação</label>
+        </div>
+
+        <div class="question">
+          <p>7. Um ataque de Negação de Serviço (DoS/DDoS) visa comprometer principalmente qual pilar da segurança?</p>
+          <label><input type="radio" name="q7" value="a"> Confidencialidade</label>
+          <label><input type="radio" name="q7" value="b"> Integridade</label>
+          <label><input type="radio" name="q7" value="c"> Disponibilidade</label>
+          <label><input type="radio" name="q7" value="d"> Não-repúdio</label>
+        </div>
+
+        <div class="question">
+          <p>8. Controles de acesso baseados em papéis (RBAC - Role-Based Access Control) são implementados para reforçar qual(is) pilar(es)?</p>
+          <label><input type="radio" name="q8" value="a"> Apenas Disponibilidade</label>
+          <label><input type="radio" name="q8" value="b"> Apenas Integridade</label>
+          <label><input type="radio" name="q8" value="c"> Principalmente Confidencialidade (e indiretamente Integridade)</label>
+          <label><input type="radio" name="q8" value="d"> Apenas Autenticidade</label>
+        </div>
+
+        <div class="question">
+          <p>9. Qual cenário representa uma violação da Integridade?</p>
+          <label><input type="radio" name="q9" value="a"> Um funcionário não autorizado consegue visualizar dados salariais confidenciais.</label>
+          <label><input type="radio" name="q9" value="b"> Um hacker altera o valor de uma transação bancária registrada no sistema.</label>
+          <label><input type="radio" name="q9" value="c"> O servidor de e-mail da empresa fica fora do ar por várias horas.</label>
+          <label><input type="radio" name="q9" value="d"> Um usuário esquece sua senha e não consegue acessar o sistema.</label>
+        </div>
+
+        <div class="question">
+          <p>10. A necessidade de redundância de hardware (ex: servidores, links de rede) está mais diretamente ligada a qual pilar?</p>
+          <label><input type="radio" name="q10" value="a"> Confidencialidade</label>
+          <label><input type="radio" name="q10" value="b"> Integridade</label>
+          <label><input type="radio" name="q10" value="c"> Disponibilidade</label>
+          <label><input type="radio" name="q10" value="d"> Não-repúdio</label>
+        </div>
+
+        <div class="question">
+          <p>11. Como o conceito de "Não-repúdio" (Non-repudiation) se relaciona com os pilares da CIA (Confidencialidade, Integridade, Disponibilidade)?</p>
+          <label><input type="radio" name="q11" value="a"> É um sinônimo de Confidencialidade.</label>
+          <label><input type="radio" name="q11" value="b"> Garante que uma ação ou comunicação não pode ser negada pela parte que a realizou, complementando a Integridade e Autenticidade.</label>
+          <label><input type="radio" name="q11" value="c"> É o pilar que garante que os dados estarão disponíveis após um desastre.</label>
+          <label><input type="radio" name="q11" value="d"> Assegura que apenas o remetente e o destinatário podem ler a mensagem.</label>
+        </div>
+
+        <div class="question">
+          <p>12. Em certas situações, pode haver um conflito entre Confidencialidade e Disponibilidade. Qual exemplo ilustra isso?</p>
+          <label><input type="radio" name="q12" value="a"> Implementar firewalls que filtram tráfego malicioso.</label>
+          <label><input type="radio" name="q12" value="b"> Realizar backups criptografados dos dados.</label>
+          <label><input type="radio" name="q12" value="c"> Implementar procedimentos de recuperação de desastres muito complexos que dificultam o rápido restabelecimento do serviço.</label>
+          <label><input type="radio" name="q12" value="d"> Usar assinaturas digitais para verificar a origem de e-mails.</label>
+        </div>
+
+        <div class="question">
+          <p>13. Qual técnica criptográfica garante tanto a Confidencialidade quanto a Integridade de uma mensagem transmitida?</p>
+          <label><input type="radio" name="q13" value="a"> Usar apenas criptografia simétrica (ex: AES).</label>
+          <label><input type="radio" name="q13" value="b"> Usar apenas hashing (ex: SHA-256).</label>
+          <label><input type="radio" name="q13" value="c"> Usar um esquema de criptografia autenticada (ex: AES-GCM) ou combinar criptografia com um MAC (Message Authentication Code).</label>
+          <label><input type="radio" name="q13" value="d"> Usar apenas criptografia assimétrica (ex: RSA) para cifrar a mensagem.</label>
+        </div>
+
+        <div class="question">
+          <p>14. A implementação de listas de controle de acesso (ACLs) em roteadores e firewalls contribui para quais pilares?</p>
+          <label><input type="radio" name="q14" value="a"> Apenas Disponibilidade, prevenindo sobrecarga.</label>
+          <label><input type="radio" name="q14" value="b"> Apenas Integridade, prevenindo alterações de pacotes.</label>
+          <label><input type="radio" name="q14" value="c"> Principalmente Confidencialidade (restringindo acesso) e Disponibilidade (filtrando tráfego malicioso/DoS).</label>
+          <label><input type="radio" name="q14" value="d"> Apenas Não-repúdio.</label>
+        </div>
+
+        <div class="question">
+          <p>15. Como a granularidade do controle de acesso (ex: permissões de leitura vs. escrita) se relaciona com os pilares da CIA?</p>
+          <label><input type="radio" name="q15" value="a"> Permissões de leitura afetam apenas a Disponibilidade.</label>
+          <label><input type="radio" name="q15" value="b"> Permissões de escrita afetam apenas a Confidencialidade.</label>
+          <label><input type="radio" name="q15" value="c"> Permissões de leitura estão ligadas à Confidencialidade, enquanto permissões de escrita estão ligadas à Integridade. Ambas afetam indiretamente a Disponibilidade se mal configuradas.</label>
+          <label><input type="radio" name="q15" value="d"> A granularidade não tem relação direta com os pilares da CIA.</label>
+        </div>
+
+      </div>
+
+      <div class="quiz-footer">
+        <button type="button" id="next-btn">Próxima Pergunta</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="quiz2.js"></script>
+  <script src="../../../main.js"></script>
+
+</body>
+</html>

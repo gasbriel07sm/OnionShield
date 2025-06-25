@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário 4</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../style.css">
+      <link rel="stylesheet" href="../quiz.css">
+
+</head>
+<body>
+<!-- HEADER -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="../../../index.html" class="nav__logo">
+                    <img src="../../../assets/logo branca.png" alt=""> OnionShield
+                </a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__burger"></i>
+                    <i class="ri-close-line nav__close"></i>
+                </div>
+            </div>
+            <!--============ NAV MENU ============-->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="../../../index.html" class="nav__link">Home</a></li>
+                    <!--============ DROPDOWN 1 ============-->
+                    <li class="dropdown__item">
+                        <a href="../../info.html" class="nav__link">
+                        Informações <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </a>
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="../../content/conteudo.html" class="dropdown__link">
+                                    <i class="ri-bookmark-line"></i> Conteúdo
+                                </a>
+                            </li>
+                            <!--=============== DROPDOWN SUBMENU ===============-->
+                            <li class="dropdown__subitem">
+                                <div class="dropdown__link">
+                                    <i class="ri-survey-line"></i> Questionários <i class="ri-add-line dropdown__add"></i>
+                                </div>
+                                <ul class="dropdown__submenu">
+                                    <li>
+                                        <a href="../quiz1.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../quiz2/quiz2.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../quiz3/quiz3.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 3
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="quiz4.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 4
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../quiz5/quiz5.html" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Questionário 5
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../../source/pesquisa.html" class="dropdown__link">
+                                    <i class="ri-search-line"></i> Pesquisa
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--============ DROPDOWN 2 ============-->
+                    <li class="dropdown__item">
+                        <a href="../../../criptografia/criptografia.html" class="nav__link">
+                            Criptografia <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </a>
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="../../../criptografia/medidor_senha/medidor_senha.html" class="dropdown__link">
+                                    <i class="ri-alarm-warning-line"></i> Medidor de Força
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../../criptografia/gerador_senha/gerador_senha.html" class="dropdown__link">
+                                    <i class="ri-key-2-line"></i> Gerador de Senhas
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../../criptografia/criptografia_simetrica/criptografia_simetrica.html" class="dropdown__link">
+                                    <i class="ri-lock-password-line"></i> Simétrica
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../../criptografia/hashing/hashing.html" class="dropdown__link">
+                                    <i class="ri-terminal-line"></i> Hashing
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../../criptografia/analise_url/analise_url.html" class="dropdown__link">
+                                    <i class="ri-qr-scan-2-line"></i> Análise de URL
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../sobre.html" class="nav__link">Sobre</a></li>
+                    <li><a href="../../../contato/contato.html" class="nav__link">Contato</a></li>
+                    <li class="dropdown__item" id="login-area" style="display: flex">
+                        <a href="../../../login.html" class="nav__link">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+<!-- FIM HEADER -->
+  <div class="quiz-container">
+    <div class="quiz-header">
+      <h1>Questionário 4 - Tipos de Segurança</h1>
+      <div id="timer-display">Tempo: <span>60</span>s</div>
+    </div>
+    
+    <form id="quiz-form">
+      <div class="questions-wrapper">
+
+        <div class="question active">
+          <p>1. A proteção de edifícios, salas de servidores e equipamentos contra acesso físico não autorizado pertence a qual tipo de segurança?</p>
+          <label><input type="radio" name="q1" value="a"> Segurança de Rede</label>
+          <label><input type="radio" name="q1" value="b"> Segurança de Aplicação</label>
+          <label><input type="radio" name="q1" value="c"> Segurança Física</label>
+          <label><input type="radio" name="q1" value="d"> Segurança na Nuvem</label>
+        </div>
+
+        <div class="question">
+          <p>2. Qual tipo de segurança se concentra em proteger a infraestrutura de rede (roteadores, switches, firewalls) e o tráfego de dados?</p>
+          <label><input type="radio" name="q2" value="a"> Segurança Física</label>
+          <label><input type="radio" name="q2" value="b"> Segurança de Rede</label>
+          <label><input type="radio" name="q2" value="c"> Segurança de Endpoint</label>
+          <label><input type="radio" name="q2" value="d"> Segurança Operacional</label>
+        </div>
+
+        <div class="question">
+          <p>3. A instalação de software antivírus em computadores e laptops é uma medida de qual tipo de segurança?</p>
+          <label><input type="radio" name="q3" value="a"> Segurança de Rede</label>
+          <label><input type="radio" name="q3" value="b"> Segurança Física</label>
+          <label><input type="radio" name="q3" value="c"> Segurança de Endpoint (ou Segurança de Host)</label>
+          <label><input type="radio" name="q3" value="d"> Segurança de Banco de Dados</label>
+        </div>
+
+        <div class="question">
+          <p>4. Qual tipo de segurança lida com a proteção de dados contra acesso não autorizado, corrupção ou perda, independentemente de onde estejam armazenados?</p>
+          <label><input type="radio" name="q4" value="a"> Segurança de Aplicação</label>
+          <label><input type="radio" name="q4" value="b"> Segurança de Dados</label>
+          <label><input type="radio" name="q4" value="c"> Segurança Física</label>
+          <label><input type="radio" name="q4" value="d"> Segurança Operacional</label>
+        </div>
+
+        <div class="question">
+          <p>5. Proteger um aplicativo web contra ataques como SQL Injection e Cross-Site Scripting (XSS) é o foco de qual tipo de segurança?</p>
+          <label><input type="radio" name="q5" value="a"> Segurança de Rede</label>
+          <label><input type="radio" name="q5" value="b"> Segurança de Endpoint</label>
+          <label><input type="radio" name="q5" value="c"> Segurança de Aplicação</label>
+          <label><input type="radio" name="q5" value="d"> Segurança Física</label>
+        </div>
+
+        <div class="question">
+          <p>6. A definição de políticas e procedimentos para o manuseio seguro de informações, gerenciamento de mudanças e resposta a incidentes faz parte de qual tipo de segurança?</p>
+          <label><input type="radio" name="q6" value="a"> Segurança Física</label>
+          <label><input type="radio" name="q6" value="b"> Segurança de Rede</label>
+          <label><input type="radio" name="q6" value="c"> Segurança Operacional (ou Segurança de Processos)</label>
+          <label><input type="radio" name="q6" value="d"> Segurança de Hardware</label>
+        </div>
+
+        <div class="question">
+          <p>7. Qual tipo de segurança aborda os desafios específicos de proteger dados, aplicações e infraestrutura hospedados em provedores como AWS, Azure ou Google Cloud?</p>
+          <label><input type="radio" name="q7" value="a"> Segurança de Endpoint</label>
+          <label><input type="radio" name="q7" value="b"> Segurança na Nuvem</label>
+          <label><input type="radio" name="q7" value="c"> Segurança de Comunicações</label>
+          <label><input type="radio" name="q7" value="d"> Segurança Física</label>
+        </div>
+
+        <div class="question">
+          <p>8. A segurança que se preocupa em proteger dispositivos como smartphones e tablets conectados à rede corporativa é conhecida como:</p>
+          <label><input type="radio" name="q8" value="a"> Segurança de Banco de Dados</label>
+          <label><input type="radio" name="q8" value="b"> Segurança de Gerenciamento de Dispositivos Móveis (MDM) ou Segurança Móvel</label>
+          <label><input type="radio" name="q8" value="c"> Segurança de Virtualização</label>
+          <label><input type="radio" name="q8" value="d"> Segurança Perimetral</label>
+        </div>
+
+        <div class="question">
+          <p>9. Segmentar a rede corporativa em diferentes zonas (VLANs) com controles de acesso entre elas é uma prática de qual tipo de segurança?</p>
+          <label><input type="radio" name="q9" value="a"> Segurança Física</label>
+          <label><input type="radio" name="q9" value="b"> Segurança de Aplicação</label>
+          <label><input type="radio" name="q9" value="c"> Segurança de Rede</label>
+          <label><input type="radio" name="q9" value="d"> Segurança de Dados</label>
+        </div>
+
+        <div class="question">
+          <p>10. Qual a diferença principal entre Segurança de Rede e Segurança de Endpoint?</p>
+          <label><input type="radio" name="q10" value="a"> Segurança de Rede protege o tráfego, Segurança de Endpoint protege os dispositivos individuais.</label>
+          <label><input type="radio" name="q10" value="b"> Segurança de Rede usa firewalls, Segurança de Endpoint usa antivírus.</label>
+          <label><input type="radio" name="q10" value="c"> Segurança de Rede é para conexões externas, Segurança de Endpoint para internas.</label>
+          <label><input type="radio" name="q10" value="d"> Não há diferença significativa, são termos intercambiáveis.</label>
+        </div>
+
+        <div class="question">
+          <p>11. A implementação de Controles de Segurança Industrial (ICS) / SCADA, que protegem sistemas de automação e controle em infraestruturas críticas, se enquadra em qual área especializada?</p>
+          <label><input type="radio" name="q11" value="a"> Segurança de Aplicação Web</label>
+          <label><input type="radio" name="q11" value="b"> Segurança de Tecnologia Operacional (OT Security)</label>
+          <label><input type="radio" name="q11" value="c"> Segurança de Big Data</label>
+          <label><input type="radio" name="q11" value="d"> Segurança Quântica</label>
+        </div>
+
+        <div class="question">
+          <p>12. Como a "Segurança Centrada em Dados" (Data-Centric Security) difere da abordagem tradicional de segurança perimetral?</p>
+          <label><input type="radio" name="q12" value="a"> Foca exclusivamente na criptografia de dados em repouso.</label>
+          <label><input type="radio" name="q12" value="b"> Ignora a segurança da rede e foca apenas nos endpoints.</label>
+          <label><input type="radio" name="q12" value="c"> Prioriza a proteção dos dados em si (classificação, controle de acesso, DLP) onde quer que eles estejam, em vez de apenas proteger o perímetro da rede.</label>
+          <label><input type="radio" name="q12" value="d"> É um sinônimo para segurança de banco de dados.</label>
+        </div>
+
+        <div class="question">
+          <p>13. Dentro da Segurança Operacional, qual a importância do "Gerenciamento de Identidade e Acesso" (IAM - Identity and Access Management)?</p>
+          <label><input type="radio" name="q13" value="a"> Foca apenas na criação de senhas fortes para os usuários.</label>
+          <label><input type="radio" name="q13" value="b"> É crucial para definir e gerenciar quem tem acesso a quais recursos (autenticação e autorização), aplicando o princípio do menor privilégio.</label>
+          <label><input type="radio" name="q13" value="c"> Trata apenas da segurança física dos crachás de acesso.</label>
+          <label><input type="radio" name="q13" value="d"> É responsável por monitorar o desempenho dos sistemas.</label>
+        </div>
+
+        <div class="question">
+          <p>14. A "Segurança de Contêineres" (ex: Docker, Kubernetes) é um subconjunto de qual tipo mais amplo de segurança e quais desafios específicos ela aborda?</p>
+          <label><input type="radio" name="q14" value="a"> Subconjunto da Segurança Física; aborda o roubo de servidores.</label>
+          <label><input type="radio" name="q14" value="b"> Subconjunto da Segurança de Rede; aborda a configuração de firewalls para contêineres.</label>
+          <label><input type="radio" name="q14" value="c"> Subconjunto da Segurança de Aplicação/Nuvem/Endpoint; aborda a segurança da imagem do contêiner, o tempo de execução e a orquestração.</label>
+          <label><input type="radio" name="q14" value="d"> Subconjunto da Segurança de Dados; aborda a criptografia dentro dos contêineres.</label>
+        </div>
+
+        <div class="question">
+          <p>15. Qual o papel da "Inteligência de Ameaças" (Threat Intelligence) dentro de uma estratégia de segurança abrangente?</p>
+          <label><input type="radio" name="q15" value="a"> É o mesmo que um sistema SIEM.</label>
+          <label><input type="radio" name="q15" value="b"> Refere-se apenas ao treinamento de conscientização dos usuários.</label>
+          <label><input type="radio" name="q15" value="c"> Fornece informações contextualizadas sobre ameaças atuais (atores, TTPs, IoCs) para ajudar na tomada de decisões proativas de defesa e na resposta a incidentes.</label>
+          <label><input type="radio" name="q15" value="d"> É um tipo de firewall de próxima geração.</label>
+        </div>
+
+      </div>
+
+      <div class="quiz-footer">
+        <button type="button" id="next-btn">Próxima Pergunta</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="quiz4.js"></script>
+  <script src="../../../main.js"></script>
+</body>
+</html>

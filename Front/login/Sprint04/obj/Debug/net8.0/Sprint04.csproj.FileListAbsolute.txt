@@ -1,0 +1,14 @@
+C:\Users\Administrador\source\repos\Sprint04\Sprint04\obj\Debug\net8.0\Sprint04.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrador\source\repos\Sprint04\Sprint04\obj\Debug\net8.0\Sprint04.AssemblyInfoInputs.cache
+C:\Users\Administrador\source\repos\Sprint04\Sprint04\obj\Debug\net8.0\Sprint04.AssemblyInfo.cs
+C:\Users\Administrador\source\repos\Sprint04\Sprint04\obj\Debug\net8.0\Sprint04.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\source\repos\Sprint04\Sprint04\bin\Debug\net8.0\Sprint04.exe
+C:\Users\Administrador\source\repos\Sprint04\Sprint04\bin\Debug\net8.0\Sprint04.deps.json
+C:\Users\Administrador\source\repos\Sprint04\Sprint04\bin\Debug\net8.0\Sprint04.runtimeconfig.json
+C:\Users\Administrador\source\repos\Sprint04\Sprint04\bin\Debug\net8.0\Sprint04.dll
+C:\Users\Administrador\source\repos\Sprint04\Sprint04\bin\Debug\net8.0\Sprint04.pdb
+C:\Users\Administrador\source\repos\Sprint04\Sprint04\obj\Debug\net8.0\Sprint04.dll
+C:\Users\Administrador\source\repos\Sprint04\Sprint04\obj\Debug\net8.0\refint\Sprint04.dll
+C:\Users\Administrador\source\repos\Sprint04\Sprint04\obj\Debug\net8.0\Sprint04.pdb
+C:\Users\Administrador\source\repos\Sprint04\Sprint04\obj\Debug\net8.0\Sprint04.genruntimeconfig.cache
+C:\Users\Administrador\source\repos\Sprint04\Sprint04\obj\Debug\net8.0\ref\Sprint04.dll
