@@ -68,4 +68,3 @@ C:\Users\gs_mi\OneDrive\Área de Trabalho\OnionShield\API\ApiDaSprint04\obj\Debu
 C:\Users\gs_mi\OneDrive\Área de Trabalho\OnionShield\API\ApiDaSprint04\obj\Debug\net8.0\ApiDaSprint04.pdb
 C:\Users\gs_mi\OneDrive\Área de Trabalho\OnionShield\API\ApiDaSprint04\obj\Debug\net8.0\ApiDaSprint04.genruntimeconfig.cache
 C:\Users\gs_mi\OneDrive\Área de Trabalho\OnionShield\API\ApiDaSprint04\obj\Debug\net8.0\ref\ApiDaSprint04.dll
-C:\Users\gs_mi\OneDrive\Área de Trabalho\OnionShield\API\ApiDaSprint04\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

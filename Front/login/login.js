@@ -99,7 +99,7 @@ if (user) {
   localStorage.setItem("usuarioLogado", JSON.stringify(user)); // Salva dados do usuário
   exibirMensagemModal("Sucesso", `Bem-vindo, ${user.nome}! Login efetuado com sucesso.`);
   setTimeout(() => {
-    window.location.href = "../index.html"; // Redireciona para página principal
+    window.location.href = "../../index.html"; // Redireciona para página principal
   }, 2000);
 }
 else {

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiDaSprint04")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31c6b9822bf4e4b78bbb6ccb2247668173e87dc7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ca6a8a594af1b80be262881ab889da3195fe04e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiDaSprint04")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiDaSprint04")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
