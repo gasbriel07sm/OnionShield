@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Usuário não logado: mostra botão de login
     loginArea.innerHTML = `
       <li>
-        <a href="OnionShield/Front/login/login.html" class="nav__link">
+        <a href="/Front/login/login.html" class="nav__link">
           </i> Login
         </a>
       </li>
