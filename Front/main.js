@@ -13,19 +13,30 @@ const showMenu = (toggleId, navId) =>{
 }
 
 showMenu('nav-toggle','nav-menu')
+
+// ...existing code...
 document.addEventListener("DOMContentLoaded", () => {
   const user = JSON.parse(localStorage.getItem("usuarioLogado"));
   const loginArea = document.getElementById("login-area");
 
+  // Detecta o nível do diretório para montar o caminho correto
+  let loginPath = "login/login.html";
+  const path = window.location.pathname;
+  if (path.includes("/info/") || path.includes("/contato/") || path.includes("/criptografia/")) {
+    loginPath = "../login/login.html";
+    // Se estiver em subpasta de subpasta (ex: /criptografia/medidor_senha/)
+    if ((path.match(/\//g) || []).length > 3) {
+      loginPath = "../../login/login.html";
+    }
+  }
+
   if (user && loginArea) {
-    // Usuário logado: mostra dropdown igual aos outros
     loginArea.innerHTML = `
       <li class="dropdown__item">
         <div class="nav__link">
           <i class="ri-user-line"></i> Olá, ${user.nome.split(" ")[0]}
           <i class="ri-arrow-down-s-line dropdown__arrow"></i>
         </div>
-
         <ul class="dropdown__menu">
           <li>
             <a href="#" class="dropdown__link" onclick="logout()">
@@ -36,16 +47,16 @@ document.addEventListener("DOMContentLoaded", () => {
       </li>
     `;
   } else if (loginArea) {
-    // Usuário não logado: mostra botão de login
     loginArea.innerHTML = `
       <li>
-        <a href="Front/login/login.html" class="nav__link">
-          </i> Login
+        <a href="${loginPath}" class="nav__link">
+           Login
         </a>
       </li>
     `;
   }
 });
+// ...existing code...
 
 function logout() {
   localStorage.removeItem("usuarioLogado");
