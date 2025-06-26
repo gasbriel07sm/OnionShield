@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let loginPath = "login/login.html";
   const path = window.location.pathname;
   if (path.includes("/info/") || path.includes("/contato/") || path.includes("/criptografia/")) {
-    loginPath = "../login/login.html";
+    loginPath = "../Front/login/login.html";
     // Se estiver em subpasta de subpasta (ex: /criptografia/medidor_senha/)
     if ((path.match(/\//g) || []).length > 3) {
       loginPath = "../../login/login.html";
