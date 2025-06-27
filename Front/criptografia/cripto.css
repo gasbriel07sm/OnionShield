@@ -1,217 +1,275 @@
-/*
-  ARQUIVO: cripto.css
-  Estilos com layout horizontal, mas com tamanho e espaçamento refinados.
-*/
-
-/* Container que agrupa todos os cards de ferramentas */
-.main-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem; /* Espaço vertical entre cada card horizontal */
+.faq-section {
+  margin: 4rem auto 0 auto;
+  max-width: 900px;
+  padding: 2rem 1rem;
+  text-align: center;
 }
-
-/* Estilo base para cada card de ferramenta */
-.tool-card {
-  background-color: var(--container-color);
-  color: var(--text-color);
-  border-radius: .75rem;
-  box-shadow: 0 8px 25px hsla(0, 0%, 0%, 0.1);
-  display: flex;
-  flex-direction: row; /* Garante o layout horizontal */
-  overflow: hidden;
-  align-items: stretch;
-  border: 1px solid var(--primary-color-alt);
-  max-width: 900px; /* Largura máxima para os cards não ficarem gigantes em telas grandes */
-  margin-inline: auto; /* Centraliza os cards */
+.faq-list {
+  margin-top: 2rem;
+  text-align: left;
 }
-
-/* Variação de layout, invertendo a ordem da imagem */
-.tool-card.reverse {
-  flex-direction: row-reverse; /* Mantém a inversão horizontal */
-}
-
-/* Coluna da imagem (mais estreita) */
-.tool-image {
-  flex: 0 0 35%; /* A imagem ocupa 35% da largura do card */
-  min-width: 280px; /* Largura mínima para a imagem não sumir */
-}
-
-.tool-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Coluna do conteúdo interativo */
-.tool-content {
-  flex: 1;
-  padding: 2rem; /* Preenchimento interno um pouco menor */
-  display: flex;
-  flex-direction: column;
-}
-
-.tool-content h2 {
-  color: var(--title-color);
-  margin-bottom: 0.75rem;
-  font-size: var(--h3-font-size);
-}
-
-.tool-content .description {
-  font-style: italic;
+.faq-item {
+  background: transparent;
+  border-radius: 1rem;
   margin-bottom: 1.5rem;
-  padding-left: 1rem;
-  border-left: 3px solid var(--primary-color);
-  color: var(--text-color);
-  font-size: var(--small-font-size);
-  line-height: 1.5; /* Melhorando espaçamento entre linhas */
-}
-
-/* --- Estilos de Formulários e Inputs com mais espaçamento --- */
-.form-group, .password-container, .generated-password-container {
-  margin-bottom: 1rem;
-  position: relative;
-}
-
-.tool-content label {
-  display: block;
-  font-weight: var(--font-semi-bold);
-  margin-bottom: 0.5rem;
-  color: var(--title-color);
-}
-
-.tool-content input[type="text"],
-.tool-content input[type="password"],
-.tool-content select,
-.tool-content textarea {
-  width: 100%;
-  padding: .75rem 1rem;
-  background-color: var(--body-color);
-  border: 1px solid var(--primary-color-alt);
-  border-radius: .5rem;
-  font-size: var(--normal-font-size);
-  color: var(--text-color);
-  transition: border-color .3s, box-shadow .3s;
-}
-
-.tool-content input::placeholder,
-.tool-content textarea::placeholder {
-  color: var(--text-color);
-  opacity: 0.7;
-}
-
-.tool-content input:focus,
-.tool-content select:focus,
-.tool-content textarea:focus {
-  outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px hsla(188, 100%, 46%, 0.2);
-}
-
-.password-container i {
-  position: absolute;
-  top: 50%;
-  right: 1rem;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: var(--text-color);
-}
-
-/* --- Medidor de Força de Senha --- */
-.strength-meter {
-  height: 8px;
-  background-color: hsla(218, 65%, 19%, 0.5);
-  border-radius: 8px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
   overflow: hidden;
-  margin-top: 0.5rem;
+}
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  color: #e6f0ff;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 1.5rem 2.5rem 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
-.strength-bar {
-  height: 100%;
-  width: 0;
-  border-radius: 8px;
-  transition: width 0.3s, background-color 0.3s;
+.faq-arrow {
+  font-size: 2rem;
+  color: #4db8ff;
+  transition: transform 0.3s;
 }
-.strength-bar.weak { background-color: hsl(0, 79%, 63%); }
-.strength-bar.medium { background-color: hsl(35, 91%, 65%); }
-.strength-bar.strong { background-color: var(--primary-color); }
-
-.strength-text {
-  font-weight: var(--font-semi-bold);
-  margin-top: 0.75rem;
-  height: 20px;
+.faq-question[aria-expanded="true"] .faq-arrow {
+  transform: rotate(180deg);
+}
+.faq-answer {
+  color: #b0bed9;
+  font-size: 1rem;
+  padding: 1.5rem 2rem 1.5rem 2rem; /* aumente o padding-top para abaixar o texto */
+  display: none;
+  background: transparent; /* fundo transparente */
+  box-shadow: none;
+  border: none;
+  animation: fadeIn 0.3s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px);}
+  to { opacity: 1; transform: translateY(0);}
 }
 
-/* --- Critérios de Validação --- */
-.strength-criteria {
-  margin-top: 1rem;
+.section__title {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #e6f0ff;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.section__title--center {
+  text-align: center;
+}
+
+.section__divider {
+  width: 90%;
+  max-width: 1100px;
+  margin: 2rem auto 2.5rem auto;
+  border: none;
+  border-top: 3px solid var(--primary-color);
+  opacity: 1;
+  background: none;
+  height: 0;
+  display: block;
+  border-radius: 2px;
+}
+
+.solutions-section {
+  max-width: 1200px;
+  margin: 0 auto 4rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+.section__subtitle {
+  color: #b0bed9;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+.solution-card {
+  background: #0e1a2b;
+  border-radius: 1rem;
+  border: 1.5px solid #183c6c;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  align-items: center;
+  transition: box-shadow 0.2s, border 0.2s;
 }
-
-.criteria-item {
+.solution-card:hover {
+  border: 1.5px solid #4db8ff;
+  box-shadow: 0 4px 24px 0 rgba(77,184,255,0.10);
+}
+.solution-icon {
+  font-size: 3rem;
+  color: #4db8ff;
+  margin-bottom: 1.2rem;
+}
+.solution-title {
+  color: #e6f0ff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+.solution-desc {
+  color: #b0bed9;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.solution-btn {
+  color: #4db8ff;
+  border: 1.5px solid #4db8ff;
+  background: transparent;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  display: inline-block;
+}
+.solution-btn:hover {
+  background: #4db8ff;
+  color: #0e1a2b;
+}
+.solutions-footer {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: var(--small-font-size);
+  justify-content: flex-start;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
 }
-.criteria-item i { font-size: 1.1rem; }
-.criteria-item.invalid { color: hsl(0, 79%, 63%); }
-.criteria-item.valid { color: var(--primary-color); text-decoration: line-through; opacity: 0.8; }
+.solutions-trial {
+  color: #e6f0ff;
+  font-size: 1.1rem;
+  margin-right: 1.5rem;
+}
+.solutions-desc {
+  color: #b0bed9;
+  font-size: 1rem;
+  margin-right: 1.5rem;
+}
+.solution-btn--trial {
+  background: #4db8ff;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  padding: 0.7rem 2rem;
+  border-radius: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+.solution-btn--trial:hover {
+  background: #2699e6;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  .solutions-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+  }
+}
 
-/* --- Gerador de Senhas --- */
-.checkbox-group { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center;}
-.checkbox-group label { font-weight: normal; display: flex; align-items: center; gap: .5rem; margin-bottom: 0; cursor: pointer;}
-
-.generated-password-container { display: flex; gap: .5rem; }
-
-.generated-password-container button {
-  flex-shrink: 0;
-  padding: 0 1rem;
-  background-color: transparent;
-  color: var(--text-color);
-  border: 2px solid var(--text-color);
-  border-radius: .5rem;
-  cursor: pointer;
-  font-size: 1.25rem;
+.choose-section {
+  margin: 6rem auto 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem 3rem 1rem;
+}
+.choose-container {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+.choose-img-area {
+  flex: 0 0 480px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+.choose-img {
+  width: 480px;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+  display: block;
+}
+.choose-content {
+  flex: 1 1 600px;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section__title--left {
+  text-align: left;
+  margin-bottom: 2.2rem;
+}
+.choose-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.choose-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  background: #183c6c33;
+  border-radius: 0.9rem;
+  padding: 1.5rem 2rem;
+}
+.choose-icon {
+  font-size: 2.4rem;
+  color: #4db8ff;
+  background: #14233a;
+  border-radius: 0.6rem;
+  padding: 0.7rem;
   display: flex;
   align-items: center;
-  transition: background-color .3s, color .3s, border-color .3s;
+  justify-content: center;
+  min-width: 56px;
+  min-height: 56px;
 }
-.generated-password-container button:hover {
-    background-color: var(--text-color);
-    color: var(--body-color);
-    border-color: var(--text-color);
+.choose-title {
+  color: #e6f0ff;
+  font-weight: 700;
+  font-size: 1.18rem;
+  margin-bottom: 0.2rem;
 }
-
-/* --- Botões e Saídas --- */
-.button-group { display: flex; gap: 1rem; }
-.button-group .button { flex: 1; justify-content: center; }
-
-
-.hash-output-box, .results-box {
-    background-color: var(--body-color);
-    border: 1px solid var(--primary-color-alt);
-    border-radius: .5rem;
-    padding: 1rem;
-    min-height: 50px;
-    color: var(--text-color);
-    font-family: 'Courier New', Courier, monospace;
-    word-break: break-all;
+.choose-desc {
+  color: #b0bed9;
+  font-size: 1rem;
 }
-#hash-output { min-height: 90px; }
-.results-box { margin-top: 1.5rem; }
-
-/* --- Responsividade --- */
-@media (max-width: 768px) {
-  .tool-card,
-  .tool-card.reverse {
-    flex-direction: column; /* Em telas menores, volta para o layout vertical */
+@media (max-width: 1100px) {
+  .choose-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
-  .tool-image {
-    min-width: 100%;
-    height: 180px;
+  .choose-img-area, .choose-img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
   }
-  .tool-content { padding: 1.5rem; }
+  .choose-content {
+    width: 100%;
+    min-width: unset;
+  }
 }
-

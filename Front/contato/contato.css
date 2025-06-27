@@ -252,3 +252,27 @@ body {
     max-height: 180px;
   }
 }
+
+.custom-alert {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: 'Poppins', Arial, sans-serif;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  transition: opacity 0.3s;
+}
+.alert-success {
+  background: #183c6c;
+  color: #4db8ff;
+  border: 2px solid #4db8ff;
+}
+.alert-error {
+  background: #3a1a1a;
+  color: #ff4d4d;
+  border: 2px solid #ff4d4d;
+}

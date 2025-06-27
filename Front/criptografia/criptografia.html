@@ -119,160 +119,218 @@
         </nav>
     </header>
 <!-- FIM HEADER -->
-    <main class="main">
-        <section class="section">
-            <div class="main-content container" style="margin-top: 2rem;">
 
-                <article class="tool-card" >
-                    <div class="tool-image"><img src="./assets/imagem1.jpg" alt="Ilustração de um cadeado com biometria"></div>
-                    <div class="tool-content">
-                        <h2>Medidor de Força de Senha</h2>
-                        <p class="description">Pense nisto como um "termômetro" para sua senha. Ele mostra em tempo real o quão difícil seria para um invasor descobri-la.</p>
-                        <div class="password-container">
-                            <input type="password" id="password-input" placeholder="Digite sua senha aqui..."" >
-                            <i class="ri-eye-line" id="toggle-password"></i>
-                        </div>
-                        <div class="strength-meter" ><div class="strength-bar" id="strength-bar"></div></div>
-                        <p class="strength-text" id="strength-text"></p>
-                        <div class="strength-criteria" id="strength-criteria">
-                            <div class="criteria-item invalid" id="length-criteria"><i class="ri-close-circle-line"></i> Pelo menos 12 caracteres</div>
-                            <div class="criteria-item invalid" id="uppercase-criteria"><i class="ri-close-circle-line"></i> Contém letras maiúsculas (A-Z)</div>
-                            <div class="criteria-item invalid" id="number-criteria"><i class="ri-close-circle-line"></i> Contém números (0-9)</div>
-                            <div class="criteria-item invalid" id="symbol-criteria"><i class="ri-close-circle-line"></i> Contém símbolos (!@#$%)</div>
-                        </div>
-                    </div>
-                </article>
+<!-- FAQ Accordion -->
+<section class="faq-section">
+  <h2 class="section__title section__title--center" style="margin-top: 4rem;">CRIPTOGRAFIA</h2>
+<hr class="section__divider">
+  <div class="faq-list">
+<!--PERGUNTA 1-->
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="true">
+        <span>How Does Good Cyber Security Operate?</span>
+        <i class="ri-arrow-down-s-line faq-arrow"></i>
+      </button>
+      <div class="faq-answer" style="display: block;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam hendrerit aliquet fermentum. Nulla non metus sapien. Quisque nec aliquet ante. Sed vitae molestie mauris. Suspendisse rutrum enim nec turpis lacinia, sit amet volutpat mi hendrerit. Integer magna nibh, varius at dapibus in, elementum vel diam. Maecenas porttitor in turpis ac suscipit. Donec vel rutrum orci. Phasellus dapibus, mi vitae tincidunt pellentesque, lacus magna molestie felis, nec porta ex eros quis felis.
+      </div>
+    </div>
+<!--PERGUNTA 2-->
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>How Is Encryption Different From Hacking?</span>
+        <i class="ri-arrow-down-s-line faq-arrow"></i>
+      </button>
+      <div class="faq-answer">
+        Resposta sobre diferença entre criptografia e hacking.
+      </div>
+    </div>
+<!--PERGUNTA 3-->
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Do Mobile Devices Present Security Risks?</span>
+        <i class="ri-arrow-down-s-line faq-arrow"></i>
+      </button>
+      <div class="faq-answer">
+        Resposta sobre riscos de segurança em dispositivos móveis.
+      </div>
+    </div>
+<!--PERGUNTA 4-->
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Do Mobile Devices Present Security Risks?</span>
+        <i class="ri-arrow-down-s-line faq-arrow"></i>
+      </button>
+      <div class="faq-answer">
+        Resposta sobre riscos de segurança em dispositivos móveis.
+      </div>
+    </div>
+ <!--PERGUNTA 5-->
+   <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Do Mobile Devices Present Security Risks?</span>
+        <i class="ri-arrow-down-s-line faq-arrow"></i>
+      </button>
+      <div class="faq-answer">
+        Resposta sobre riscos de segurança em dispositivos móveis.
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FIM FAQ Accordion -->
 
-                <article class="tool-card reverse">
-                    <div class="tool-image" style="height: 24rem;"><img src="./assets/img2.jpg" alt="Ilustração de um robô gerando senhas"></div>
-                    <div class="tool-content">
-                        <h2>Gerador de Senhas Seguras</h2>
-                        <p class="description">Cansado de inventar senhas? Deixe que nosso robô crie uma para você! Ele gera senhas fortes e aleatórias, difíceis de adivinhar.</p>
-                        <div class="form-group">
-                            <label for="password-length">Tamanho da Senha: <span id="length-value">16</span></label>
-                            <input type="range" id="password-length" min="8" max="32" value="16">
-                        </div>
-                        <div class="checkbox-group" style="margin-bottom: 1rem;">
-                            <label><input type="checkbox" id="include-uppercase" checked> Maiúsculas</label>
-                            <label><input type="checkbox" id="include-numbers" checked> Números</label>
-                            <label><input type="checkbox" id="include-symbols" checked> Símbolos</label>
-                        </div>
-                        <div class="generated-password-container">
-                            <input type="text" id="generated-password" readonly placeholder="Sua senha segura aparecerá aqui...">
-                            <button id="copy-btn" title="Copiar"><i class="ri-file-copy-line"></i></button>
-                        </div>
-                        <button id="generate-btn" class="button">Gerar Nova Senha <i class="ri-refresh-line"></i></button>
-                    </div>
-                </article>
+<!-- Cyber Security Solutions Section -->
+<section class="solutions-section">
+  <h2 class="section__title section__title--center" style="margin-top: 4rem;">Cyber Security Solutions</h2>
+  <p class="section__subtitle">Lorem ipsum dolor sit amet, consectetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
+  <div class="solutions-grid">
+    <div class="solution-card">
+      <div class="solution-icon"><i class="ri-cloud-line"></i></div>
+      <h3 class="solution-title">Cloud Storage Security</h3>
+      <p class="solution-desc">Morbi tincidunt mauris a bizzy hendrerit lacinia in malesuada.</p>
+      <a href="#" class="solution-btn">LEARN MORE</a>
+    </div>
+    <div class="solution-card">
+      <div class="solution-icon"><i class="ri-lock-password-line"></i></div>
+      <h3 class="solution-title">Password Security</h3>
+      <p class="solution-desc">Morbi tincidunt mauris a bizzy hendrerit lacinia in malesuada.</p>
+      <a href="#" class="solution-btn">LEARN MORE</a>
+    </div>
+    <div class="solution-card">
+      <div class="solution-icon"><i class="ri-shield-user-line"></i></div>
+      <h3 class="solution-title">Personal Data Security</h3>
+      <p class="solution-desc">Morbi tincidunt mauris a bizzy hendrerit lacinia in malesuada.</p>
+      <a href="#" class="solution-btn">LEARN MORE</a>
+    </div>
+    <div class="solution-card">
+      <div class="solution-icon"><i class="ri-lock-2-line"></i></div>
+      <h3 class="solution-title">Locker Security</h3>
+      <p class="solution-desc">Morbi tincidunt mauris a bizzy hendrerit lacinia in malesuada.</p>
+      <a href="#" class="solution-btn">LEARN MORE</a>
+    </div>
+    <div class="solution-card">
+      <div class="solution-icon"><i class="ri-folder-lock-line"></i></div>
+      <h3 class="solution-title">File System Security</h3>
+      <p class="solution-desc">Morbi tincidunt mauris a bizzy hendrerit lacinia in malesuada.</p>
+      <a href="#" class="solution-btn">LEARN MORE</a>
+    </div>
+    <div class="solution-card">
+      <div class="solution-icon"><i class="ri-global-line"></i></div>
+      <h3 class="solution-title">All Website Security</h3>
+      <p class="solution-desc">Morbi tincidunt mauris a bizzy hendrerit lacinia in malesuada.</p>
+      <a href="#" class="solution-btn">LEARN MORE</a>
+    </div>
+    <div class="solution-card">
+      <div class="solution-icon"><i class="ri-global-line"></i></div>
+      <h3 class="solution-title">All Website Security</h3>
+      <p class="solution-desc">Morbi tincidunt mauris a bizzy hendrerit lacinia in malesuada.</p>
+      <a href="#" class="solution-btn">LEARN MORE</a>
+    </div>
+    <div class="solution-card">
+      <div class="solution-icon"><i class="ri-global-line"></i></div>
+      <h3 class="solution-title">All Website Security</h3>
+      <p class="solution-desc">Morbi tincidunt mauris a bizzy hendrerit lacinia in malesuada.</p>
+      <a href="#" class="solution-btn">LEARN MORE</a>
+    </div>
+  </div>
+</section>
+<!-- FIM Cyber Security Solutions Section -->
 
-                <article class="tool-card">
-                    <div class="tool-image"><img src="./assets/img3.jpg" alt="Ilustração de código criptografado"></div>
-                    <div class="tool-content">
-                        <h2>Criptografia Simétrica (AES)</h2>
-                        <p class="description">Imagine escrever uma carta com "tinta invisível". Apenas quem tem a "caneta especial" (a chave secreta) consegue revelar o texto.</p>
-                        <div class="form-group">
-                            <label for="plain-text">Texto Original:</label>
-                            <textarea id="plain-text" rows="3" placeholder="Digite o texto para criptografar..."></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="secret-key">Chave Secreta:</label>
-                            <input type="password" id="secret-key" placeholder="Insira uma chave secreta">
-                        </div>
-                        <div class="button-group">
-                            <button id="encrypt-btn" class="button">Criptografar <i class="ri-lock-line"></i></button>
-                            <button id="decrypt-btn" class="button button--ghost">Descriptografar <i class="ri-lock-unlock-line"></i></button>
-                        </div>
-                        <div class="form-group">
-                            <label for="cipher-text" style="margin-bottom: 1rem; margin-top: 1rem;">Texto Criptografado:</label>
-                            <textarea id="cipher-text" rows="3" placeholder="O resultado aparecerá aqui..." readonly></textarea>
-                        </div>
-                    </div>
-                </article>
+<!-- Why Choose Us Section -->
+<section class="choose-section">
+  <div class="choose-container">
+    <div class="choose-img-area">
+      <img src="assets/imagem1.jpg" alt="Cyber Security Team" class="choose-img">
+    </div>
+    <div class="choose-content">
+      <h2 class="section__title section__title--left">Why Choose Us?</h2>
+      <div class="choose-list">
+        <div class="choose-item">
+          <div class="choose-icon"><i class="ri-time-line"></i></div>
+          <div>
+            <div class="choose-title">24 Hours Costumer Service</div>
+            <div class="choose-desc">Morbi tincidunt mauris a hendrerit lacinia. In malesuada magna.</div>
+          </div>
+        </div>
+        <div class="choose-item">
+          <div class="choose-icon"><i class="ri-shield-check-line"></i></div>
+          <div>
+            <div class="choose-title">Trusted Cyber Company</div>
+            <div class="choose-desc">Morbi tincidunt mauris a hendrerit lacinia. In malesuada magna.</div>
+          </div>
+        </div>
+        <div class="choose-item">
+          <div class="choose-icon"><i class="ri-building-line"></i></div>
+          <div>
+            <div class="choose-title">High Level Cyber Security</div>
+            <div class="choose-desc">Morbi tincidunt mauris a hendrerit lacinia. In malesuada magna.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FIM Why Choose Us Section -->
 
-                <article class="tool-card reverse">
-                    <div class="tool-image"><img src="./assets/img4.jpg" alt="Ilustração de um liquidificador com código saindo"></div>
-                    <div class="tool-content">
-                        <h2>Demonstrador de Hashing</h2>
-                        <p class="description">Pense no hashing como um "liquidificador de dados". Você coloca uma maçã (sua senha) e obtém suco (o hash). É impossível transformar o suco de volta na maçã.</p>
-                        <div class="form-group">
-                            <label for="hash-input">Texto de Entrada:</label>
-                            <input type="text" id="hash-input" placeholder="Digite qualquer coisa...">
-                        </div>
-                        <div class="form-group">
-                            <label for="hash-algorithm">Algoritmo:</label>
-                            <select id="hash-algorithm">
-                                <option value="SHA256" selected>SHA-256</option>
-                                <option value="SHA512">SHA-512</option>
-                                <option value="MD5">MD5 (Inseguro)</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="hash-output">Hash Gerado:</label>
-                            <textarea id="hash-output" class="hash-output-box" readonly></textarea>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="tool-card">
-                    <div class="tool-image"><img src="./assets/img5.jpg" alt="Lupa analisando uma URL"></div>
-                    <div class="tool-content">
-                        <h2>Analisador de Segurança de URL</h2>
-                        <p class="description">Recebeu um link suspeito? Cole-o aqui. Nossa ferramenta age como um detetive, verificando se o link usa uma conexão segura (HTTPS).</p>
-                        <div class="form-group">
-                            <label for="url-input">Cole a URL para análise:</label>
-                            <input type="text" id="url-input" placeholder="https://www.exemplo.com.br">
-                        </div>
-                        <button id="analyze-url-btn" class="button">Analisar URL <i class="ri-search-eye-line"></i></button>
-                        <div id="url-results" class="results-box"></div>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-    </main>
-
+<!-- FOOTER -->
     <footer class="footer">
         <div class="footer__container container grid">
             <div class="footer__content">
-                <a href="../index.html" class="footer__logo">OnionShield</a>
-                <p class="footer__description" style="margin-top: 1rem;">Protegendo seu mundo digital com soluções de cibersegurança de ponta.</p>
+                <a href="index.html" class="footer__logo">OnionShield</a>
+                <p class="footer__description" style="margin-top: 0.5rem;">Soluções de segurança integradas para sua vida, sua empresa e sua tranquilidade. <br><br>
+                Nos acompanhe em nossas redes:</p>
                 <div class="footer__social">
-                    <a href="#" class="footer__social-link"><i class="ri-facebook-fill"></i></a>
-                    <a href="#" class="footer__social-link"><i class="ri-instagram-line"></i></a>
-                    <a href="#" class="footer__social-link"><i class="ri-twitter-x-line"></i></a>
-                    <a href="#" class="footer__social-link"><i class="ri-linkedin-box-line"></i></a>
+                    <abbr title="Chatbot">
+                        <a href="#" class="footer__social-link"><i class="ri-whatsapp-line"></i></a>
+                    </abbr>
+                    <abbr title="Instagram">
+                        <a href="#" class="footer__social-link"><i class="ri-instagram-line"></i></a>
+                    </abbr>
+                    <abbr title="Github">
+                        <a href="https://github.com/gasbriel07sm/OnionShield" class="footer__social-link"><i class="ri-github-fill"></i></a>
+                    </abbr>
+                    <abbr title="Contato">
+                        <a href="./Front/contato/contato.html" class="footer__social-link"><i class="ri-mail-line"></i></a>
+                    </abbr>
                 </div>
             </div>
+
             <div class="footer__content">
                 <h3 class="footer__title">Links Rápidos</h3>
                 <ul class="footer__links">
-                    <li><a href="#" class="footer__link">Sobre</a></li>
-                    <li><a href="#" class="footer__link">Nossos Serviços</a></li>
-                    <li><a href="#" class="footer__link">Carreira</a></li>
-                    <li><a href="../contato/contato.html" class="footer__link">Contato</a></li>
+                    <li><a href="sobre.html" class="footer__link">Sobre</a></li>
+                    <li><a href="info/info.html" class="footer__link">Informações</a></li>
+                    <li><a href="criptografia/criptografia.html" class="footer__link">Criptografia</a></li>
+                    <li><a href="contato/contato.html" class="footer__link">Contato</a></li>
+                    <li><a href="login/login.html" class="footer__link">Login</a></li>
                 </ul>
             </div>
+
             <div class="footer__content">
-                <h3 class="footer__title">Nosso Escritório</h3>
+                <h3 class="footer__title">Nosso Grupo</h3>
                 <ul class="footer__links">
-                    <li>Sistemas da Informação</li>
-                    <li>Uniaraxá, Sala 3C01</li><br>
-                    <li>Contato 1: (XX) XXXXX-XXXX</li>
-                    <li>Contato 2: (XX) XXXXX-XXXX</li>
+                    <li>Gabriel de Souza Miranda</li>
+                    <li>Luiz Gustavo</li>
+                    <li>Willian Kenner</li>
+                    <li>Gabriel de Sousa Gomes</li>
+                    <li>Maicon</li>
+                    <li>Sávio Honorato</li>
+                    <li>Gabriel Carvalho</li>
                 </ul>
             </div>
+
             <div class="footer__content">
                 <h3 class="footer__title">Inscreva-se</h3>
-                <p class="footer__description">Receba notícias e dicas de segurança diretamente no seu email.</p>
+                <p class="footer__description">Receba notícias e atualizações constantes de nossos serviços.</p>
                 <form action="" class="footer__form">
-                    <input type="email" placeholder="Seu email" class="footer__input">
+                    <input type="email" placeholder="Seu email..." class="footer__input">
                     <button class="button">Inscrever</button>
                 </form>
             </div>
         </div>
         <p class="footer__copy">&#169; OnionShield. Todos os direitos reservados.</p>
     </footer>
-
+<!-- FIM FOOTER -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
     <script src="cripto.js"></script>
