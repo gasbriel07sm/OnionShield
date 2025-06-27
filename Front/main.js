@@ -1,18 +1,18 @@
 /*=============== SHOW MENU ===============*/
-const showMenu = (toggleId, navId) =>{
-   const toggle = document.getElementById(toggleId),
-         nav = document.getElementById(navId)
+const showMenu = (toggleId, navId) => {
+  const toggle = document.getElementById(toggleId),
+    nav = document.getElementById(navId);
 
-   toggle.addEventListener('click', () =>{
-       // adicionar menu da classe
-       nav.classList.toggle('show-menu')
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show-menu');
+      toggle.classList.toggle('show-icon');
+    });
+  }
+};
 
-       // adicionar ícone de entrar e sair
-       toggle.classList.toggle('show-icon')
-   })
-}
+showMenu('nav-toggle', 'nav-menu');
 
-showMenu('nav-toggle','nav-menu')
 document.addEventListener("DOMContentLoaded", () => {
   const user = JSON.parse(localStorage.getItem("usuarioLogado"));
   const loginArea = document.getElementById("login-area");
@@ -35,20 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
         </ul>
       </li>
     `;
-  } else if (loginArea) {
-    // Usuário não logado: mostra botão de login
-    loginArea.innerHTML = `
-      <li>
-        <a href="Front/login/login.html" class="nav__link">
-          </i> Login
-        </a>
-      </li>
-    `;
-  }
+  } 
 });
 
 function logout() {
   localStorage.removeItem("usuarioLogado");
   location.reload();
 }
-
