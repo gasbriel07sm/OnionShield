@@ -6,6 +6,7 @@
   <title>OnionShield</title>
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
   <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="medidor_senha.css">
 </head>
 <body>
 <!-- HEADER -->
@@ -119,7 +120,69 @@
     </header>
 <!-- FIM HEADER -->
 
-    <!-- ============== COMEÇO DO SOBRE =========== -->
-     <script src="../../main.js"></script>
+<!-- HERO -->
+<section class="hero-section hero-section--medidor">
+  <div class="hero-container">
+    <h1 class="hero-title">
+      Modern Information Protect<br>
+      From Hackers.
+    </h1>
+    <p class="hero-subtitle">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus mattis urna nec convallis.<br>
+      Vestibulum at fermentum magna. Suspendisse pretium faucibus velit vitae iaculis.
+    </p>
+  </div>
+</section>
+<!--FIM HERO -->
+
+<!-- MEDIDOR DE SENHA -->
+ <!-- Medidor de Senha Avançado -->
+<section class="password-meter-section" aria-labelledby="password-meter-title">
+    <div class="password-meter-img-side">
+  <img src="../assets/imagem1.jpg" alt="Imagem Segurança" />
+</div>
+  <div class="password-meter-container">
+    <h2 id="password-meter-title" class="password-meter-title">Teste a força da sua senha</h2>
+    <form id="password-form" autocomplete="off">
+      <label for="password-input" class="password-label">Digite sua senha:</label>
+      <div class="password-input-wrapper">
+        <input type="password" id="password-input" class="password-input" aria-describedby="password-help" autocomplete="new-password" spellcheck="false" />
+        <button type="button" id="toggle-password" aria-label="Mostrar/ocultar senha"><i class="ri-eye-line"></i></button>
+      </div>
+      <div id="password-help" class="password-help">
+        Sua senha deve ter pelo menos 10 caracteres, incluir letras maiúsculas, minúsculas, números e símbolos.
+      </div>
+    </form>
+    <div class="password-strength-visual" aria-live="polite">
+      <div class="password-strength-bar-bg">
+        <div id="password-strength-bar" class="password-strength-bar"></div>
+      </div>
+      <div id="password-strength-text" class="password-strength-text"></div>
+    </div>
+    <ul id="password-feedback-list" class="password-feedback-list" aria-live="polite"></ul>
+    <div id="password-crack-time" class="password-crack-time"></div>
+    <div id="password-pwned-alert" class="password-pwned-alert" role="alert"></div>
+    <div class="password-policy">
+      <h3>Critérios para uma senha forte:</h3>
+      <ul>
+        <li><span class="policy-icon" id="policy-length">❌</span> Pelo menos 10 caracteres</li>
+        <li><span class="policy-icon" id="policy-uppercase">❌</span> Letra maiúscula</li>
+        <li><span class="policy-icon" id="policy-lowercase">❌</span> Letra minúscula</li>
+        <li><span class="policy-icon" id="policy-number">❌</span> Número</li>
+        <li><span class="policy-icon" id="policy-symbol">❌</span> Símbolo</li>
+        <li><span class="policy-icon" id="policy-dictionary">❌</span> Não usar palavras comuns ou padrões previsíveis</li>
+        <li><span class="policy-icon" id="policy-pwned">❌</span> Não estar em vazamentos públicos</li>
+      </ul>
+      <div class="passphrase-tip">
+        <strong>Dica:</strong> Use uma frase longa e fácil de lembrar, como <em>CachorroAzulSubiu!MontanhaVerde</em>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZXCVBN para análise de senha -->
+<script src="https://cdn.jsdelivr.net/npm/zxcvbn@4.4.2/dist/zxcvbn.js"></script>
+<script src="medidor_senha.js"></script>
+<script src="../../main.js"></script>
 </body>
 </html>
