@@ -6,6 +6,7 @@
   <title>OnionShield</title>
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
   <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="gerador_senha.css">
 </head>
 <body>
 <!-- HEADER -->
@@ -119,7 +120,56 @@
     </header>
 <!-- FIM HEADER -->
 
+<!-- HERO -->
+<section class="hero-section hero-section--medidor">
+  <div class="hero-container">
+    <h1 class="hero-title">
+      Gerador de Senhas Seguras
+    </h1>
+    <p class="hero-subtitle">
+      Crie senhas fortes, aleatórias e personalizadas para proteger suas contas e sistemas.<br>
+      Defina os critérios, gere quantas quiser e salve seu histórico com segurança.
+    </p>
+  </div>
+</section>
+<!--FIM HERO -->
+
+<!-- GERADOR DE SENHA -->
+<section class="password-meter-section" aria-labelledby="password-generator-title">
+  <div class="password-meter-img-side">
+    <img src="../assets/imagem1.jpg" alt="Imagem Segurança" />
+  </div>
+  <div class="password-meter-container">
+    <h2 id="password-generator-title" class="password-meter-title">Personalize e gere suas senhas</h2>
+    <form id="generator-form" autocomplete="off">
+      <div class="generator-options">
+        <label>
+          Comprimento:
+          <input type="number" id="length" min="12" max="64" value="16" />
+        </label>
+        <label><input type="checkbox" id="uppercase" checked /> Letras maiúsculas (A-Z)</label>
+        <label><input type="checkbox" id="lowercase" checked /> Letras minúsculas (a-z)</label>
+        <label><input type="checkbox" id="numbers" checked /> Números (0-9)</label>
+        <label><input type="checkbox" id="symbols" checked /> Símbolos (!@#$...)</label>
+        <label><input type="checkbox" id="emojis" /> Emojis (😀🚀🔒)</label>
+        <label>
+          Quantidade:
+          <input type="number" id="bulk" min="1" max="20" value="1" />
+        </label>
+      </div>
+      <button type="button" id="generate-btn" class="button button--solid">Gerar Senha(s)</button>
+    </form>
+    <div id="generated-passwords" class="generated-passwords"></div>
+    <div class="history-header">
+      <span>Histórico de Senhas Geradas</span>
+      <button id="clear-history" class="button button--ghost" title="Limpar histórico"><i class="ri-delete-bin-line"></i></button>
+    </div>
+    <ul id="password-history" class="password-history"></ul>
+  </div>
+</section>
+
     <!-- ============== COMEÇO DO SOBRE =========== -->
      <script src="../../main.js"></script>
+     <script src="gerador_senha.js"></script>
 </body>
 </html>

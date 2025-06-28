@@ -1,0 +1,203 @@
+@import url('../medidor_senha/medidor_senha.css');
+
+.password-meter-container {
+  flex: 1 1 0;
+  padding: 2.8rem 2.5rem 2.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 340px;
+}
+
+.generator-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.1rem 2.2rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+  background: #162a48;
+  border-radius: 0.8rem;
+  padding: 1.2rem 1.5rem 0.7rem 1.5rem;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+}
+
+
+.generator-options label {
+  font-size: 1.09rem;
+  color: #e6f0ff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 0.2rem;
+  user-select: none;
+}
+
+.generator-options input[type="checkbox"] {
+  accent-color: #00d2ff;
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: 0.2em;
+  border-radius: 0.25em;
+  border: 1.5px solid #4db8ff;
+  background: #223a5e;
+  transition: border 0.2s;
+}
+.generator-options input[type="checkbox"]:focus {
+  outline: 2px solid #4db8ff;
+}
+
+.generator-options input[type="number"] {
+  width: 60px;
+  margin-left: 0.4rem;
+  border-radius: 0.4rem;
+  border: 1.5px solid #223a5e;
+  background: #172a4a;
+  color: #e6f0ff;
+  padding: 0.22rem 0.5rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  transition: border 0.2s;
+}
+.generator-options input[type="number"]:focus {
+  border: 1.5px solid #00d2ff;
+  outline: none;
+}
+.generator-options .emoji-preview {
+  font-size: 1.2em;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+  vertical-align: middle;
+  filter: drop-shadow(0 0 2px #4db8ff33);
+}
+
+#generate-btn {
+  margin-top: 0.7rem;
+  width: 100%;
+  font-size: 1.15rem;
+  font-weight: 700;
+  background: #00d2ff;
+  color: #0e1a2b;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.9rem 0;
+  transition: background 0.2s;
+}
+#generate-btn:hover {
+  background: #4db8ff;
+}
+
+.generated-passwords {
+  margin: 1.2rem 0 1.2rem 0;
+  background: #162a48;
+  border-radius: 0.7rem;
+  padding: 1rem 1.2rem;
+  font-size: 1.25rem;
+  color: #4db8ff;
+  word-break: break-all;
+  min-height: 2.2rem;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.generated-pwd {
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  background: #223a5e;
+  color: #fff;
+  padding: 0.35rem 0.7rem;
+  border-radius: 0.4rem;
+  margin-right: 0.5rem;
+  font-size: 1.13rem;
+  letter-spacing: 0.04em;
+  display: inline-block;
+}
+.copy-btn {
+  background: none;
+  border: none;
+  color: #4db8ff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 0.2rem;
+  vertical-align: middle;
+  transition: color 0.2s;
+}
+.copy-btn:hover {
+  color: #00d2ff;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: #b0bed9;
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-top: 1.2rem;
+}
+#clear-history {
+  background: none;
+  border: none;
+  color: #ff4136;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.4rem;
+  transition: background 0.2s;
+}
+#clear-history:hover {
+  background: #1a2b47;
+}
+
+.password-history {
+  background: #14233a;
+  border-radius: 0.7rem;
+  padding: 0.7rem 1rem;
+  min-height: 2rem;
+  max-height: 180px;
+  overflow-y: auto;
+  font-size: 1.05rem;
+  color: #e6f0ff;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.password-history li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #223a5e;
+  border-radius: 0.4rem;
+  padding: 0.35rem 0.7rem;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  font-size: 1.05rem;
+  color: #fff;
+  transition: background 0.2s;
+}
+.password-history li:hover {
+  background: #2a3e63;
+}
+.password-history .copy-btn {
+  margin-left: 0.7rem;
+  font-size: 1.1rem;
+  color: #4db8ff;
+}
+.password-history .copy-btn:hover {
+  color: #00d2ff;
+}
+
+@media (max-width: 700px) {
+  .generator-options {
+    grid-template-columns: 1fr;
+    padding: 1rem 0.7rem 0.7rem 0.7rem;
+    gap: 0.7rem 0.5rem;
+  }
+  .generator-options label {
+    font-size: 1rem;
+  }
+}
