@@ -6,6 +6,7 @@
   <title>OnionShield</title>
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
   <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="criptografia_simetrica.css">
 </head>
 <body>
 <!-- HEADER -->
@@ -119,7 +120,74 @@
     </header>
 <!-- FIM HEADER -->
 
-    <!-- ============== COMEÇO DO SOBRE =========== -->
-     <script src="../../main.js"></script>
+<!-- HERO -->
+<section class="hero-section hero-section--medidor">
+  <div class="hero-container">
+    <h1 class="hero-title">
+      Criptografia Simétrica Moderna
+    </h1>
+    <p class="hero-subtitle">
+      Proteja dados com AES-256-GCM ou ChaCha20-Poly1305.<br>
+      Geração segura de chaves, IV único, autenticação e rotação de chaves.
+    </p>
+  </div>
+</section>
+<!--FIM HERO -->
+
+<!-- CRIPTOGRAFIA SIMÉTRICA -->
+<section class="password-meter-section" aria-labelledby="symmetric-crypto-title">
+  <div class="password-meter-img-side">
+    <img src="../assets/imagem1.jpg" alt="Imagem Segurança" />
+  </div>
+  <div class="password-meter-container">
+    <h2 id="symmetric-crypto-title" class="password-meter-title">Criptografe e Descriptografe Dados</h2>
+    <form id="crypto-form" autocomplete="off">
+      <div class="generator-options">
+        <label>
+          Algoritmo:
+          <select id="algorithm">
+            <option value="AES-GCM">AES-256-GCM</option>
+            <option value="CHACHA20">ChaCha20-Poly1305</option>
+          </select>
+        </label>
+        <label>
+          Chave (base64 ou senha):
+          <input type="password" id="key-input" class="password-input" autocomplete="new-password" spellcheck="false" />
+        </label>
+        <label>
+          Derivar chave com:
+          <select id="kdf">
+            <option value="argon2">Argon2</option>
+            <option value="pbkdf2">PBKDF2</option>
+            <option value="scrypt">scrypt</option>
+            <option value="raw">Chave já derivada (base64)</option>
+          </select>
+        </label>
+        <label>
+          Texto para criptografar:
+          <textarea id="plaintext" rows="3" style="resize:vertical;width:100%;"></textarea>
+        </label>
+        <label>
+          Envelope JSON:
+          <textarea id="envelope" rows="5" style="resize:vertical;width:100%;" readonly></textarea>
+        </label>
+      </div>
+      <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+        <button type="button" id="encrypt-btn" class="button button--solid" style="flex:1;">Criptografar</button>
+        <button type="button" id="decrypt-btn" class="button button--ghost" style="flex:1;">Descriptografar</button>
+      </div>
+    </form>
+    <div class="history-header" style="margin-top:1.5rem;">
+      <span>Histórico de Operações</span>
+      <button id="clear-crypto-history" class="button button--ghost" title="Limpar histórico"><i class="ri-delete-bin-line"></i></button>
+    </div>
+    <ul id="crypto-history" class="password-history"></ul>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/argon2-browser/dist/argon2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/crypto-js@4.2.0/crypto-js.min.js"></script>
+<script src="../../main.js"></script>
+<script src="criptografia_simetrica.js"></script>
 </body>
 </html>

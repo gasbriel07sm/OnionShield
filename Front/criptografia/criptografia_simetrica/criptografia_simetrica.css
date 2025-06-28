@@ -1,0 +1,274 @@
+@import url('../medidor_senha/medidor_senha.css');
+
+.password-meter-section {
+  max-width: 1300px;
+  min-width: 340px;
+  margin: 3.5rem auto 3rem auto;
+  background: rgba(14, 26, 43, 0.98);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 40px 0 rgba(0,0,0,0.22);
+  padding: 0;
+  color: #e6f0ff;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  overflow: hidden;
+  align-items: stretch;
+}
+
+.password-meter-container {
+  flex: 1 1 0;
+  padding: 2.8rem 2.5rem 2.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 340px;
+  max-width: 900px;
+}
+
+.crypto-flex {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.crypto-panel {
+  flex: 1 1 350px;
+  background: #162a48;
+  border-radius: 0.9rem;
+  padding: 1.5rem 1.3rem 1.3rem 1.3rem;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  min-width: 320px;
+}
+
+.crypto-panel h3 {
+  font-size: 1.18rem;
+  color: #4db8ff;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+}
+
+.crypto-panel label {
+  font-size: 1.05rem;
+  color: #e6f0ff;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.crypto-panel input,
+.crypto-panel select {
+  border-radius: 0.4rem;
+  border: 1.5px solid #223a5e;
+  background: #172a4a;
+  color: #e6f0ff;
+  padding: 0.35rem 0.7rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  transition: border 0.2s;
+  margin-top: 0.1rem;
+}
+
+.crypto-panel input:focus,
+.crypto-panel select:focus {
+  border: 1.5px solid #00d2ff;
+  outline: none;
+}
+
+.crypto-panel .crypto-result {
+  background: #223a5e;
+  color: #b0bed9;
+  border-radius: 0.5rem;
+  padding: 0.7rem 0.8rem;
+  font-size: 1.04rem;
+  word-break: break-all;
+  margin-top: 0.3rem;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  min-height: 2.2em;
+  white-space: pre-wrap;
+  box-shadow: 0 1px 6px 0 rgba(0,0,0,0.10);
+  transition: background 0.2s;
+}
+
+.crypto-panel .crypto-result:empty {
+  display: none;
+}
+
+.crypto-panel .crypto-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.7rem;
+}
+
+.crypto-panel .crypto-actions button {
+  flex: 1;
+  font-size: 1.08rem;
+  font-weight: 700;
+  border-radius: 0.7rem;
+  padding: 0.9rem 0;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+}
+
+#encrypt-btn {
+  background: #00d2ff;
+  color: #0e1a2b;
+  border: none;
+}
+#encrypt-btn:hover {
+  background: #4db8ff;
+}
+
+#decrypt-btn {
+  background: none;
+  color: #00d2ff;
+  border: 2px solid #00d2ff;
+}
+#decrypt-btn:hover {
+  background: #223a5e;
+  color: #fff;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: #b0bed9;
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-top: 1.2rem;
+}
+#clear-crypto-history {
+  background: none;
+  border: none;
+  color: #ff4136;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.4rem;
+  transition: background 0.2s;
+}
+#clear-crypto-history:hover {
+  background: #1a2b47;
+}
+
+.password-history {
+  background: #14233a;
+  border-radius: 0.7rem;
+  padding: 0.7rem 1rem;
+  min-height: 2rem;
+  max-height: 180px;
+  overflow-y: auto;
+  font-size: 1.05rem;
+  color: #e6f0ff;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.password-history li {
+  display: flex;
+  flex-direction: column;
+  background: #223a5e;
+  border-radius: 0.4rem;
+  padding: 0.35rem 0.7rem;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  font-size: 1.05rem;
+  color: #fff;
+  transition: background 0.2s;
+  margin-bottom: 0.2rem;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.06);
+}
+.password-history li:hover {
+  background: #2a3e63;
+}
+
+/* Generator options (caso use em outro contexto) */
+.generator-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2.5rem;
+  margin-bottom: 1.7rem;
+  align-items: start;
+  background: #162a48;
+  border-radius: 1.1rem;
+  padding: 2rem 2.2rem 1.2rem 2.2rem;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.13);
+  transition: box-shadow 0.2s;
+}
+
+.generator-options label {
+  font-size: 1.13rem;
+  color: #e6f0ff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 0.2rem;
+  user-select: none;
+  letter-spacing: 0.01em;
+}
+
+.generator-options input,
+.generator-options select,
+.generator-options textarea {
+  border-radius: 0.5rem;
+  border: 1.5px solid #223a5e;
+  background: #1b2d4a;
+  color: #e6f0ff;
+  padding: 0.55rem 0.9rem;
+  font-size: 1.13rem;
+  font-weight: 500;
+  transition: border 0.2s, background 0.2s;
+  margin-top: 0.1rem;
+  outline: none;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.06);
+  resize: none;
+}
+
+.generator-options input:focus,
+.generator-options select:focus,
+.generator-options textarea:focus {
+  border: 1.5px solid #00d2ff;
+  background: #223a5e;
+}
+
+.generator-options textarea[readonly] {
+  background: #223a5e;
+  color: #b0bed9;
+  font-style: italic;
+}
+
+@media (max-width: 1100px) {
+  .password-meter-section {
+    max-width: 99vw;
+    flex-direction: column;
+  }
+  .crypto-flex {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .crypto-panel {
+    min-width: unset;
+  }
+}
+@media (max-width: 900px) {
+  .generator-options {
+    grid-template-columns: 1fr;
+    padding: 1rem 0.7rem 0.7rem 0.7rem;
+    gap: 0.7rem 0.5rem;
+  }
+  .generator-options label {
+    font-size: 1rem;
+  }
+}
