@@ -1,4 +1,12 @@
-const charset = {
+// Verifica se o usuário está logado
+  const usuarioLogado = localStorage.getItem("usuarioLogado");
+
+  if (!usuarioLogado) {
+    // Redireciona para login se não estiver logado
+    window.location.href = "../../login/login.html";
+  }
+
+  const charset = {
   uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
   lowercase: 'abcdefghijklmnopqrstuvwxyz',
   numbers: '0123456789',
@@ -115,3 +123,4 @@ document.getElementById('clear-history').addEventListener('click', () => {
 });
 
 window.addEventListener('DOMContentLoaded', renderHistory);
+

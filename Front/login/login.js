@@ -111,4 +111,24 @@ else {
         exibirMensagemModal("Erro", "Erro ao conectar com a API.");
       });
   });
+  
+  function fazerLogin(email, senha) {
+  // Aqui você valida com a API, se der certo:
+  const usuario = {
+    email: email,
+    nome: "Usuário Teste"
+  };
+
+  // Salva no localStorage
+  localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
+
+  // Redireciona para a home (ou outra página)
+  window.location.href = "../index.html";
+}
+function logout() {
+  localStorage.removeItem("usuarioLogado");
+  window.location.href = "index.html";
+}
+
+
 

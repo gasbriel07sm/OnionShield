@@ -1,3 +1,10 @@
+// Verifica se o usuário está logado
+  const usuarioLogado = localStorage.getItem("usuarioLogado");
+
+  if (!usuarioLogado) {
+    // Redireciona para login se não estiver logado
+    window.location.href = "../../login/login.html";
+  }
 // Funções utilitárias
 function base64ToBytes(str) {
   return Uint8Array.from(atob(str), c => c.charCodeAt(0));
