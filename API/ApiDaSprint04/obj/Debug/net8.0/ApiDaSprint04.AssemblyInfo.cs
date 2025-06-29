@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiDaSprint04")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28bc948dfc705b01e50b6b12e6927eafeff96a5e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8fc8c950c2ea2455fea04b301da56c965056091e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiDaSprint04")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiDaSprint04")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
