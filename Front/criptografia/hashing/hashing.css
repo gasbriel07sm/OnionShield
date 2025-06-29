@@ -1,0 +1,360 @@
+/* ================= HERO SECTION CUSTOM ================= */
+.hero-section--medidor {
+  background: transparent;
+  padding: 5.5rem 0 2.5rem 0;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.hero-title {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  line-height: 1.15;
+}
+
+.hero-subtitle {
+  color: #b0bed9;
+  font-size: 1.05rem;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  .hero-subtitle {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+}
+
+/* ================= MAIN CONTAINER ================= */
+.password-meter-section {
+  margin: 3.5rem auto 3rem auto;
+  max-width: 1100px;
+  min-width: 340px;
+  background: rgba(14, 26, 43, 0.98);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 40px 0 rgba(0,0,0,0.22);
+  padding: 0;
+  color: #e6f0ff;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  overflow: hidden;
+  align-items: stretch;
+  min-height: 500px;
+}
+.password-meter-section:hover {
+  box-shadow: 0 12px 60px 0 rgba(0,0,0,0.32);
+}
+
+@media (max-width: 900px) {
+  .password-meter-section {
+    max-width: 98vw;
+    padding: 1.5rem 0.5rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .password-meter-section {
+    flex-direction: column;
+    max-width: 99vw;
+    padding: 0;
+  }
+  .password-meter-img-side {
+    width: 100%;
+    min-width: unset;
+    height: 180px;
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+  .password-meter-img-side img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .password-meter-container {
+    padding: 2rem 1rem 1.5rem 1rem;
+  }
+}
+
+/* ================= IMAGE SIDE ================= */
+.password-meter-img-side {
+  width: 420px;
+  min-width: 260px;
+  height: auto;
+  background: #12213a;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  border-radius: 1.5rem 0 0 1.5rem;
+  overflow: hidden;
+  position: relative;
+  flex: 0 0 420px;
+}
+
+.password-meter-img-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  flex: 1 1 auto;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+/* ================= FORM CONTAINER ================= */
+.password-meter-container {
+  flex: 1 1 0;
+  padding: 2.8rem 2.5rem 2.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ================= TITLES & LABELS ================= */
+.password-meter-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+.password-label {
+  font-size: 1.18rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #b0bed9;
+}
+
+/* ================= INPUTS & WRAPPERS ================= */
+.password-input-wrapper {
+  display: flex;
+  align-items: center;
+  background: #172a4a;
+  border-radius: 0.8rem;
+  padding: 0.2rem 1rem;
+  margin-bottom: 0.7rem;
+  border: 1.5px solid #223a5e;
+  transition: border 0.2s;
+}
+
+.password-input-wrapper:focus-within {
+  border: 1.5px solid #4db8ff;
+}
+
+.password-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #e6f0ff;
+  font-size: 1.25rem;
+  padding: 0.8rem 0.3rem;
+  outline: none;
+  letter-spacing: 0.06em;
+}
+
+/* ================= TOGGLE VISIBILITY BUTTON ================= */
+#toggle-visibility {
+  background: none;
+  border: none;
+  color: #4db8ff;
+  font-size: 1.7rem;
+  cursor: pointer;
+  margin-left: 0.3rem;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  height: 2.2rem;
+}
+#toggle-visibility:hover {
+  color: #fff;
+}
+.password-input-wrapper button {
+  box-shadow: none;
+  background: none;
+}
+
+/* ================= SELECT (ALGORITMO) ================= */
+#algoritmo,
+.password-input[type="select"] {
+  background: #172a4a;
+  border: 1.5px solid #223a5e;
+  color: #e6f0ff;
+  font-size: 1.25rem;
+  padding: 0.8rem 2.2rem 0.8rem 0.3rem;
+  outline: none;
+  letter-spacing: 0.06em;
+  border-radius: 0.4rem;
+  width: 100%;
+  margin-bottom: 1.2rem;
+  margin-top: 0.2rem;
+  cursor: pointer;
+  transition: border 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='18' viewBox='0 0 24 24' width='18' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 1.2em;
+}
+
+#algoritmo:focus {
+  border: 1.5px solid #4db8ff;
+}
+
+select::-ms-expand { display: none; }
+
+/* ================= AJUDA E DICAS ================= */
+.password-help {
+  color: #b0bed9;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  margin-left: 0.1rem;
+}
+
+.passphrase-tip {
+  color: #b0bed9;
+  font-size: 1.02rem;
+  margin-top: 0.8rem;
+  background: #1a2b47;
+  border-radius: 0.7rem;
+  padding: 0.6rem 0.9rem;
+  font-style: italic;
+  border-left: 4px solid #4db8ff;
+}
+
+/* ================= RESULTADO ================= */
+.result {
+  background: #172a4a;
+  color: #e6f0ff;
+  border-radius: 0.7rem;
+  padding: 1rem 1rem 0.7rem 1rem;
+  margin-top: 1.2rem;
+  font-size: 1.08rem;
+  word-break: break-all;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+  min-height: 2.2rem;
+}
+
+.formats {
+  color: #b0bed9;
+  font-size: 0.98rem;
+  margin-top: 0.5rem;
+  word-break: break-all;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+}
+
+/* ================= BOTÃO ================= */
+.button--solid, .button.button--solid {
+  background: #19d4ff;
+  color: #0a223a;
+  border: none;
+  padding: 0.9rem 0;
+  border-radius: 0.7rem;
+  font-size: 1.13rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 1.2rem;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+}
+.button--solid:hover, .button.button--solid:hover {
+  background: #4db8ff;
+  color: #fff;
+}
+
+/* ================= OUTROS ELEMENTOS DO MEDIDOR (IGNORADOS AQUI) ================= */
+/* Você pode remover as regras abaixo se não usar barra de força, feedback, etc. */
+.password-strength-visual,
+.password-strength-bar-bg,
+.password-strength-bar,
+.password-strength-text,
+.password-feedback-list,
+.password-crack-time,
+.password-pwned-alert,
+.password-policy,
+.policy-icon {
+  display: none;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 1100px) {
+  .password-meter-section {
+    flex-direction: column;
+    max-width: 99vw;
+    padding: 0;
+  }
+  .password-meter-img-side {
+    width: 100%;
+    min-width: unset;
+    height: 180px;
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+  .password-meter-img-side img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .password-meter-container {
+    padding: 2rem 1rem 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .password-meter-section {
+    max-width: 98vw;
+    padding: 1.5rem 0.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  .hero-subtitle {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+  .password-meter-container {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .password-meter-section {
+    border-radius: 0.7rem;
+    min-width: unset;
+    margin: 1rem 0.2rem;
+  }
+  .password-meter-img-side {
+    border-radius: 0.7rem 0.7rem 0 0;
+    min-width: unset;
+    height: 120px;
+  }
+  .password-meter-container {
+    padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+  }
+  .password-meter-title {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 370px) {
+  .password-meter-section {
+    padding: 0;
+  }
+  .password-meter-container {
+    padding: 0.3rem 0.1rem 0.3rem 0.1rem;
+  }
+}

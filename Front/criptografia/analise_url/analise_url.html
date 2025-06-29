@@ -6,6 +6,7 @@
   <title>OnionShield</title>
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
   <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="analise_url.css">
 </head>
 <body>
 <!-- HEADER -->
@@ -119,7 +120,39 @@
     </header>
 <!-- FIM HEADER -->
 
-    <!-- ============== COMEÇO DO SOBRE =========== -->
-     <script src="../../main.js"></script>
+<!-- HERO -->
+<section class="hero-section hero-section--medidor">
+  <div class="hero-container">
+    <h1 class="hero-title">
+      Análise de URL
+    </h1>
+    <p class="hero-subtitle">
+      Verifique se um link é seguro antes de clicar! <br>
+      Analise rapidamente URLs suspeitas e evite golpes de phishing.
+    </p>
+  </div>
+</section>
+<!--FIM HERO -->
+
+<section class="password-meter-section" aria-labelledby="url-analyzer-title">
+  <div class="password-meter-img-side">
+    <img src="../assets/imagem1.jpg" alt="Imagem Segurança" />
+  </div>
+  <div class="password-meter-container">
+    <h2 id="url-analyzer-title" class="password-meter-title">Analise a segurança de uma URL</h2>
+    <form id="url-form" autocomplete="off">
+      <label for="url-input" class="password-label">Cole ou digite a URL:</label>
+      <div class="password-input-wrapper">
+        <input type="text" id="url-input" class="password-input" placeholder="https://exemplo.com/..." autocomplete="off" spellcheck="false" />
+      </div>
+      <button type="submit" class="button button--solid" style="width:100%;margin-bottom:1.2rem;">Analisar URL</button>
+    </form>
+    <div id="url-result" class="result" style="display:none"></div>
+    <div id="url-tips" class="formats"></div>
+  </div>
+</section>
+
+<script src="analise_url.js"></script>
+<script src="../../main.js"></script>
 </body>
 </html>

@@ -6,6 +6,7 @@
   <title>OnionShield</title>
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
   <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="hashing.css">
 </head>
 <body>
 <!-- HEADER -->
@@ -119,7 +120,54 @@
     </header>
 <!-- FIM HEADER -->
 
-    <!-- ============== COMEÇO DO SOBRE =========== -->
-     <script src="../../main.js"></script>
+<!-- HERO -->
+<section class="hero-section hero-section--medidor">
+  <div class="hero-container">
+    <h1 class="hero-title">
+      Gerador de Hash
+    </h1>
+    <p class="hero-subtitle">
+      Transforme qualquer texto ou senha em hash seguro usando algoritmos modernos.<br>
+      Escolha o algoritmo, visualize em hexadecimal e base64.
+    </p>
+  </div>
+</section>
+<!--FIM HERO -->
+
+<!-- HASHING -->
+<section class="password-meter-section" aria-labelledby="hashing-title">
+  <div class="password-meter-img-side">
+    <img src="../assets/imagem1.jpg" alt="Imagem Segurança" />
+  </div>
+  <div class="password-meter-container">
+    <h2 id="hashing-title" class="password-meter-title">Gere o hash do seu texto</h2>
+    <form id="hash-form" autocomplete="off">
+      <label for="hash-input" class="password-label">Digite o texto ou senha:</label>
+      <div class="password-input-wrapper">
+        <input type="password" id="hash-input" class="password-input" autocomplete="off" spellcheck="false" />
+        <button type="button" id="toggle-visibility" aria-label="Mostrar/ocultar texto"><i class="ri-eye-line"></i></button>
+      </div>
+      <div class="password-help">
+        Seu texto pode ser qualquer informação, senha ou frase.
+      </div>
+      <label for="algoritmo" class="password-label" style="margin-top:1.2rem;">Algoritmo:</label>
+      <select id="algoritmo" class="password-input" style="margin-bottom:1.2rem;">
+        <option value="md5">MD5 (educacional)</option>
+        <option value="sha-1">SHA-1 (obsoleto)</option>
+        <option value="sha-256" selected>SHA-256</option>
+        <option value="sha-384">SHA-384</option>
+        <option value="sha-512">SHA-512</option>
+      </select>
+      <button type="button" onclick="gerarHash()" class="button button--solid" style="width:100%;margin-bottom:1.2rem;">Gerar Hash</button>
+    </form>
+    <div id="resultado" class="result" style="display:none"></div>
+    <div id="formatos" class="formats"></div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/js-md5@0.8.3/build/md5.min.js"></script>
+    
+<script src="hashing.js"></script>
+<script src="../../main.js"></script>
 </body>
 </html>
