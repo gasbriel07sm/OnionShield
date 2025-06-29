@@ -1,0 +1,18 @@
+/*===================== GRÁFICO CHART.JS =====================*/
+.chart__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh; /* altura mínima para centralização visual */
+  background-color: var(--body-color);
+  padding: 2rem;
+}
+
+#Grafico1 {
+  max-width: 400px;
+  max-height: 400px;
+  background-color: var(--container-color);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 8px 24px hsla(188, 100%, 46%, 0.15);
+}
