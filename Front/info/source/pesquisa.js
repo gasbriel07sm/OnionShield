@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
       label: "Sua idade",
       type: "bar",
       data: [6.1, 6.1, 6.1, 6.1, 6.1, 6.1, 6.1, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 9.1, 6.1, 6.1, 6.1, 3.0, 3.0, 3.0],
-      labels: ["04/09/78", "18", "20", "21 anos", "26", "28", "30 anos", "31 anos", "32 anos", "36", "38 anos", "46"],
+      labels: [ "18 anos", "20 anos", "21 anos", "26 anos", "28 anos", "30 anos", "31 anos", "32 anos", "36 anos", "38 anos", "46 anos","46 anos"],
       colors: ["#2ecc71"]
     },
     {

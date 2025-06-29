@@ -1,3 +1,10 @@
+ // Verifica se o usuário está logado
+  const usuarioLogado = localStorage.getItem("usuarioLogado");
+
+  if (!usuarioLogado) {
+    // Redireciona para login se não estiver logado
+    window.location.href = "../../../login/login.html";
+  }
 // ARQUIVO: quest1.js
 document.addEventListener('DOMContentLoaded', () => {
     const quizForm = document.getElementById('quiz-form');
@@ -101,10 +108,4 @@ document.addEventListener('DOMContentLoaded', () => {
     showQuestion(0);
 });
 
-  // Verifica se o usuário está logado
-  const usuarioLogado = localStorage.getItem("usuarioLogado");
-
-  if (!usuarioLogado) {
-    // Redireciona para login se não estiver logado
-    window.location.href = "../../../login/login.html";
-  }
+ 

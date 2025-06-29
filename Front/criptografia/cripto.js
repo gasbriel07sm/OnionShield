@@ -1,3 +1,5 @@
+
+
 document.querySelectorAll('.faq-question').forEach(btn => {
   btn.addEventListener('click', function() {
     const expanded = this.getAttribute('aria-expanded') === 'true';
