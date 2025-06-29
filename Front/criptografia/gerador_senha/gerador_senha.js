@@ -1,10 +1,10 @@
 // Verifica se o usuário está logado
-  const usuarioLogado = localStorage.getItem("usuarioLogado");
+  /*const usuarioLogado = localStorage.getItem("usuarioLogado");
 
   if (!usuarioLogado) {
     // Redireciona para login se não estiver logado
     window.location.href = "../../login/login.html";
-  }
+  }*/
 
 
 const charset = {
@@ -124,3 +124,18 @@ document.getElementById('clear-history').addEventListener('click', () => {
 });
 
 window.addEventListener('DOMContentLoaded', renderHistory);
+
+function addToHistory(password) {
+  const ul = document.getElementById('password-history');
+  const li = document.createElement('li');
+  li.textContent = password;
+  const btn = document.createElement('button');
+  btn.className = 'copy-btn';
+  btn.title = 'Copiar senha';
+  btn.innerHTML = '📋';
+  btn.onclick = () => {
+    navigator.clipboard.writeText(password);
+  };
+  li.appendChild(btn);
+  ul.prepend(li);
+}

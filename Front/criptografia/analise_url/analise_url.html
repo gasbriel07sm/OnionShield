@@ -120,24 +120,48 @@
     </header>
 <!-- FIM HEADER -->
 
-<!-- HERO -->
-<section class="hero-section hero-section--medidor">
-  <div class="hero-container">
-    <h1 class="hero-title">
-      Análise de URL
-    </h1>
+<section class="faq-section">
+    <h2 class="section__title section__title--center" style="margin-top: 4rem;">ANÁLISE DE URL</h2>
+    <hr class="section__divider">
     <p class="hero-subtitle">
-      Verifique se um link é seguro antes de clicar! <br>
-      Analise rapidamente URLs suspeitas e evite golpes de phishing.
+        A análise de URL é uma ferramenta essencial para verificar a segurança de links, identificar possíveis ameaças e garantir que você esteja acessando sites confiáveis. Esta seção permite que você cole ou digite uma URL para análise, fornecendo informações sobre sua segurança e possíveis riscos associados.
+    </p> <br>
+    <p class="hero-subtitle">
+      <ol>
+        <li>Recebe a URL digitada pelo usuário no formulário.</li>
+
+        <li>Valida se a URL é válida (sintaxe correta).</li>
+
+        <li>Analisa diversos aspectos de segurança da URL, incluindo:</li>
+        <ul>
+            <li>
+                Se usa HTTPS.
+                Se está usando uma porta incomum.
+                Se o domínio é um endereço IP.
+                Se contém palavras suspeitas (ex: "login", "bank", "senha", "pix", etc).
+                Se possui muitos subdomínios.
+                Se a URL é muito longa.
+            </li>
+            <li>Se contém caracteres incomuns.</li>
+            <li>Se é de um encurtador de URL.</li>
+            <li>Se contém o símbolo @ (técnica comum em phishing).</li>
+            <li>Se o domínio usa caracteres especiais (homógrafos).</li>
+            <li>Se o domínio tenta imitar marcas famosas (ex: "g00gle", "faceb00k", etc).</li>
+        </ul>
+        <li>Atribui uma pontuação de risco (score) conforme os itens acima.</li>
+        <li>Mostra o resultado final:</li>
+        <ul>
+            <li>Verde: "URL provavelmente segura"</li>
+            <li>Amarelo: "Atenção: verifique a URL com cuidado"</li>
+            <li>Vermelho: "URL suspeita! Não clique se não tiver certeza"</li>
+        </ul>
+        <li>Exibe dicas e alertas detalhados sobre cada ponto analisado.</li>
+      </ol>
     </p>
-  </div>
-</section>
+  <div class="faq-list">
 <!--FIM HERO -->
 
 <section class="password-meter-section" aria-labelledby="url-analyzer-title">
-  <div class="password-meter-img-side">
-    <img src="../assets/imagem1.jpg" alt="Imagem Segurança" />
-  </div>
   <div class="password-meter-container">
     <h2 id="url-analyzer-title" class="password-meter-title">Analise a segurança de uma URL</h2>
     <form id="url-form" autocomplete="off">

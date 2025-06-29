@@ -1,10 +1,10 @@
 // Verifica se o usuário está logado
-  const usuarioLogado = localStorage.getItem("usuarioLogado");
+  /*const usuarioLogado = localStorage.getItem("usuarioLogado");
 
   if (!usuarioLogado) {
     // Redireciona para login se não estiver logado
     window.location.href = "../../login/login.html";
-  }
+  }*/
 // Funções utilitárias
 function base64ToBytes(str) {
   return Uint8Array.from(atob(str), c => c.charCodeAt(0));
@@ -173,3 +173,111 @@ document.getElementById('clear-crypto-history').onclick = () => {
 
 window.addEventListener('DOMContentLoaded', renderCryptoHistory);
 
+// Utilitários
+function strToUint8(str) {
+  return new TextEncoder().encode(str);
+}
+function uint8ToBase64(bytes) {
+  return btoa(String.fromCharCode(...bytes));
+}
+function base64ToUint8(str) {
+  return new Uint8Array([...atob(str)].map(c => c.charCodeAt(0)));
+}
+
+// Deriva uma chave a partir da senha e salt usando PBKDF2
+async function deriveKeyPBKDF2(password, salt, keyLen = 32) {
+  const keyMaterial = await window.crypto.subtle.importKey(
+    "raw", strToUint8(password), "PBKDF2", false, ["deriveKey"]
+  );
+  return window.crypto.subtle.deriveKey(
+    {
+      name: "PBKDF2",
+      salt: salt,
+      iterations: 100000,
+      hash: "SHA-256"
+    },
+    keyMaterial,
+    { name: "AES-GCM", length: keyLen * 8 },
+    false,
+    ["encrypt", "decrypt"]
+  );
+}
+
+// Gera IV aleatório
+function generateIV(len = 12) {
+  const iv = new Uint8Array(len);
+  window.crypto.getRandomValues(iv);
+  return iv;
+}
+
+// Criptografa texto
+async function encryptAESGCM(plaintext, password) {
+  const salt = generateIV(16);
+  const iv = generateIV(12);
+  const key = await deriveKeyPBKDF2(password, salt);
+  const enc = new TextEncoder().encode(plaintext);
+  const ciphertext = await window.crypto.subtle.encrypt(
+    { name: "AES-GCM", iv: iv },
+    key,
+    enc
+  );
+  // Monta envelope JSON
+  return JSON.stringify({
+    alg: "AES-256-GCM",
+    salt: uint8ToBase64(salt),
+    iv: uint8ToBase64(iv),
+    ciphertext: uint8ToBase64(new Uint8Array(ciphertext))
+  }, null, 2);
+}
+
+// Descriptografa texto
+async function decryptAESGCM(envelope, password) {
+  let parsed;
+  try {
+    parsed = typeof envelope === "string" ? JSON.parse(envelope) : envelope;
+  } catch {
+    throw new Error("Envelope inválido!");
+  }
+  if (!parsed.salt || !parsed.iv || !parsed.ciphertext) throw new Error("Envelope incompleto!");
+  const salt = base64ToUint8(parsed.salt);
+  const iv = base64ToUint8(parsed.iv);
+  const ciphertext = base64ToUint8(parsed.ciphertext);
+  const key = await deriveKeyPBKDF2(password, salt);
+  try {
+    const plaintext = await window.crypto.subtle.decrypt(
+      { name: "AES-GCM", iv: iv },
+      key,
+      ciphertext
+    );
+    return new TextDecoder().decode(plaintext);
+  } catch {
+    throw new Error("Falha na autenticação ou senha incorreta!");
+  }
+}
+
+// Eventos dos botões
+document.getElementById('encrypt-btn').onclick = async () => {
+  const password = document.getElementById('key-input').value;
+  const plaintext = document.getElementById('plaintext').value;
+  if (!password || !plaintext) return alert('Preencha a chave e o texto!');
+  try {
+    const envelope = await encryptAESGCM(plaintext, password);
+    document.getElementById('envelope').value = envelope;
+    alert('Texto criptografado com sucesso!');
+  } catch (e) {
+    alert('Erro ao criptografar: ' + e.message);
+  }
+};
+
+document.getElementById('decrypt-btn').onclick = async () => {
+  const password = document.getElementById('key-input').value;
+  const envelope = document.getElementById('envelope').value;
+  if (!password || !envelope) return alert('Preencha a chave e o envelope!');
+  try {
+    const plaintext = await decryptAESGCM(envelope, password);
+    document.getElementById('plaintext').value = plaintext;
+    alert('Texto descriptografado com sucesso!');
+  } catch (e) {
+    alert('Erro ao descriptografar: ' + e.message);
+  }
+};

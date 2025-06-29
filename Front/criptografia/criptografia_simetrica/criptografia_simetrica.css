@@ -1,211 +1,311 @@
 @import url('../medidor_senha/medidor_senha.css');
 
-.password-meter-section {
-  max-width: 1300px;
-  min-width: 340px;
-  margin: 3.5rem auto 3rem auto;
-  background: rgba(14, 26, 43, 0.98);
-  border-radius: 1.5rem;
-  box-shadow: 0 8px 40px 0 rgba(0,0,0,0.22);
-  padding: 0;
-  color: #e6f0ff;
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  overflow: hidden;
-  align-items: stretch;
+/* Personalização para análise de URL */
+#url-input {
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  letter-spacing: 0.03em;
 }
 
-.password-meter-container {
-  flex: 1 1 0;
-  padding: 2.8rem 2.5rem 2.5rem 2.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  min-width: 340px;
+#url-result {
+  margin-top: 1.2rem;
+  font-size: 1.08rem;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  word-break: break-all;
+}
+
+.url-safe {
+  color: #2ecc40;
+  font-weight: 600;
+}
+.url-warning {
+  color: #ffdc00;
+  font-weight: 600;
+}
+.url-danger {
+  color: #ff4136;
+  font-weight: 600;
+}
+
+#url-tips {
+  margin-top: 0.7rem;
+  color: #b0bed9;
+  font-size: 0.98rem;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+}
+
+/* Responsividade igual ao medidor */
+@media (max-width: 1100px) {
+  .password-meter-section {
+    flex-direction: column;
+    max-width: 99vw;
+    padding: 0;
+  }
+  .password-meter-img-side {
+    width: 100%;
+    min-width: unset;
+    height: 180px;
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+  .password-meter-img-side img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .password-meter-container {
+    padding: 2rem 1rem 1.5rem 1rem;
+  }
+}
+@media (max-width: 700px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  .hero-subtitle {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+  .password-meter-container {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .password-meter-section {
+    border-radius: 0.7rem;
+    min-width: unset;
+    margin: 1rem 0.2rem;
+  }
+  .password-meter-img-side {
+    border-radius: 0.7rem 0.7rem 0 0;
+    min-width: unset;
+    height: 120px;
+  }
+  .password-meter-container {
+    padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+  }
+  .password-meter-title {
+    font-size: 1.25rem;
+  }
+}
+
+@import url('../medidor_senha/medidor_senha.css');
+
+#url-input {
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  letter-spacing: 0.03em;
+}
+
+#url-result {
+  margin-top: 1.2rem;
+  font-size: 1.08rem;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  word-break: break-all;
+}
+
+.url-safe {
+  color: #2ecc40;
+  font-weight: 600;
+}
+.url-warning {
+  color: #ffdc00;
+  font-weight: 600;
+}
+.url-danger {
+  color: #ff4136;
+  font-weight: 600;
+}
+
+#url-tips {
+  margin-top: 0.7rem;
+  color: #b0bed9;
+  font-size: 0.98rem;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+}
+
+/* Responsividade igual ao medidor */
+@media (max-width: 1100px) {
+  .password-meter-section {
+    flex-direction: column;
+    max-width: 99vw;
+    padding: 0;
+  }
+  .password-meter-img-side {
+    width: 100%;
+    min-width: unset;
+    height: 180px;
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+  .password-meter-img-side img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .password-meter-container {
+    padding: 2rem 1rem 1.5rem 1rem;
+  }
+}
+@media (max-width: 700px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  .hero-subtitle {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+  .password-meter-container {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .password-meter-section {
+    border-radius: 0.7rem;
+    min-width: unset;
+    margin: 1rem 0.2rem;
+  }
+  .password-meter-img-side {
+    border-radius: 0.7rem 0.7rem 0 0;
+    min-width: unset;
+    height: 120px;
+  }
+  .password-meter-container {
+    padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+  }
+  .password-meter-title {
+    font-size: 1.25rem;
+  }
+}
+
+/* FAQ Section - Organização das listas */
+.faq-section {
   max-width: 900px;
+  margin: 2.5rem auto 2.5rem auto;
+  padding: 2rem 1.5rem 1rem 1.5rem;
+  background: rgba(14, 26, 43, 0.98);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+}
+section h2.faq-section {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #e6f0ff;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
 }
 
-.crypto-flex {
+.faq-section .hero-subtitle {
+  color: #b0bed9;
+  font-size: 1.08rem;
+  text-align: justify;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+}
+
+.faq-section ol {
+  margin-left: 1.2rem;
+  padding-left: 1.2rem;
+  font-size: 1.08rem;
+  color: #fff;
+  font-weight: 600;
+  list-style-type: decimal;
+  text-align: justify;
+}
+
+.faq-section ol > li {
+  margin-bottom: 0.7rem;
+  line-height: 1.7;
+  text-align: justify;
+  color: #fff;
+  font-weight: 600;
+  font-family: 'Poppins', Arial, sans-serif;
+  border-left: 3px solid #6b8ed6;
+  padding-left: 0.7rem;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.01);
+  box-shadow: 0 1px 0 0 rgba(46,204,64,0.04);
+}
+
+.faq-section ul {
+  margin-left: 1.2rem;
+  padding-left: 1.2rem;
+  list-style-type: disc;
+  color: #b0bed9;
+  font-weight: 500;
+  font-size: 1.01rem;
+  text-align: justify;
+}
+
+.faq-section ul > li {
+  margin-bottom: 0.35rem;
+  line-height: 1.6;
+  text-align: justify;
+  color: #b0bed9;
+  font-weight: 500;
+  font-family: 'Poppins', Arial, sans-serif;
+  border-left: none;
+  background: none;
+  box-shadow: none;
+  padding-left: 0;
+}
+
+
+.faq-section li {
+  margin-bottom: 0.45rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.faq-section .section__title {
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.faq-section .section__divider {
+  margin-bottom: 1.5rem;
+}
+
+/* Imagem cobre toda a altura da coluna lateral */
+.password-meter-section {
   display: flex;
   gap: 2.5rem;
-  margin-bottom: 2rem;
+  align-items: stretch;
+  margin-top: 2.5rem;
   flex-wrap: wrap;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  min-height: 340px;
+}
+.password-meter-img-side {
+  flex: 1 1 320px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  min-width: 220px;
+  max-width: 340px;
+  padding: 0;
+  background: none;
+}
+.password-meter-img-side img {
+  width: 100%;
+  height: 100%;
+  max-width: 340px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10);
+  display: block;
 }
 
-.crypto-panel {
-  flex: 1 1 350px;
-  background: #162a48;
-  border-radius: 0.9rem;
-  padding: 1.5rem 1.3rem 1.3rem 1.3rem;
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+/* Formulário em coluna, campos 100% largura */
+.generator-options {
   display: flex;
   flex-direction: column;
   gap: 1.1rem;
-  min-width: 320px;
-}
-
-.crypto-panel h3 {
-  font-size: 1.18rem;
-  color: #4db8ff;
-  margin-bottom: 0.7rem;
-  font-weight: 700;
-}
-
-.crypto-panel label {
-  font-size: 1.05rem;
-  color: #e6f0ff;
-  font-weight: 500;
-  margin-bottom: 0.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.crypto-panel input,
-.crypto-panel select {
-  border-radius: 0.4rem;
-  border: 1.5px solid #223a5e;
-  background: #172a4a;
-  color: #e6f0ff;
-  padding: 0.35rem 0.7rem;
-  font-size: 1.08rem;
-  font-weight: 600;
-  transition: border 0.2s;
-  margin-top: 0.1rem;
-}
-
-.crypto-panel input:focus,
-.crypto-panel select:focus {
-  border: 1.5px solid #00d2ff;
-  outline: none;
-}
-
-.crypto-panel .crypto-result {
-  background: #223a5e;
-  color: #b0bed9;
-  border-radius: 0.5rem;
-  padding: 0.7rem 0.8rem;
-  font-size: 1.04rem;
-  word-break: break-all;
-  margin-top: 0.3rem;
-  font-family: 'Fira Mono', 'Consolas', monospace;
-  min-height: 2.2em;
-  white-space: pre-wrap;
-  box-shadow: 0 1px 6px 0 rgba(0,0,0,0.10);
-  transition: background 0.2s;
-}
-
-.crypto-panel .crypto-result:empty {
-  display: none;
-}
-
-.crypto-panel .crypto-actions {
-  display: flex;
-  gap: 1rem;
-  margin-top: 0.7rem;
-}
-
-.crypto-panel .crypto-actions button {
-  flex: 1;
-  font-size: 1.08rem;
-  font-weight: 700;
-  border-radius: 0.7rem;
-  padding: 0.9rem 0;
-  transition: background 0.2s, color 0.2s;
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
-}
-
-#encrypt-btn {
-  background: #00d2ff;
-  color: #0e1a2b;
-  border: none;
-}
-#encrypt-btn:hover {
-  background: #4db8ff;
-}
-
-#decrypt-btn {
-  background: none;
-  color: #00d2ff;
-  border: 2px solid #00d2ff;
-}
-#decrypt-btn:hover {
-  background: #223a5e;
-  color: #fff;
-}
-
-.history-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.5rem;
-  color: #b0bed9;
-  font-size: 1.08rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  margin-top: 1.2rem;
-}
-#clear-crypto-history {
-  background: none;
-  border: none;
-  color: #ff4136;
-  font-size: 1.3rem;
-  cursor: pointer;
-  padding: 0.2rem 0.5rem;
-  border-radius: 0.4rem;
-  transition: background 0.2s;
-}
-#clear-crypto-history:hover {
-  background: #1a2b47;
-}
-
-.password-history {
-  background: #14233a;
-  border-radius: 0.7rem;
-  padding: 0.7rem 1rem;
-  min-height: 2rem;
-  max-height: 180px;
-  overflow-y: auto;
-  font-size: 1.05rem;
-  color: #e6f0ff;
-  list-style: none;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-.password-history li {
-  display: flex;
-  flex-direction: column;
-  background: #223a5e;
-  border-radius: 0.4rem;
-  padding: 0.35rem 0.7rem;
-  font-family: 'Fira Mono', 'Consolas', monospace;
-  font-size: 1.05rem;
-  color: #fff;
-  transition: background 0.2s;
-  margin-bottom: 0.2rem;
-  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.06);
-}
-.password-history li:hover {
-  background: #2a3e63;
-}
-
-/* Generator options (caso use em outro contexto) */
-.generator-options {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem 2.5rem;
   margin-bottom: 1.7rem;
-  align-items: start;
+  align-items: stretch;
   background: #162a48;
   border-radius: 1.1rem;
   padding: 2rem 2.2rem 1.2rem 2.2rem;
   box-shadow: 0 4px 24px 0 rgba(0,0,0,0.13);
   transition: box-shadow 0.2s;
 }
-
 .generator-options label {
   font-size: 1.13rem;
   color: #e6f0ff;
@@ -218,7 +318,6 @@
   user-select: none;
   letter-spacing: 0.01em;
 }
-
 .generator-options input,
 .generator-options select,
 .generator-options textarea {
@@ -234,41 +333,51 @@
   outline: none;
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.06);
   resize: none;
+  width: 100%;
 }
 
-.generator-options input:focus,
-.generator-options select:focus,
-.generator-options textarea:focus {
-  border: 1.5px solid #00d2ff;
-  background: #223a5e;
-}
-
-.generator-options textarea[readonly] {
-  background: #223a5e;
-  color: #b0bed9;
-  font-style: italic;
-}
-
+/* Responsivo */
 @media (max-width: 1100px) {
   .password-meter-section {
-    max-width: 99vw;
     flex-direction: column;
+    min-height: unset;
   }
-  .crypto-flex {
-    flex-direction: column;
-    gap: 1.2rem;
+  .password-meter-img-side,
+  .password-meter-container {
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
   }
-  .crypto-panel {
-    min-width: unset;
+  .generator-options {
+    padding: 1rem 0.7rem 0.7rem 0.7rem;
   }
 }
-@media (max-width: 900px) {
-  .generator-options {
-    grid-template-columns: 1fr;
-    padding: 1rem 0.7rem 0.7rem 0.7rem;
-    gap: 0.7rem 0.5rem;
+
+
+/* Responsivo */
+@media (max-width: 700px) {
+  .faq-section {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
   }
-  .generator-options label {
-    font-size: 1rem;
+  .faq-section ol,
+  .faq-section ul {
+    margin-left: 0.7rem;
+    padding-left: 1rem;
+    font-size: 0.98rem;
   }
+  .faq-section ol > li {
+    padding-left: 0.4rem;
+    font-size: 0.98rem;
+  }
+}
+
+.section__title,
+.section__title--center {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #e6f0ff;
+  letter-spacing: 1px;
+  margin-top: 4rem;
 }

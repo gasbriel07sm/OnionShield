@@ -1,10 +1,10 @@
 // Verifica se o usuário está logado
-  const usuarioLogado = localStorage.getItem("usuarioLogado");
+  /*const usuarioLogado = localStorage.getItem("usuarioLogado");
 
   if (!usuarioLogado) {
     // Redireciona para login se não estiver logado
     window.location.href = "../../login/login.html";
-  }
+  }*/
 // Alternar visibilidade do campo
       const input = document.getElementById('hash-input');
       const toggleBtn = document.getElementById('toggle-visibility');

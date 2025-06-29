@@ -1,10 +1,10 @@
 // Verifica se o usuário está logado
-  const usuarioLogado = localStorage.getItem("usuarioLogado");
+  /*const usuarioLogado = localStorage.getItem("usuarioLogado");
 
   if (!usuarioLogado) {
     // Redireciona para login se não estiver logado
     window.location.href = "../../login/login.html";
-  }
+  }*/
 document.getElementById('url-form').addEventListener('submit', function(e) {
   e.preventDefault();
   const urlInput = document.getElementById('url-input').value.trim();

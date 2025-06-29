@@ -85,33 +85,49 @@
   max-width: 1200px;
   margin: 0 auto 4rem auto;
   padding: 0 1rem;
-  text-align: center;
 }
-.section__subtitle {
+.solutions-section .section__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #e6f0ff;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+}
+.solutions-section .section__subtitle {
   color: #b0bed9;
-  font-size: 1.1rem;
-  margin-bottom: 3rem;
+  font-size: 1.13rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 .solutions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 2rem;
-  margin-bottom: 2.5rem;
 }
+
+img{
+  margin-top: 8.5rem;
+}
+
 .solution-card {
-  background: #0e1a2b;
-  border-radius: 1rem;
-  border: 1.5px solid #183c6c;
-  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
-  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  background: #162a48;
+  border-radius: 1.1rem;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.13);
+  padding: 2.2rem 1.2rem 1.2rem 1.2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: box-shadow 0.2s, border 0.2s;
+  position: relative;
+  transition: box-shadow 0.2s, transform 0.2s;
+  min-height: 320px;
+  overflow: hidden;
 }
-.solution-card:hover {
-  border: 1.5px solid #4db8ff;
-  box-shadow: 0 4px 24px 0 rgba(77,184,255,0.10);
+.solution-card.expanded {
+  min-height: 420px;
+  background: #223a5e;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
+  transform: scale(1.03);
 }
 .solution-icon {
   font-size: 3rem;
@@ -120,69 +136,68 @@
 }
 .solution-title {
   color: #e6f0ff;
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   font-weight: 700;
-  margin-bottom: 0.7rem;
   text-align: center;
+  margin-bottom: 0.7rem;
 }
 .solution-desc {
   color: #b0bed9;
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.04rem;
   text-align: center;
+  margin-bottom: 1.2rem;
+  min-height: 48px;
 }
 .solution-btn {
-  color: #4db8ff;
-  border: 1.5px solid #4db8ff;
-  background: transparent;
+  background: none;
+  border: 2px solid #19c2ff;
+  color: #19c2ff;
   border-radius: 0.5rem;
   padding: 0.5rem 1.5rem;
-  font-weight: 600;
   font-size: 1rem;
-  text-decoration: none;
+  font-weight: 600;
+  margin-top: auto;
+  cursor: pointer;
   transition: background 0.2s, color 0.2s;
-  display: inline-block;
+  margin-bottom: 0.5rem;
 }
 .solution-btn:hover {
-  background: #4db8ff;
-  color: #0e1a2b;
+  background: #19c2ff;
+  color: #162a48;
 }
-.solutions-footer {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1.5rem;
-  margin-top: 2.5rem;
-  flex-wrap: wrap;
-}
-.solutions-trial {
+.solution-more {
+  display: none;
+  margin-top: 1.2rem;
   color: #e6f0ff;
-  font-size: 1.1rem;
-  margin-right: 1.5rem;
+  background: rgba(14,26,43,0.98);
+  border-radius: 0.7rem;
+  padding: 1rem 1rem 1rem 1rem;
+  font-size: 1.01rem;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10);
+  animation: fadeIn 0.3s;
 }
-.solutions-desc {
-  color: #b0bed9;
-  font-size: 1rem;
-  margin-right: 1.5rem;
+.solution-card.expanded .solution-more {
+  display: block;
 }
-.solution-btn--trial {
-  background: #4db8ff;
-  color: #fff;
-  border: none;
-  font-weight: 700;
-  padding: 0.7rem 2rem;
-  border-radius: 0.5rem;
-  transition: background 0.2s, color 0.2s;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px);}
+  to { opacity: 1; transform: translateY(0);}
 }
-.solution-btn--trial:hover {
-  background: #2699e6;
-  color: #fff;
-}
+/* RESPONSIVO: Um card por linha em telas pequenas */
 @media (max-width: 700px) {
-  .solutions-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.7rem;
+  .solutions-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .solution-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+   img{
+    margin-top: 2rem;
   }
 }
 
@@ -273,3 +288,15 @@
     min-width: unset;
   }
 }
+
+.section__title,
+.section__title--center {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #e6f0ff;
+  letter-spacing: 1px;
+  margin-top: 4rem;
+}
+

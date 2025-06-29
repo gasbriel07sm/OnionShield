@@ -120,51 +120,64 @@
     </header>
 <!-- FIM HEADER -->
 
-<!-- HERO -->
-<section class="hero-section hero-section--medidor">
-  <div class="hero-container">
-    <h1 class="hero-title">
-      Gerador de Senhas Seguras
-    </h1>
-    <p class="hero-subtitle">
-      Crie senhas fortes, aleatórias e personalizadas para proteger suas contas e sistemas.<br>
-      Defina os critérios, gere quantas quiser e salve seu histórico com segurança.
-    </p>
+<!-- Exemplo para gerador_senha.html -->
+<section class="faq-section">
+  <h2 class="section__title section__title--center" style="margin-top: 4rem;">GERADOR DE SENHAS</h2>
+  <hr class="section__divider">
+  <p class="hero-subtitle">
+    Gere senhas fortes, aleatórias e personalizadas para proteger suas contas e sistemas. Defina os critérios, gere quantas quiser e salve seu histórico com segurança.
+  </p>
+  <ol>
+    <li><b>Escolha o comprimento e os tipos de caracteres desejados (maiúsculas, minúsculas, números, símbolos, emojis).</b></li>
+    <li><b>Defina a quantidade de senhas a serem geradas.</b></li>
+    <li><b>Clique em "Gerar Senha(s)" para criar senhas aleatórias e seguras.</b></li>
+    <li><b>Copie as senhas geradas para usar em seus cadastros, sistemas ou aplicativos.</b></li>
+    <li><b>Consulte o histórico de senhas geradas localmente no seu navegador.</b></li>
+    <li><b>Atenção:</b> Nunca reutilize senhas e evite salvar em locais inseguros!</li>
+  </ol>
+  <div class="password-meter-section" aria-labelledby="password-generator-title" style="margin-top:2.5rem;">
+    <div class="password-meter-container">
+      <h2 id="password-generator-title" class="password-meter-title">Personalize e gere suas senhas</h2>
+      <form id="generator-form" autocomplete="off">
+  <div class="generator-options">
+    <label>
+      Comprimento:
+      <input type="number" id="length" min="12" max="64" value="16" />
+    </label>
+    <label>
+      Quantidade:
+      <input type="number" id="bulk" min="1" max="20" value="1" />
+    </label>
+    <label>
+      <input type="checkbox" id="uppercase" checked />
+      Letras maiúsculas (A-Z)
+    </label>
+    <label>
+      <input type="checkbox" id="lowercase" checked />
+      Letras minúsculas (a-z)
+    </label>
+    <label>
+      <input type="checkbox" id="numbers" checked />
+      Números (0-9)
+    </label>
+    <label>
+      <input type="checkbox" id="symbols" checked />
+      Símbolos (!@#$...)
+    </label>
+    <label>
+      <input type="checkbox" id="emojis" />
+      Emojis (😀🚀🔒)
+    </label>
   </div>
-</section>
-<!--FIM HERO -->
-
-<!-- GERADOR DE SENHA -->
-<section class="password-meter-section" aria-labelledby="password-generator-title">
-  <div class="password-meter-img-side">
-    <img src="../assets/imagem1.jpg" alt="Imagem Segurança" />
-  </div>
-  <div class="password-meter-container">
-    <h2 id="password-generator-title" class="password-meter-title">Personalize e gere suas senhas</h2>
-    <form id="generator-form" autocomplete="off">
-      <div class="generator-options">
-        <label>
-          Comprimento:
-          <input type="number" id="length" min="12" max="64" value="16" />
-        </label>
-        <label><input type="checkbox" id="uppercase" checked /> Letras maiúsculas (A-Z)</label>
-        <label><input type="checkbox" id="lowercase" checked /> Letras minúsculas (a-z)</label>
-        <label><input type="checkbox" id="numbers" checked /> Números (0-9)</label>
-        <label><input type="checkbox" id="symbols" checked /> Símbolos (!@#$...)</label>
-        <label><input type="checkbox" id="emojis" /> Emojis (😀🚀🔒)</label>
-        <label>
-          Quantidade:
-          <input type="number" id="bulk" min="1" max="20" value="1" />
-        </label>
+  <button type="button" id="generate-btn" class="button button--solid">Gerar Senha(s)</button>
+</form>
+      <div id="generated-passwords" class="generated-passwords"></div>
+      <div class="history-header">
+        <span>Histórico de Senhas Geradas</span>
+        <button id="clear-history" class="button button--ghost" title="Limpar histórico"><i class="ri-delete-bin-line"></i></button>
       </div>
-      <button type="button" id="generate-btn" class="button button--solid">Gerar Senha(s)</button>
-    </form>
-    <div id="generated-passwords" class="generated-passwords"></div>
-    <div class="history-header">
-      <span>Histórico de Senhas Geradas</span>
-      <button id="clear-history" class="button button--ghost" title="Limpar histórico"><i class="ri-delete-bin-line"></i></button>
+      <ul id="password-history" class="password-history"></ul>
     </div>
-    <ul id="password-history" class="password-history"></ul>
   </div>
 </section>
 
