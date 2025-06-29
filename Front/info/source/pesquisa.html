@@ -6,6 +6,7 @@
   <title>OnionShield</title>
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
   <link rel="stylesheet" href="../../style.css">
+  <link href="pesquisa.css" rel="stylesheet"> 
 </head>
 <body>
 <!-- HEADER -->
@@ -111,15 +112,128 @@
                     <li><a href="../../sobre.html" class="nav__link">Sobre</a></li>
                     <li><a href="../../contato/contato.html" class="nav__link">Contato</a></li>
                     <li class="dropdown__item" id="login-area" style="display: flex">
-                        <a href="../../login/login.html" class="nav__link">Login</a>
+                       <a href="/Front/login/login.html" class="nav__link">Login</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
 <!-- FIM HEADER -->
+<!-- CONTEÚDO PRINCIPAL -->
+<main class="main">
+  <section class="section">
+    <div class="container">
+      <h1 class="section__title">PESQUISA</h1>
 
-    <!-- ============== COMEÇO DO SOBRE =========== -->
-     <script src="../../main.js"></script>
+      <div class="pesquisa__text">
+        <p>Foi realizada uma pesquisa com 33 pessoas, selecionadas de forma aleatória, na cidade de Araxá - região. O formulário continha 15 perguntas, divididas em diferentes seções e táticas, abordando temas relacionados à segurança da informação.</p>
+
+        <p>A pesquisa a seguir apresenta o resultado das perguntas fechadas aplicadas na pesquisa, organizadas em categorias demográficas e de conhecimento em segurança digital.</p>
+      </div>
+
+      <!-- SEÇÃO: DADOS DEMOGRÁFICOS -->
+      <h2 class="section__title">Perfil dos Participantes</h2>
+
+      <!-- GRÁFICOS DEMOGRÁFICOS -->
+      <div class="chart__container">
+        <div class="chart__item">
+          <h3>Idade dos participantes</h3>
+          <canvas id="chart-1"></canvas>
+        </div>
+
+        <div class="chart__item">
+          <h3>Escolaridade</h3>
+          <canvas id="chart-2"></canvas>
+        </div>
+
+        <div class="chart__item">
+          <h3>Trabalha ou já trabalhou com tecnologia?</h3>
+          <canvas id="chart-3"></canvas>
+        </div>
+
+        <div class="chart__item">
+          <h3>Frequência de uso da internet</h3>
+          <canvas id="chart-4"></canvas>
+        </div>
+      </div>
+
+      <!-- SEÇÃO: HÁBITOS DIGITAIS -->
+      <h2 class="section__title">Hábitos e Dispositivos</h2>
+
+      <div class="chart__container">
+        <div class="chart__item">
+          <h3>Dispositivos usados para acessar a internet</h3>
+          <canvas id="chart-5"></canvas>
+        </div>
+
+        <div class="chart__item">
+          <h3>Usa senhas diferentes para cada serviço online?</h3>
+          <canvas id="chart-6"></canvas>
+        </div>
+      </div>
+
+      <!-- SEÇÃO: CONHECIMENTOS EM SEGURANÇA -->
+      <h2 class="section__title">Conhecimentos em Segurança Digital</h2>
+
+      <div class="chart__container">
+        <div class="chart__item">
+          <h3>Você sabe o que é malware?</h3>
+          <canvas id="chart-7"></canvas>
+        </div>
+
+        <div class="chart__item">
+          <h3>Você sabe o que é phishing?</h3>
+          <canvas id="chart-8"></canvas>
+        </div>
+
+        <div class="chart__item">
+          <h3>Você usa antivírus?</h3>
+          <canvas id="chart-9"></canvas>
+        </div>
+
+        <div class="chart__item">
+          <h3>Conhece autenticação de dois fatores (2FA)?</h3>
+          <canvas id="chart-10"></canvas>
+        </div>
+
+        <div class="chart__item">
+          <h3>Conhece os tipos de ataques cibernéticos</h3>
+          <canvas id="chart-11"></canvas>
+        </div>
+
+        <div class="chart__item">
+          <h3>Onde busca informações sobre proteção online?</h3>
+          <canvas id="chart-12"></canvas>
+        </div>
+      </div>
+
+      <div class="pesquisa__text">
+        <p>Os resultados indicaram um perfil interessante dos participantes: a maioria possui ensino superior (completo ou incompleto), trabalha ou já trabalhou com tecnologia, e usa a internet diariamente através de dispositivos móveis e computadores.</p>
+
+        <p>Em relação ao conhecimento sobre segurança digital, observou-se que a maioria dos participantes conhece conceitos básicos como malware e phishing, utiliza antivírus e adota práticas como senhas diferentes para cada serviço. No entanto, ainda há oportunidades de melhoria, especialmente na adoção de autenticação de dois fatores e na busca por informações sobre proteção online.</p>
+      </div>
+
+      <h2 class="section__title">CONCLUSÃO</h2>
+
+      <div class="conclusao__text">
+        <p>A pesquisa revelou um panorama positivo em relação ao conhecimento básico sobre segurança da informação entre os participantes de Araxá e região. O perfil dos respondentes, caracterizado por alta escolaridade e familiaridade com tecnologia, contribuiu para os bons índices de conhecimento observados.</p>
+
+        <p>Os dados mostram que 75% dos participantes conhecem malware, 70% sabem o que é phishing, e 85% utilizam antivírus. Estes números demonstram uma base sólida de conhecimento em segurança digital. No entanto, apenas 72,7% utilizam autenticação de dois fatores, indicando uma área que necessita de maior conscientização.</p>
+
+        <p>Um ponto de atenção identificado foi a diversidade nas fontes de informação sobre proteção online. Enquanto 36,4% buscam informações em sites de notícias, 18,2% recorrem às redes sociais e outros 18,2% a outras fontes. Isso sugere a necessidade de canais de comunicação mais estruturados e confiáveis para disseminação de conhecimento sobre segurança digital.</p>
+
+        <p>A pesquisa também evidenciou que o uso massivo de dispositivos móveis (93,9% dos participantes) e computadores (84,8%) reforça a importância de programas educacionais que abordem a segurança em diferentes plataformas e contextos de uso.</p>
+
+        <p>Em conclusão, embora os resultados sejam encorajadores, há espaço para melhorias através de iniciativas educacionais focadas em práticas avançadas de segurança, como a autenticação multifatorial, e na criação de fontes confiáveis de informação sobre proteção digital.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../source/pesquisa.js"></script>
+<script src="../../main.js"></script>
+
 </body>
 </html>
