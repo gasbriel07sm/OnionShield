@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OnionShield</title>
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+  <title>OnionShield - Ferramentas de Criptografia</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="shortcut icon" href="../assets/logo branca.png" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="info.css">
 </head>
 <body>
 <!-- HEADER -->
@@ -26,7 +28,7 @@
                     <li><a href="../index.html" class="nav__link">Home</a></li>
                     <!--============ DROPDOWN 1 ============-->
                     <li class="dropdown__item">
-                        <a href="info.html" class="nav__link">
+                        <a href="#" class="nav__link">
                             Informações <i class="ri-arrow-down-s-line dropdown__arrow"></i>
                         </a>
                         <ul class="dropdown__menu">
@@ -119,7 +121,393 @@
     </header>
 <!-- FIM HEADER -->
 
-    <!-- ============== COMEÇO DO SOBRE =========== -->
-     <script src="../main.js"></script>
+<section class="faq-section">
+  <h2 class="section__title section__title--center" style="margin-top: 4rem;">SEGURANÇA DA INFORMAÇÃO</h2>
+  <hr class="section__divider">
+  <div class="faq-list">
+    <!-- PERGUNTA 1 -->
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="true">
+        <span>O que é segurança da informação?</span>
+        <i class="ri-arrow-down-s-line faq-arrow"></i>
+      </button>
+      <div class="faq-answer" style="display: block;">
+        <b>Segurança da informação</b> é o conjunto de práticas, políticas e tecnologias voltadas para proteger dados e sistemas contra acessos não autorizados, uso indevido, divulgação, alteração ou destruição. O objetivo é garantir que as informações estejam sempre protegidas, disponíveis e íntegras para quem realmente precisa delas.<br><br>
+        <b>Importante:</b> Segurança da informação não se limita à tecnologia, mas envolve pessoas, processos e cultura organizacional.
+      </div>
+    </div>
+    <!-- PERGUNTA 2 -->
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Quais são os pilares da segurança da informação?</span>
+        <i class="ri-arrow-down-s-line faq-arrow"></i>
+      </button>
+      <div class="faq-answer">
+        Os pilares fundamentais da segurança da informação são conhecidos como <b>tríade CIA</b>:<br>
+        <b>Confidencialidade:</b> Garante que apenas pessoas autorizadas tenham acesso à informação.<br>
+        <b>Integridade:</b> Assegura que a informação não seja alterada de forma indevida.<br>
+        <b>Disponibilidade:</b> Garante que a informação esteja acessível sempre que necessário.<br><br>
+        Outros pilares importantes incluem <b>autenticidade</b> (garantir a identidade de quem acessa) e <b>não repúdio</b> (impedir que alguém negue uma ação realizada).
+      </div>
+    </div>
+    <!-- PERGUNTA 3 -->
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Quais são as principais ameaças à segurança da informação?</span>
+        <i class="ri-arrow-down-s-line faq-arrow"></i>
+      </button>
+      <div class="faq-answer">
+        As ameaças mais comuns incluem:<br>
+        <ul>
+          <li><b>Malware:</b> Softwares maliciosos como vírus, worms, trojans e ransomware.</li>
+          <li><b>Phishing:</b> Tentativas de enganar usuários para obter dados sensíveis.</li>
+          <li><b>Engenharia social:</b> Manipulação psicológica para obter informações confidenciais.</li>
+          <li><b>Ataques de força bruta:</b> Tentativas automáticas de descobrir senhas.</li>
+          <li><b>Vazamento de dados:</b> Exposição acidental ou proposital de informações.</li>
+          <li><b>Falhas humanas:</b> Erros de usuários, como senhas fracas ou compartilhamento indevido.</li>
+        </ul>
+        <b>Dica:</b> Manter sistemas atualizados e treinar usuários reduz significativamente os riscos.
+      </div>
+    </div>
+    <!-- PERGUNTA 4 -->
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>O que é confidencialidade e por que é importante?</span>
+        <i class="ri-arrow-down-s-line faq-arrow"></i>
+      </button>
+      <div class="faq-answer">
+        <b>Confidencialidade</b> significa garantir que apenas pessoas autorizadas possam acessar determinadas informações. É essencial para proteger dados pessoais, estratégicos ou sensíveis contra espionagem, roubo ou exposição.<br><br>
+        <b>Exemplo:</b> Dados bancários, prontuários médicos e segredos industriais devem ser acessados apenas por quem tem permissão.
+      </div>
+    </div>
+    <!-- PERGUNTA 5 -->
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>O que é integridade da informação?</span>
+        <i class="ri-arrow-down-s-line faq-arrow"></i>
+      </button>
+      <div class="faq-answer">
+        <b>Integridade</b> garante que a informação não seja alterada, corrompida ou destruída de forma não autorizada. Isso assegura que os dados são confiáveis e refletem a realidade.<br><br>
+        <b>Exemplo:</b> Um extrato bancário não pode ser modificado por terceiros sem autorização.
+      </div>
+    </div>
+    <!-- PERGUNTA 6 -->
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>O que é disponibilidade na segurança da informação?</span>
+        <i class="ri-arrow-down-s-line faq-arrow"></i>
+      </button>
+      <div class="faq-answer">
+        <b>Disponibilidade</b> significa que a informação estará acessível sempre que for necessária, evitando indisponibilidade causada por falhas técnicas, ataques ou desastres.<br><br>
+        <b>Exemplo:</b> Sistemas de hospitais e bancos precisam estar disponíveis 24h para garantir atendimento e operações.
+      </div>
+    </div>
+    <!-- PERGUNTA 7 -->
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Como proteger informações pessoais e corporativas?</span>
+        <i class="ri-arrow-down-s-line faq-arrow"></i>
+      </button>
+      <div class="faq-answer">
+        <ul>
+          <li>Utilize senhas fortes e únicas para cada serviço.</li>
+          <li>Ative autenticação em dois fatores sempre que possível.</li>
+          <li>Evite clicar em links suspeitos ou baixar arquivos desconhecidos.</li>
+          <li>Mantenha sistemas e aplicativos sempre atualizados.</li>
+          <li>Faça backups regulares dos dados importantes.</li>
+          <li>Eduque colaboradores sobre boas práticas de segurança.</li>
+        </ul>
+        <b>Dica:</b> A segurança é responsabilidade de todos!
+      </div>
+    </div>
+    <!-- PERGUNTA 8 -->
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>O que é engenharia social?</span>
+        <i class="ri-arrow-down-s-line faq-arrow"></i>
+      </button>
+      <div class="faq-answer">
+        <b>Engenharia social</b> é o uso de manipulação psicológica para enganar pessoas e levá-las a revelar informações confidenciais ou realizar ações inseguras.<br><br>
+        <b>Exemplo:</b> Alguém se passando por técnico de TI para pedir sua senha por telefone.
+      </div>
+    </div>
+    <!-- PERGUNTA 9 -->
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>O que é phishing?</span>
+        <i class="ri-arrow-down-s-line faq-arrow"></i>
+      </button>
+      <div class="faq-answer">
+        <b>Phishing</b> é uma técnica de fraude digital que tenta enganar usuários para obter dados sensíveis, como senhas e números de cartão, geralmente por e-mail, SMS ou sites falsos.<br><br>
+        <b>Dica:</b> Sempre verifique o endereço do remetente e evite clicar em links suspeitos.
+      </div>
+    </div>
+    <!-- PERGUNTA 10 -->
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Como identificar e evitar ameaças digitais?</span>
+        <i class="ri-arrow-down-s-line faq-arrow"></i>
+      </button>
+      <div class="faq-answer">
+        <ul>
+          <li>Desconfie de mensagens urgentes ou ofertas boas demais para ser verdade.</li>
+          <li>Verifique sempre o endereço de e-mail e o site antes de inserir dados.</li>
+          <li>Use antivírus e firewall atualizados.</li>
+          <li>Não compartilhe informações pessoais em redes sociais públicas.</li>
+          <li>Desconfie de solicitações de dados por telefone ou e-mail.</li>
+        </ul>
+        <b>Importante:</b> A prevenção é o melhor caminho para evitar prejuízos e vazamentos.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="solutions-section">
+  <h2 class="section__title section__title--center" style="margin-top: 4rem;">Soluções em Segurança da Informação</h2>
+  <p class="section__subtitle">Conheça conceitos essenciais, ameaças e boas práticas para proteger dados e sistemas.</p>
+  <div class="solutions-grid">
+    <!-- CARD 1 -->
+    <div class="solution-card">
+      <div class="solution-icon"><i class="ri-shield-keyhole-line"></i></div>
+      <h3 class="solution-title">Confidencialidade</h3>
+      <p class="solution-desc">Garante que apenas pessoas autorizadas tenham acesso à informação.</p>
+      <button class="solution-btn">SAIBA MAIS</button>
+      <div class="solution-more">
+        <b>Importância:</b> Protege dados pessoais, estratégicos e sensíveis.<br>
+        <b>Exemplo:</b> Senhas, dados bancários e informações médicas.<br>
+        <b>Dica:</b> Use criptografia e controle de acesso.
+      </div>
+    </div>
+    <!-- CARD 2 -->
+    <div class="solution-card">
+      <div class="solution-icon"><i class="ri-checkbox-circle-line"></i></div>
+      <h3 class="solution-title">Integridade</h3>
+      <p class="solution-desc">Garante que a informação não seja alterada ou corrompida sem autorização.</p>
+      <button class="solution-btn">SAIBA MAIS</button>
+      <div class="solution-more">
+        <b>Importância:</b> Dados íntegros são confiáveis e refletem a realidade.<br>
+        <b>Exemplo:</b> Extratos bancários e registros de sistemas.<br>
+        <b>Dica:</b> Utilize backups e mecanismos de verificação, como hash.
+      </div>
+    </div>
+    <!-- CARD 3 -->
+    <div class="solution-card">
+      <div class="solution-icon"><i class="ri-time-line"></i></div>
+      <h3 class="solution-title">Disponibilidade</h3>
+      <p class="solution-desc">Garante que a informação esteja acessível sempre que necessário.</p>
+      <button class="solution-btn">SAIBA MAIS</button>
+      <div class="solution-more">
+        <b>Importância:</b> Evita prejuízos por indisponibilidade de sistemas.<br>
+        <b>Exemplo:</b> Hospitais e bancos precisam de sistemas 24h.<br>
+        <b>Dica:</b> Invista em redundância e planos de contingência.
+      </div>
+    </div>
+    <!-- CARD 4 -->
+    <div class="solution-card">
+      <div class="solution-icon"><i class="ri-shield-check-line"></i></div>
+      <h3 class="solution-title">Autenticidade</h3>
+      <p class="solution-desc">Garante que a identidade de usuários e sistemas seja verificada.</p>
+      <button class="solution-btn">SAIBA MAIS</button>
+      <div class="solution-more">
+        <b>Importância:</b> Evita fraudes e acessos indevidos.<br>
+        <b>Exemplo:</b> Login com autenticação em dois fatores.<br>
+        <b>Dica:</b> Sempre confirme a identidade antes de liberar acesso.
+      </div>
+    </div>
+    <!-- CARD 5 -->
+    <div class="solution-card">
+      <div class="solution-icon"><i class="ri-close-circle-line"></i></div>
+      <h3 class="solution-title">Não Repúdio</h3>
+      <p class="solution-desc">Impede que alguém negue uma ação realizada em um sistema.</p>
+      <button class="solution-btn">SAIBA MAIS</button>
+      <div class="solution-more">
+        <b>Importância:</b> Garante responsabilidade e rastreabilidade.<br>
+        <b>Exemplo:</b> Assinaturas digitais e logs de auditoria.<br>
+        <b>Dica:</b> Mantenha registros detalhados de operações críticas.
+      </div>
+    </div>
+    <!-- CARD 6 -->
+    <div class="solution-card">
+      <div class="solution-icon"><i class="ri-bug-line"></i></div>
+      <h3 class="solution-title">Malware</h3>
+      <p class="solution-desc">Softwares maliciosos que podem roubar, corromper ou bloquear dados.</p>
+      <button class="solution-btn">SAIBA MAIS</button>
+      <div class="solution-more">
+        <b>Exemplo:</b> Vírus, ransomware, trojans.<br>
+        <b>Como evitar:</b> Use antivírus, não baixe arquivos suspeitos e mantenha o sistema atualizado.
+      </div>
+    </div>
+    <!-- CARD 7 -->
+    <div class="solution-card">
+      <div class="solution-icon"><i class="ri-mail-line"></i></div>
+      <h3 class="solution-title">Phishing</h3>
+      <p class="solution-desc">Fraudes que tentam enganar usuários para obter dados sensíveis.</p>
+      <button class="solution-btn">SAIBA MAIS</button>
+      <div class="solution-more">
+        <b>Exemplo:</b> E-mails ou sites falsos pedindo senhas ou dados bancários.<br>
+        <b>Dica:</b> Sempre verifique o remetente e evite clicar em links suspeitos.
+      </div>
+    </div>
+    <!-- CARD 8 -->
+    <div class="solution-card">
+      <div class="solution-icon"><i class="ri-user-search-line"></i></div>
+      <h3 class="solution-title">Engenharia Social</h3>
+      <p class="solution-desc">Manipulação psicológica para obter informações ou acesso.</p>
+      <button class="solution-btn">SAIBA MAIS</button>
+      <div class="solution-more">
+        <b>Exemplo:</b> Alguém se passando por suporte técnico para pedir sua senha.<br>
+        <b>Dica:</b> Nunca compartilhe informações confidenciais sem confirmação.
+      </div>
+    </div>
+    <!-- CARD 9 -->
+    <div class="solution-card">
+      <div class="solution-icon"><i class="ri-database-2-line"></i></div>
+      <h3 class="solution-title">Vazamento de Dados</h3>
+      <p class="solution-desc">Exposição acidental ou proposital de informações sensíveis.</p>
+      <button class="solution-btn">SAIBA MAIS</button>
+      <div class="solution-more">
+        <b>Exemplo:</b> Dados de clientes expostos na internet.<br>
+        <b>Como evitar:</b> Controle de acesso, criptografia e monitoramento constante.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quiz-grid-section">
+  <h2 class="section__title section__title--center" style="margin-top: 4rem;">Quizzes de Segurança da Informação</h2>
+  <p class="section__subtitle">Teste seus conhecimentos em diferentes áreas da segurança da informação!</p>
+  <div class="quiz-grid">
+    <!-- Linha 1 -->
+    <div class="quiz-card">
+      <h3 class="quiz-title">QUIZ 1</h3>
+      <p class="quiz-desc">Avalie seus conhecimentos sobre conceitos básicos de segurança da informação, incluindo pilares e boas práticas.</p>
+      <a href="quiz/quiz1/quiz1.html" class="quiz-btn">Acessar Quiz 1</a>
+    </div>
+    <div class="quiz-card">
+      <h3 class="quiz-title">QUIZ 2</h3>
+      <p class="quiz-desc">Teste sua compreensão sobre ameaças digitais, como malware, phishing e engenharia social.</p>
+      <a href="quiz/quiz2/quiz2.html" class="quiz-btn">Acessar Quiz 2</a>
+    </div>
+    <div class="quiz-card">
+      <h3 class="quiz-title">QUIZ 3</h3>
+      <p class="quiz-desc">Desafie-se com perguntas sobre criptografia, tipos de algoritmos e aplicações práticas.</p>
+      <a href="quiz/quiz3/quiz3.html" class="quiz-btn">Acessar Quiz 3</a>
+    </div>
+    <!-- Linha 2 -->
+    <div class="quiz-card">
+      <h3 class="quiz-title">QUIZ 4</h3>
+      <p class="quiz-desc">Verifique seu domínio sobre políticas de segurança, autenticação e controle de acesso.</p>
+      <a href="quiz/quiz4/quiz4.html" class="quiz-btn">Acessar Quiz 4</a>
+    </div>
+    <div class="quiz-card">
+      <h3 class="quiz-title">QUIZ 5</h3>
+      <p class="quiz-desc">Avalie seus conhecimentos sobre legislação, LGPD, privacidade e responsabilidade digital.</p>
+      <a href="quiz/quiz5/quiz5.html" class="quiz-btn">Acessar Quiz 5</a>
+    </div>
+    <div class="quiz-card">
+      <h3 class="quiz-title">MAIS QUIZZES</h3>
+      <p class="quiz-desc">Para mais quizzes acesse pelo link abaixo. E pratique cada vez mais.</p>
+      <a href="https://wayground.com/admin/quiz/63baf9feb45f25001da1740f/ciberseguranca" target="_blank" class="quiz-btn">Acesse Aqui</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Why Choose Us Section -->
+<section class="choose-section">
+  <div class="choose-container">
+    <div class="choose-img-area">
+      <img src="segurança_informação.jpg" alt="Cyber Security Team" class="choose-img" >
+    </div>
+    <div class="choose-content">
+      <h2 class="section__title section__title--left">Por que Segurança Cibernética?</h2>
+      <div class="choose-list">
+        <div class="choose-item">
+          <div class="choose-icon"><i class="ri-wallet-2-fill"></i></div>
+          <div>
+            <div class="choose-title">Evitar prejuízos financeiros e fraudes</div>
+            <div class="choose-desc">A segurança da informação protege empresas e pessoas contra golpes, fraudes bancárias, roubo de identidade e transações não autorizadas, evitando perdas financeiras.</div>
+          </div>
+        </div>
+        <div class="choose-item">
+          <div class="choose-icon"><i class="ri-git-repository-private-fill"></i></div>
+          <div>
+            <div class="choose-title">Preservar a reputação e a confiança</div>
+            <div class="choose-desc">Falhas de segurança podem causar danos à imagem de uma organização, levando à perda de clientes, parceiros e credibilidade no mercado.</div>
+          </div>
+        </div>
+        <div class="choose-item">
+          <div class="choose-icon"><i class="ri-shield-fill"></i></div>
+          <div>
+            <div class="choose-title">Garantir a continuidade dos negócios</div>
+            <div class="choose-desc">Medidas de segurança evitam paralisações causadas por ataques, falhas ou desastres, assegurando que sistemas e serviços essenciais continuem funcionando sem interrupções.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FIM Why Choose Us Section -->
+
+<!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="index.html" class="footer__logo">OnionShield</a>
+                <p class="footer__description" style="margin-top: 0.5rem;">Soluções de segurança integradas para sua vida, sua empresa e sua tranquilidade. <br><br>
+                Nos acompanhe em nossas redes:</p>
+                <div class="footer__social">
+                    <abbr title="Chatbot">
+                        <a href="#" class="footer__social-link"><i class="ri-whatsapp-line"></i></a>
+                    </abbr>
+                    <abbr title="Instagram">
+                        <a href="#" class="footer__social-link"><i class="ri-instagram-line"></i></a>
+                    </abbr>
+                    <abbr title="Github">
+                        <a href="https://github.com/gasbriel07sm/OnionShield" class="footer__social-link"><i class="ri-github-fill"></i></a>
+                    </abbr>
+                    <abbr title="Contato">
+                        <a href="./Front/contato/contato.html" class="footer__social-link"><i class="ri-mail-line"></i></a>
+                    </abbr>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Links Rápidos</h3>
+                <ul class="footer__links">
+                    <li><a href="content/conteudo.html" class="footer__link">Conteúdo</a></li>
+                    <li><a href="source/pesquisa.html" class="footer__link">Pesquisa</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Nosso Grupo</h3>
+                <ul class="footer__links">
+                    <li>Gabriel de Souza Miranda</li>
+                    <li>Luiz Gustavo</li>
+                    <li>Willian Kenner</li>
+                    <li>Gabriel de Sousa Gomes</li>
+                    <li>Maicon</li>
+                    <li>Sávio Honorato</li>
+                    <li>Gabriel Carvalho</li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Inscreva-se</h3>
+                <p class="footer__description">Receba notícias e atualizações constantes de nossos serviços.</p>
+                <form action="" class="footer__form">
+                    <input type="email" placeholder="Seu email..." class="footer__input">
+                    <button class="button">Inscrever</button>
+                </form>
+            </div>
+        </div>
+        <p class="footer__copy">&#169; OnionShield. Todos os direitos reservados.</p>
+    </footer>
+<!-- FIM FOOTER -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+    <script src="info.js"></script>
+    <script src="../main.js"></script>
 </body>
 </html>
