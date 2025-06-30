@@ -65,3 +65,10 @@ function logout() {
       });
     }
   });
+
+  function showTeamDesc(idx) {
+  const descs = document.querySelectorAll('.team-desc');
+  descs.forEach((desc, i) => {
+    desc.style.display = (i === idx && desc.style.display !== 'block') ? 'block' : 'none';
+  });
+}
